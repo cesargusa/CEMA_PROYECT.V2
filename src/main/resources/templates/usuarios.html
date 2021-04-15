@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/controlUsuarios.css}" rel="stylesheet" />
-
-    <title>Usuarios</title>
+    <link rel="icon" type="image/svg+xml" href="/src/main/resources/static/images/CEMA-logo-definitivo.svg">
+       <title>Usuarios</title>
 </head>
 
 <body>
@@ -56,7 +56,9 @@
                     <p th:text="*{apellido}"></p>
                 </td>
                 <td>
-                    <p th:text="*{imagen}"></p>
+                    <a th:href="*{imagen}" target="_blank">
+                        Click Aquí
+                    </a>
                 </td>
                 <td>
                     <p th:text="*{telefono}"></p>

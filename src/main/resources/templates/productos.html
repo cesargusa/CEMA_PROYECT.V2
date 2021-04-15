@@ -2,15 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" ​>
 
 <head>
+    <header th:insert="~{fragments/changelang.html :: header}">
+</header>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/controlUsuarios.css}" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/src/main/resources/static/images/CEMA-logo-definitivo.svg">
-       <title>Usuarios</title>
+  
+    <title>Usuarios</title>
 </head>
 
 <body>
+    <div th:replace="~{fragments/changelang.html :: body}"></div>
+
     <div class="menu">
         <div class="titulo">
             <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />

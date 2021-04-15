@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"​>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+</head>
+<body>
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Email</th>
+                    <th>Contraseña</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Imagen</th>
+                    <th>Telefono</th>
+                    <th>Ciudad</th>
+                    <th>Pais</th>
+                    <th>Descripcion</th>
+
+                </tr>
+            </thead>
+            <tbody  th:each="usu : ${usuarios}" th:object="${usu}">
+                <tr>
+                    <td><p th:text="*{id}"></p></td>
+                    <td><p th:text="*{email}"></p></td>
+                    <td><p th:text="*{contrasena}"></p></td>
+                    <td><p th:text="*{nombre}"></p></td>
+                    <td><p th:text="*{apellido}"></p></td>
+                    <td><p th:text="*{imagen}"></p></td>
+                    <td><p th:text="*{telefono}"></p></td>
+                    <td><p th:text="*{ciudad}"></p></td>
+                    <td><p th:text="*{pais}"></p></td>
+                    <td><p th:text="*{descripcion}"></p></td>
+                </tr>
+            </tbody>
+            
+
+        </table>
+
+</body>
+</html>

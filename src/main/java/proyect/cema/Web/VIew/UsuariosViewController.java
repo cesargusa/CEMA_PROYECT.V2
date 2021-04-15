@@ -1,0 +1,27 @@
+package proyect.cema.Web.VIew;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import proyect.cema.Services.Models.UsuarioDTO;
+import proyect.cema.Web.API.UsuarioController;
+
+@Controller
+public class UsuariosViewController {
+    private final UsuarioController usuarioController;
+
+    UsuariosViewController(UsuarioController usuarioController){
+        this.usuarioController=usuarioController;
+    }
+
+    @GetMapping("/usuarios")
+    public ModelAndView GetAllUsuarios(){
+        List<UsuarioDTO> allUsuarios = usuarioController.GetAll();
+        ModelAndView mv = new ModelAndView("usuarios");
+        mv.addObject("usuarios", allUsuarios);
+        return mv;
+    }
+}

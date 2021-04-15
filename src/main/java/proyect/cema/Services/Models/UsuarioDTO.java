@@ -3,9 +3,10 @@ package proyect.cema.Services.Models;
 public class UsuarioDTO {
     private Long id;
     private String email;
-    private String contraseña;
+    private String contrasena;
     private String nombre;
     private String apellido;
+    private String imagen;
     private String telefono;
     private String ciudad;
     private String pais;
@@ -13,13 +14,13 @@ public class UsuarioDTO {
 
     public UsuarioDTO() {
     }
-
-    public UsuarioDTO(String email, String contraseña, String nombre, String apellido, String telefono, String ciudad,
+    public UsuarioDTO(String email, String contrasena, String nombre, String apellido, String imagen,String telefono, String ciudad,
             String pais, String descripcion) {
         this.email = email;
-        this.contraseña = contraseña;
+        this.contrasena = contrasena;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.imagen=imagen;
         this.telefono = telefono;
         this.ciudad = ciudad;
         this.pais = pais;
@@ -42,13 +43,7 @@ public class UsuarioDTO {
         this.email = email;
     }
 
-    public String getContraseña() {
-        return contraseña;
-    }
-
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
-    }
+  
 
     public String getNombre() {
         return nombre;
@@ -98,4 +93,17 @@ public class UsuarioDTO {
         this.descripcion = descripcion;
     }
 
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+    public String getContrasena() {
+        return contrasena;
+    }
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
 }

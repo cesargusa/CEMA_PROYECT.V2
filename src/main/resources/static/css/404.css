@@ -1,15 +1,37 @@
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('../font/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'Montserrat Titulo';
+    src: url('../font/Montserrat-Bold.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
 }
-.contenedor{
-    background: crimson;
-    height: 100vh;
-    display: flex;        
-    justify-content: center;
-}
+
+
 .contenido-404{
-    background: yellow;
+    margin: 0 auto;
     width: 200px;       
     height: 200px;  
 }
+
+#error{
+    font-family: Montserrat Titulo;
+    font-size: 6em;
+    text-align: center;
+}
+p{
+    font-family: Montserrat Regular;
+    text-align: center;
+    font-size: 1.3em;
+}
+pre{
+    font-family: Montserrat Regular;
+    text-align: center;
+    font-size: 1.3em;
+}
+

@@ -17,6 +17,8 @@ public class initDB {
 
             usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","Cesar","Gutierrez","https://media-exp1.licdn.com/dms/image/C5603AQE6G74tLiVRyQ/profile-displayphoto-shrink_200_200/0/1562172815294?e=1620259200&v=beta&t=jBLAKOfxtuBQwR7W3LwA3YmQN0o_jV2WMfW20Ly9bB8","722709600","Zaragoza","España",""));
             usuario.save(new UsuarioEntity("marieteloquete@gmail.com","ambel1234","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España",""));
+            usuario.save(new UsuarioEntity("marieteloquete@gmail.comerevrerveevv","123","Marirevervreo","Gutierrezveveerv","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","123445654veevervrv5","Madridvrevrrvre","Españavrervrrevr","reuh9eruheuhvuherhvr0uhrvrhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvverferv"));
+
 
             product.save(new ProductEntity("Sudadera Nike",40L,"L","https://images.asos-media.com/products/sudadera-azul-marino-con-capucha-club-de-nike-plus/12495764-1-navy?$XXL$&wid=513&fit=constrain","azul marino","Como nuevo","Nike","Hombre"));
             product.save(new ProductEntity("Pantalon Stradivarius",23L,"43","https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elle-pantalon-negro-barato-stradivarius-c-1559142955.jpg?resize=480:*","negro","Sin estrenar","Stradivarius","Hombre"));

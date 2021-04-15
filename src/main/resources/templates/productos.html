@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" ​>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/controlUsuarios.css}" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/src/main/resources/static/images/CEMA-logo-definitivo.svg">
+       <title>Usuarios</title>
+</head>
+
+<body>
+    <div class="menu">
+        <div class="titulo">
+            <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+
+
+        </div>
+        <div>
+            <p>CONTROL DE PRODUCTOS</p>
+        </div>
+    </div>
+    <table>
+
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre producto</th>
+                <th>Precio</th>
+                <th>Talla</th>
+                <th>Imagen</th>
+                <th>Color</th>
+                <th>Estado</th>
+                <th>Marca</th>
+                <th>Sexo</th>
+               
+
+            </tr>
+        </thead>
+        <tbody th:each="pro : ${productos}" th:object="${pro}">
+            <tr>
+                <td>
+                    <p th:text="*{id}"></p>
+                </td>
+                <td>
+                    <p th:text="*{nombre_producto}"></p>
+                </td>
+            
+                <td>
+                    <p th:text="*{precio}"></p>
+                </td>
+
+                <td>
+                    <p th:text="*{talla}"></p>
+                </td>
+
+                <td>
+                    <a th:href="*{imagenes}" target="_blank">
+                        Click Aquí
+                    </a>
+                </td>
+
+                <td>
+                    <p th:text="*{color}"></p>
+                </td>
+
+                <td>
+                    <p th:text="*{estado}"></p>
+                </td>
+
+                <td>
+                    <p th:text="*{marca}"></p>
+                </td>
+
+                <td>
+                    <p th:text="*{sexo}"></p>
+                </td>
+            
+            
+            </tr>
+        </tbody>
+
+
+    </table>
+
+</body>
+
+</html>

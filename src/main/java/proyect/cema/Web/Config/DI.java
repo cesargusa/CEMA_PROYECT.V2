@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import proyect.cema.Services.UsuarioServices;
+import proyect.cema.Services.Models.ProductServices;
 
 @Configuration
 public class DI {
@@ -15,5 +16,10 @@ public class DI {
     @Bean
     UsuarioServices createUsuario(){
         return new UsuarioServices();
+    }
+
+    @Bean
+    ProductServices createProduct(){
+        return new ProductServices();
     }
 }

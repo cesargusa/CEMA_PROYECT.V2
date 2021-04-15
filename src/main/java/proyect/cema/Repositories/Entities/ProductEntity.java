@@ -14,18 +14,20 @@ public class ProductEntity {
     
     private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
     private String nombre_producto;
-    private int precio;
+    private Long precio;
     private String talla;
     private String imagenes;
     private String color;
     private String estado;
     private String marca;
+    private String sexo;
     
     
     public ProductEntity() { }
 
-    public ProductEntity(String nombre_producto, int precio, String talla, String imagenes, String color, String estado,
-            String marca) {
+  
+    public ProductEntity(String nombre_producto, Long precio, String talla, String imagenes, String color,
+            String estado, String marca, String sexo) {
         this.nombre_producto = nombre_producto;
         this.precio = precio;
         this.talla = talla;
@@ -33,7 +35,9 @@ public class ProductEntity {
         this.color = color;
         this.estado = estado;
         this.marca = marca;
+        this.sexo = sexo;
     }
+
 
     public Long getId() {
         return id;
@@ -55,12 +59,12 @@ public class ProductEntity {
     }
 
 
-    public int getPrecio() {
+    public Long getPrecio() {
         return precio;
     }
 
 
-    public void setPrecio(int precio) {
+    public void setPrecio(Long precio) {
         this.precio = precio;
     }
 
@@ -114,4 +118,19 @@ public class ProductEntity {
         this.marca = marca;
     }
 
+
+    public String getSexo() {
+        return sexo;
+    }
+
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+  
+
+
+
+  
 }

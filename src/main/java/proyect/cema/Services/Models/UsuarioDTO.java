@@ -4,6 +4,7 @@ public class UsuarioDTO {
     private Long id;
     private String email;
     private String contrasena;
+    private String usuario;
     private String nombre;
     private String apellido;
     private String imagen;
@@ -11,13 +12,16 @@ public class UsuarioDTO {
     private String ciudad;
     private String pais;
     private String descripcion;
+    private String sexo;
+    private boolean modelo;
 
     public UsuarioDTO() {
     }
-    public UsuarioDTO(String email, String contrasena, String nombre, String apellido, String imagen,String telefono, String ciudad,
-            String pais, String descripcion) {
+    public UsuarioDTO(String email, String contrasena, String usuario,String nombre, String apellido, String imagen,String telefono, String ciudad,
+            String pais, String descripcion,String sexo,boolean modelo) {
         this.email = email;
         this.contrasena = contrasena;
+        this.usuario=usuario;
         this.nombre = nombre;
         this.apellido = apellido;
         this.imagen=imagen;
@@ -25,6 +29,8 @@ public class UsuarioDTO {
         this.ciudad = ciudad;
         this.pais = pais;
         this.descripcion = descripcion;
+        this.sexo=sexo;
+        this.modelo=modelo;
     }
 
     public Long getId() {
@@ -106,4 +112,23 @@ public class UsuarioDTO {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
+    public String getUsuario() {
+        return usuario;
+    }
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+    public String getSexo() {
+        return sexo;
+    }
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+    public boolean isModelo() {
+        return modelo;
+    }
+    public void setModelo(boolean modelo) {
+        this.modelo = modelo;
+    }
+    
 }

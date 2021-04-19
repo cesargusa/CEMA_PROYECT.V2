@@ -18,10 +18,10 @@ public class ProductViewController {
         this.productController=productController;
     }
 
-    @GetMapping("/productos")
+    @GetMapping("/productosControl")
     public ModelAndView GetAllProducts(){
         List<ProductDTO> allProducts = productController.GetAll();
-        ModelAndView mv = new ModelAndView("productos");
+        ModelAndView mv = new ModelAndView("productosControl");
         mv.addObject("productos", allProducts);
         return mv;
     }

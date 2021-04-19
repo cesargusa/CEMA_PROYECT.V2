@@ -13,15 +13,31 @@ import proyect.cema.Web.API.UsuarioController;
 public class UsuariosViewController {
     private final UsuarioController usuarioController;
 
-    UsuariosViewController(UsuarioController usuarioController){
-        this.usuarioController=usuarioController;
+    UsuariosViewController(UsuarioController usuarioController) {
+        this.usuarioController = usuarioController;
     }
 
+    @GetMapping("/usuariosControl")
+    public ModelAndView GetAllUsuariosControl() {
+        List<UsuarioDTO> allUsuarios = usuarioController.GetAll();
+        ModelAndView mv = new ModelAndView("usuariosControl");
+        mv.addObject("usuarios", allUsuarios);
+        return mv;
+    }
+
+    
     @GetMapping("/usuarios")
-    public ModelAndView GetAllUsuarios(){
+    public ModelAndView GetAllUsuarios() {
         List<UsuarioDTO> allUsuarios = usuarioController.GetAll();
         ModelAndView mv = new ModelAndView("usuarios");
         mv.addObject("usuarios", allUsuarios);
         return mv;
     }
+
+    /* @GetMapping("/ususarios")
+    public ModelAndView GetAllUsuarios(){
+        List<UsuarioDTO> allUsuarios = usuarioController.GetAll();
+        ModelAndView mv = new ModelAndView("usuarios");
+        mv.addObject("usuarios", attributeValue)
+    } */
 }

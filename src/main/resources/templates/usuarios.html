@@ -11,6 +11,16 @@
 </head>
 
 <body>
+
+    <div class="menu">
+        <div class="logo">
+            <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+        </div>
+        <div class="input">
+            <input type="search" class="entrada" placeholder="Haga su busqueda..." autofocus required>
+            <input class="buscar" type="submit" value="Buscar"> 
+        </div>
+    </div>
     <div class="contenedor">
 
         <div th:each="usu : ${usuarios}" th:object="${usu}">

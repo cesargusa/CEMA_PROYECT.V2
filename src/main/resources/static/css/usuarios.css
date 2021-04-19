@@ -29,3 +29,30 @@
     color:#252850;
     font-family: 'Montserrat Titulo';
 }
+.entrada{
+    font-family: 'Montserrat Regular';
+    margin: 8px 0 8px 0;
+    padding: 6px;
+    font-size: 1em;
+    border: 1px solid black;
+    width: 260px;
+}
+.buscar {
+    font-family: 'Montserrat Regular';
+    margin: 8px 0 8px 0;
+    padding: 9px;
+    font-size: 1em;
+    background-color: #252850;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    
+}
+
+.menu{
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}

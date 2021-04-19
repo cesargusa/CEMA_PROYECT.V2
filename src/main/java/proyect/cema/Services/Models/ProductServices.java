@@ -54,7 +54,31 @@ public class ProductServices {
 
     public List<ProductDTO> getById(Long id){
         return productRepository.findById(id).stream()
-        .map(x -> modelMapper.map(x,ProductDTO.class)).collect(Collectors.toList());WS
+        .map(x -> modelMapper.map(x,ProductDTO.class)).collect(Collectors.toList());
+    }
+
+    public List<ProductDTO> getByName(String nombre_producto){
+        return productRepository.findByName(nombre_producto).stream()
+        .map(x -> modelMapper.map(x, ProductDTO.class))
+        .collect(Collectors.toList());
+    }
+
+    public List<ProductDTO> getByPrice(Long precio ){
+        return productRepository.findByPrice(precio).stream()
+        .map(x -> modelMapper.map(x, ProductDTO.class))
+        .collect(Collectors.toList());
+    }
+
+    public List<ProductDTO> getByTalla(String talla ){
+        return productRepository.findByTalla(talla).stream()
+        .map(x -> modelMapper.map(x, ProductDTO.class))
+        .collect(Collectors.toList());
+    }
+
+    public List<ProductDTO> getByMarca(String marca ){
+        return productRepository.findByMarca(marca).stream()
+        .map(x -> modelMapper.map(x, ProductDTO.class))
+        .collect(Collectors.toList());
     }
 
 }

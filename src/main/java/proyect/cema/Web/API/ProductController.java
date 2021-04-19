@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import proyect.cema.Services.Models.ProductDTO;
-import proyect.cema.Services.Models.ProductServices;
+import proyect.cema.Services.ProductServices;
 
 
 @RestController
@@ -44,6 +44,10 @@ public class ProductController {
     public List<ProductDTO> GetById(@PathVariable("id") Long id){
         return productServices.getById(id);
     }
-
+    
+    @GetMapping("/nombre")
+    public List<ProductDTO> GetByName(@PathVariable("nombre_producto")String nombre_producto){
+        return productServices.findByName(nombre_producto);
+    }
 
 }

@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import proyect.cema.Services.UsuarioServices;
-import proyect.cema.Services.Models.ProductServices;
+import proyect.cema.Services.ProductServices;
 
 @Configuration
 public class DI {

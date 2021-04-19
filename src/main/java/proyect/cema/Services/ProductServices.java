@@ -1,4 +1,4 @@
-package proyect.cema.Services.Models;
+package proyect.cema.Services;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +13,7 @@ import proyect.cema.Repositories.Entities.ProductEntity;
 import proyect.cema.Repositories.Entities.UsuarioEntity;
 import proyect.cema.Repositories.Interfaces.ProductRepository;
 import proyect.cema.Repositories.Interfaces.UsuarioRepository;
+import proyect.cema.Services.Models.ProductDTO;
 import proyect.cema.Services.Models.UsuarioDTO;
 
 public class ProductServices {
@@ -56,14 +57,14 @@ public class ProductServices {
         return productRepository.findById(id).stream()
         .map(x -> modelMapper.map(x,ProductDTO.class)).collect(Collectors.toList());
     }
-/* 
+
     public List<ProductDTO> getByName(String nombre_producto){
         return productRepository.findByName(nombre_producto).stream()
         .map(x -> modelMapper.map(x, ProductDTO.class))
         .collect(Collectors.toList());
     }
- */
- /*    public List<ProductDTO> getByPrice(Long precio ){
+ 
+/*     public List<ProductDTO> getByPrice(Long precio ){
         return productRepository.findByPrice(precio).stream()
         .map(x -> modelMapper.map(x, ProductDTO.class))
         .collect(Collectors.toList());
@@ -79,6 +80,6 @@ public class ProductServices {
         return productRepository.findByMarca(marca).stream()
         .map(x -> modelMapper.map(x, ProductDTO.class))
         .collect(Collectors.toList());
-    }  */
+    }   */ 
 
 }

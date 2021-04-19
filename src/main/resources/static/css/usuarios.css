@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('../font/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'Montserrat Titulo';
+    src: url('../font/Montserrat-Bold.ttf');
+}
+*{
+    margin:0;
+    padding: 0;
+}
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 6px 6px 6px 6px;
+    margin-left: 2em;
+    margin-top: 8em;
+}
+.usuario{
+    padding: 6px 6px 6px 6px;
+    margin-left: 2em;
+}
+
+.usuario p{
+    font-family: 'Montserrat Regular';
+}
+.titulo-modelo{
+    color:#252850;
+    font-family: 'Montserrat Titulo';
+}

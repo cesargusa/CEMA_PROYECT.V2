@@ -5,79 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link th:href="@{/css/controlUsuarios.css}" rel="stylesheet" />
-    <link rel="icon" type="image/svg+xml" href="/src/main/resources/static/images/CEMA-logo-definitivo.svg">
-       <title>Usuarios</title>
+    <link th:href="@{/css/usuarios.css}" rel="stylesheet" />
+
+    <title>Usuarios | Modelos</title>
 </head>
 
 <body>
-    <div class="menu">
-        <div class="titulo">
-            <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+    <div class="contenedor">
 
-
-        </div>
-        <div>
-            <p>CONTROL DE USUARIOS</p>
+        <div th:each="usu : ${usuarios}" th:object="${usu}">
+            <div class="usuario">
+                <div class="usuario-usuario">
+                    <p th:text="*{usuario}"></p>
+                </div>
+                <div class="usuario-imagen">
+                    <img th:src="*{imagen}" height="200px" width="200px" />
+                </div>
+                <div class="usuario-ciudad">
+                    <p th:text="*{ciudad}"></p>
+                </div>
+                <div class="usuario-pais">
+                    <p th:text="*{pais}"></p>
+                </div>
+                <div class="usuario-sexo">
+                    <p th:text="*{sexo}"></p>
+                </div>
+                <span class="titulo-modelo" th:if="*{modelo == true}">Modelo</span>
+            </div>
         </div>
     </div>
-    <table>
-
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Email</th>
-                <th>Contraseña</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Imagen</th>
-                <th>Telefono</th>
-                <th>Ciudad</th>
-                <th>Pais</th>
-                <th>Descripcion</th>
-
-            </tr>
-        </thead>
-        <tbody th:each="usu : ${usuarios}" th:object="${usu}">
-            <tr>
-                <td>
-                    <p th:text="*{id}"></p>
-                </td>
-                <td>
-                    <p th:text="*{email}"></p>
-                </td>
-                <td>
-                    <p th:text="*{contrasena}"></p>
-                </td>
-                <td>
-                    <p th:text="*{nombre}"></p>
-                </td>
-                <td>
-                    <p th:text="*{apellido}"></p>
-                </td>
-                <td>
-                    <a th:href="*{imagen}" target="_blank">
-                        Click Aquí
-                    </a>
-                </td>
-                <td>
-                    <p th:text="*{telefono}"></p>
-                </td>
-                <td>
-                    <p th:text="*{ciudad}"></p>
-                </td>
-                <td>
-                    <p th:text="*{pais}"></p>
-                </td>
-                <td>
-                    <p th:text="*{descripcion}"></p>
-                </td>
-            </tr>
-        </tbody>
-
-
-    </table>
-
 </body>
 
 </html>

@@ -2,12 +2,15 @@ package proyect.cema.Web.API;
 
 import java.util.List;
 
+import javax.websocket.server.PathParam;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import proyect.cema.Services.Models.ProductDTO;
@@ -25,10 +28,7 @@ public class ProductController {
         this.productServices=productServices;
     }
 
-    @GetMapping()
-    public List<ProductDTO> GetAll(){
-        return productServices.GetAll();
-    }
+
 
     @PostMapping
     public ProductDTO AddProduct(@RequestBody ProductDTO product){
@@ -45,9 +45,16 @@ public class ProductController {
         return productServices.getById(id);
     }
     
-/*     @GetMapping("/nombre")
-    public List<ProductDTO> GetByName(@PathVariable("nombre_producto")String nombre_producto){
-        return productServices.findByName(nombre_producto);
-    } */
+     @GetMapping()
+    public List<ProductDTO> GetByName(@RequestParam(name = "nombre_producto",required = false, defaultValue  = "")String nombre_producto){
+        if(nombre_producto.equals("")){
+            return productServices.GetAll();
+        }else{
+            return productServices.getByName(nombre_producto);
+
+        }
+
+
+    } 
 
 }

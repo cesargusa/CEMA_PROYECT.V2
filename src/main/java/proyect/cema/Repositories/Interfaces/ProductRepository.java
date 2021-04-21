@@ -15,12 +15,12 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
     @Query(value = "SELECT p " + "FROM Productos p " + "WHERE id = :id ")
     Optional<ProductEntity> findById(
         @Param("id") Long id);
-
+/* 
 
     @Query(value = "SELECT p " + "FROM Productos p" + "WHERE nombre_producto = :nombre_producto")
     Optional<ProductEntity> findByName(
         @Param("nombre_producto") String nombre_producto);
-
+ */
 
  /*     @Query(value = "SELECT p " + "FROM Productos p" + "WHERE precio = :precio")
         Collection<ProductEntity> findByPrice(

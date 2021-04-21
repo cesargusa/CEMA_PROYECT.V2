@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Montserrat Regular';
-    src: url('../font/Montserrat-Regular.ttf');
+    font-family: 'Poppins Regular';
+    src: url('../font/Poppins/Poppins-Regular.ttf');
 }
 @font-face {
-    font-family: 'Montserrat Titulo';
-    src: url('../font/Montserrat-Bold.ttf');
+    font-family: 'Poppins Titulo';
+    src: url('../font/Poppins/Poppins-Bold.ttf');
 }
 *{
     margin:0;
@@ -23,14 +23,14 @@
 }
 
 .usuario p{
-    font-family: 'Montserrat Regular';
+    font-family: 'Poppins Regular';
 }
 .titulo-modelo{
     color:#252850;
-    font-family: 'Montserrat Titulo';
+    font-family: 'Poppins Titulo';
 }
 .entrada{
-    font-family: 'Montserrat Regular';
+    font-family: 'Poppins Regular';
     margin: 2% 0 2% 0;
     padding: 1%;
     font-size: 1em;
@@ -39,7 +39,7 @@
     height: 20%;
 }
 .buscar {
-    font-family: 'Montserrat Regular';
+    font-family: 'Poppins Regular';
     margin: 8px 0 8px 0;
     padding: 9px;
     font-size: 1em;
@@ -58,7 +58,7 @@
     height: auto;
 }
 .iniciar-sesion{
-    font-family: 'Montserrat Regular';
+    font-family: 'Poppins Regular';
     margin: 8px 0 8px 0;
     padding: 9px;
     font-size: 1em;
@@ -71,7 +71,7 @@
 
 }
 .iniciar-sesion:hover{
-    font-family: 'Montserrat Regular';
+    font-family: 'Poppins Regular';
     margin: 8px 0 8px 0;
     padding: 9px;
     font-size: 1em;

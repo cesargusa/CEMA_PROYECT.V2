@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Montserrat Regular';
-    src: url('../font/Montserrat-Regular.ttf');
+    font-family: 'Poppins Regular';
+    src: url('../font/Poppins/Poppins-Regular.ttf');
 }
 @font-face {
-    font-family: 'Montserrat Titulo';
-    src: url('../font/Montserrat-Bold.ttf');
+    font-family: 'Poppins Titulo';
+    src: url('../font/Poppins/Poppins-Bold.ttf');
 }
 *{
     margin: 0;
@@ -24,19 +24,19 @@
     font-size: 2em;
     color: #20315B;
 
-    font-family: Montserrat Titulo;
+    font-family: Poppins Titulo;
 }
 thead th{
     border: 2px solid gray;
     text-align: center;
-    font-family: Montserrat Titulo;
+    font-family: Poppins Titulo;
     background-color: #20315B;
     color: white;
 }
 tbody td{
     border: 1px solid gray;
     padding: 0.3em;
-    font-family: Montserrat Regular;
+    font-family: Poppins Regular;
 }
 table{
     width: 100%;

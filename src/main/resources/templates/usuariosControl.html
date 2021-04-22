@@ -28,6 +28,7 @@
                 <th>Id</th>
                 <th>Email</th>
                 <th>Contraseña</th>
+                <th>Usuario</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Imagen</th>
@@ -35,6 +36,7 @@
                 <th>Ciudad</th>
                 <th>Pais</th>
                 <th>Descripcion</th>
+                <th>Modelo</th>
 
             </tr>
         </thead>
@@ -48,6 +50,9 @@
                 </td>
                 <td>
                     <p th:text="*{contrasena}"></p>
+                </td>
+                <td>
+                    <p th:text="*{usuario}"></p>
                 </td>
                 <td>
                     <p th:text="*{nombre}"></p>
@@ -71,6 +76,9 @@
                 </td>
                 <td>
                     <p th:text="*{descripcion}"></p>
+                </td>
+                <td>
+                    <p th:text="*{modelo}"></p>
                 </td>
             </tr>
         </tbody>

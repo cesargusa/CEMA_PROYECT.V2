@@ -44,54 +44,60 @@ public class ProductController {
     @GetMapping()
     public List<ProductDTO> GetByName(
             @RequestParam(name = "nombre_producto", required = false, defaultValue = "") String nombre_producto,
-            @RequestParam(name = "precio", required = false, defaultValue = "0") Long precio,
+            
+           /*    @RequestParam(name = "precio", required = false, defaultValue = "0") double
+              precio, */
+             
             @RequestParam(name = "talla", required = false, defaultValue = "") String talla,
             @RequestParam(name = "marca", required = false, defaultValue = "") String marca) {
-        if (nombre_producto.equals("") && precio == 0 && talla.equals("") && marca.equals("")) {
+        // MUESTRA TODO SI NO HAY FILTROS
+        if (marca.equals("") && nombre_producto.equals("") && talla.equals("")) {
             return productServices.GetAll();
         }
 
-        if (!nombre_producto.equals("") && precio == 0 && talla.equals("") && marca.equals("")) {
-            return productServices.getByName(nombre_producto,precio,talla,marca);
-
+        //NOMBRE
+        if (marca.equals("") && !nombre_producto.equals("") && talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
         }
-        if (nombre_producto.equals("") && precio != 0 && talla.equals("") && marca.equals("")) {
-            return productServices.getByName(nombre_producto,precio,talla,marca);
-
+        if (!marca.equals("") && !nombre_producto.equals("") && talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
+        }
+        if (marca.equals("") && !nombre_producto.equals("") && !talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
+        }
+        //MARCA
+        if (!marca.equals("") && nombre_producto.equals("") && talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
+        }
+        if (!marca.equals("") && !nombre_producto.equals("") && talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
         }
 
-
-
-       /*  if (!nombre_producto.equals("") && precio == 0) {
-            return productServices.getByName(nombre_producto);
-
+        if (!marca.equals("") && nombre_producto.equals("") && !talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
         }
-        if (nombre_producto.equals("") && precio != 0) {
-            return productServices.getByPrice(precio);
-
+        //TALLAS
+        if (marca.equals("") && nombre_producto.equals("") && !talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
         }
-        if (!nombre_producto.equals("") && precio != 0) {
-            return productServices.getByPrice(precio);
+        if (!marca.equals("") && nombre_producto.equals("") && !talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
+        }
+        if (marca.equals("") && !nombre_producto.equals("") && !talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
+        }
 
+        // MUESTRA TODO
+        if (!marca.equals("") && !nombre_producto.equals("") && !talla.equals("")) {
+            return productServices.getByName(nombre_producto, marca, talla);
+        }
+       /*  if(precio !=0 && marca.equals("") && nombre_producto.equals("") && talla.equals("")){
+            productServices.getPrecio(precio);
         }
          */
         return null;
 
+ 
     }
-
-
-   /*  @GetMapping()
-    public List<ProductDTO> GetByPrice(
-            @RequestParam(name = "precio", required = false, defaultValue = "0") Long precio) {
-        if (precio == 0) {
-            return productServices.GetAll();
-        }
-        if (precio != 0) {
-            return productServices.getByPrice(precio);
-
-        }
-        return null;
-
-    } */
 
 }

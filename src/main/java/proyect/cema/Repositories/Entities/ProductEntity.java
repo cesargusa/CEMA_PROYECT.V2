@@ -14,7 +14,7 @@ public class ProductEntity {
     
     private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
     private String nombre_producto;
-    private Long precio;
+    private double precio;
     private String talla;
     private String imagenes;
     private String color;
@@ -26,7 +26,7 @@ public class ProductEntity {
     public ProductEntity() { }
 
   
-    public ProductEntity(String nombre_producto, Long precio, String talla, String imagenes, String color,
+    public ProductEntity(String nombre_producto, double precio, String talla, String imagenes, String color,
             String estado, String marca, String sexo) {
         this.nombre_producto = nombre_producto;
         this.precio = precio;
@@ -59,12 +59,14 @@ public class ProductEntity {
     }
 
 
-    public Long getPrecio() {
+  
+
+    public double getPrecio() {
         return precio;
     }
 
 
-    public void setPrecio(Long precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 

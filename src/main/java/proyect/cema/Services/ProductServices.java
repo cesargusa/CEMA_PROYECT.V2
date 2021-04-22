@@ -58,12 +58,17 @@ public class ProductServices {
         .map(x -> modelMapper.map(x,ProductDTO.class)).collect(Collectors.toList());
     }
 
-    public List<ProductDTO> getByName(String nombre_producto, Long precio, String talla, String marca){
-        return productRepository.findByName(nombre_producto,precio,talla,marca).stream()
+    public List<ProductDTO> getByName(String nombre_producto, String marca, String talla){
+        return productRepository.findByName(nombre_producto,marca,talla).stream()
         .map(x -> modelMapper.map(x, ProductDTO.class))
         .collect(Collectors.toList());
     }
- 
+/*     public List<ProductDTO> getPrecio(double precio){
+        return productRepository.findByPrecio(precio).stream()
+        .map(x -> modelMapper.map(x, ProductDTO.class))
+        .collect(Collectors.toList());
+    }
+  */
   /*    public List<ProductDTO> getByPrice(Long precio ){
         return productRepository.findByPrice(precio).stream()
         .map(x -> modelMapper.map(x, ProductDTO.class))

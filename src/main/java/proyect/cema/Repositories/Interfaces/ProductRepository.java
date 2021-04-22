@@ -17,22 +17,18 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
         @Param("id") Long id);
 
 
-    @Query(value = "SELECT p " + "FROM Productos p " + "WHERE nombre_producto LIKE %:nombre_producto%")
+    @Query(value = "SELECT p " + "FROM Productos p " + " WHERE nombre_producto LIKE %:nombre_producto% OR precio = :precio OR talla = :talla OR marca = :marca")
     Collection<ProductEntity> findByName(
-        @Param("nombre_producto") String nombre_producto);
- 
+        @Param("nombre_producto") String nombre_producto, @Param("precio") Long precio,@Param("talla") String talla, @Param("marca") String marca);
+        
 
- /*     @Query(value = "SELECT p " + "FROM Productos p" + "WHERE precio = :precio")
-        Collection<ProductEntity> findByPrice(
-            @Param("precio") Long precio);
+   
     
+/* 
+    @Query(value = "SELECT p " + "FROM Productos p " + "WHERE talla = :talla")
+            
 
-    @Query(value = "SELECT p " + "FROM Productos p" + "WHERE talla = :talla")
-            Collection<ProductEntity> findByTalla(
-                @Param("talla") String talla);
 
-
-    @Query(value = "SELECT p " + "FROM Productos p" + "WHERE marca = :marca")
-             Collection<ProductEntity> findByMarca(
-                    @Param("marca") String marca); */
+    @Query(value = "SELECT p " + "FROM Productos p " + "WHERE marca = :marca")
+              */
 }

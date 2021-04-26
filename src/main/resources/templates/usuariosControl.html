@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" ​>
 
 <head>
+    <header th:insert="~{fragments/changelang.html :: header}"></header>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,9 @@
 </head>
 
 <body>
+     
+    <div th:replace="~{fragments/changelang.html :: body}"></div>
+
     <div class="menu">
         <div class="titulo">
             <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
@@ -18,25 +22,24 @@
 
         </div>
         <div>
-            <p>CONTROL DE USUARIOS</p>
-        </div>
+            <p th:text="#{control_usuarios}" style="text-transform: uppercase;"></p>        </div>
     </div>
     <table>
 
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Email</th>
-                <th>Contraseña</th>
-                <th>Usuario</th>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Imagen</th>
-                <th>Telefono</th>
-                <th>Ciudad</th>
-                <th>Pais</th>
-                <th>Descripcion</th>
-                <th>Modelo</th>
+                <th >Id</th>
+                <th th:text="#{Email}">Email</th>
+                <th th:text="#{Contrasena}">Contraseña</th>
+                <th th:text="#{Usuario}">Usuario</th>
+                <th th:text="#{Nombre}">Nombre</th>
+                <th th:text="#{Apellidos}">Apellidos</th>
+                <th th:text="#{Imagen}">Imagen</th>
+                <th th:text="#{Telefono}">Telefono</th>
+                <th th:text="#{Ciudad}">Ciudad</th>
+                <th th:text="#{Pais}">Pais</th>
+                <th th:text="#{Descripcion}">Descripcion</th>
+                <th th:text="#{Modelo}">Modelo</th>
 
             </tr>
         </thead>

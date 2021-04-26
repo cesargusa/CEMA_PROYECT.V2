@@ -1,12 +1,17 @@
 package proyect.cema.Repositories.Interfaces;
 
+
+
 import java.util.Collection;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.expression.spel.support.ReflectivePropertyAccessor.OptimalPropertyAccessor;
+import org.springframework.http.ResponseEntity;
 
+import antlr.collections.List;
 import proyect.cema.Repositories.Entities.ProductEntity;
 
 public interface ProductRepository extends JpaRepository<ProductEntity,Long>{

@@ -5,6 +5,9 @@ import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -56,6 +59,7 @@ public class ProductServices {
     public List<ProductDTO> getById(Long id){
         return productRepository.findById(id).stream()
         .map(x -> modelMapper.map(x,ProductDTO.class)).collect(Collectors.toList());
+        
     }
 
     public List<ProductDTO> getByName(String nombre_producto, String marca, String talla){

@@ -91,7 +91,14 @@
 
 
     </table>
+    <a th:href="@{~/productosControl}">
+    <button  type="button" class="btn btn-danger" th:text="#{borrar_filtros}" onclick="borrar_filtros()"></button>
+    </a>
 
 </body>
-
+<!--     <script>
+        function borrar_filtros(){
+            window.location.href="@{~/productosControl}";
+        }
+    </script> -->
 </html>

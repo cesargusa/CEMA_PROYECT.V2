@@ -42,6 +42,13 @@ public class UsuariosViewController {
         return mv;
     }
 
+    @GetMapping("/usuarios/{id}")
+    public ModelAndView GetUsuariosId(@PathVariable("id") Long id) {
+        List<UsuarioDTO> allUsuarios = usuarioController.GetById(id);
+        ModelAndView mv = new ModelAndView("usuarios");
+        mv.addObject("usuarios", allUsuarios);
+        return mv;
+    }
     /* @GetMapping("/ususarios")
     public ModelAndView GetAllUsuarios(){
         List<UsuarioDTO> allUsuarios = usuarioController.GetAll();

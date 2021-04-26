@@ -19,9 +19,10 @@ public class UsuarioEntity {
     private String contrasena;
     @Column(name = "Usuario", nullable = false,length = 20)
     private String usuario;
-    @Column(name ="Nombre", nullable = false, length = 50)
+    @Column(name ="Nombre", unique = true,nullable = false, length = 50)
     private String nombre;
     private String apellido;
+    @Column(name = "Imagen", nullable = true, length = 400)
     private String imagen;
     private String telefono;
     private String ciudad;

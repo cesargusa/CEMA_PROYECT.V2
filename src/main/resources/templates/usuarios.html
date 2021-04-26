@@ -21,7 +21,8 @@
             <input class="buscar" type="submit" value="Buscar">
         </div>
         <div class="inicio">
-            <button class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión | Registrarse</button>
+            <button class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión |
+                Registrarse</button>
         </div>
     </div>
 
@@ -31,7 +32,9 @@
         <div th:each="usu : ${usuarios}" th:object="${usu}">
             <div class="usuario">
                 <div class="usuario-usuario">
-                    <p th:text="*{usuario}"></p>
+                    <a th:href="@{/usuarios/}+ ${usu.id}">
+                        <p th:text="*{usuario}"></p>
+                 </a>
                 </div>
                 <div class="usuario-imagen">
                     <img th:src="*{imagen}" height="200px" width="200px" />
@@ -50,5 +53,8 @@
         </div>
     </div>
 </body>
+<script>
+
+</script>
 
 </html>

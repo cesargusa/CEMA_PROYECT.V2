@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import proyect.cema.Services.Models.ProductDTO;
@@ -18,11 +20,20 @@ public class ProductViewController {
         this.productController=productController;
     }
 
- /*    @GetMapping("/productosControl")
-    public ModelAndView GetAllProducts(){
-        List<ProductDTO> allProducts = productController.GetAll();
+    @GetMapping("/productosControl")
+    public ModelAndView GetAllProducts(@RequestParam(name = "nombre_producto", required = false, defaultValue = "") String nombre_producto,
+     @RequestParam(name = "talla", required = false, defaultValue = "") String talla,
+     @RequestParam(name = "marca", required = false, defaultValue = "") String marca){
+        List<ProductDTO> allProducts = productController.GetByName(nombre_producto,talla,marca);
         ModelAndView mv = new ModelAndView("productosControl");
         mv.addObject("productos", allProducts);
         return mv;
-    } */
+    } 
+    @GetMapping("/productosControl/{id}")
+    public ModelAndView GetAProductsId(@PathVariable("id") Long id){
+        List<ProductDTO> allProducts = productController.GetById(id);
+        ModelAndView mv = new ModelAndView("productosControl");
+        mv.addObject("productos", allProducts);
+        return mv;
+    } 
 }

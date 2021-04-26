@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javassist.bytecode.stackmap.BasicBlock.Catch;
 import proyect.cema.Services.Models.ProductDTO;
 import proyect.cema.Services.ProductServices;
 
@@ -38,6 +39,17 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public List<ProductDTO> GetById(@PathVariable("id") Long id) {
+
+        try{
+            if(productServices.getById(id)==null){
+                throw new IllegalArgumentException("No se puede dividir por cero");
+            }else{
+                 return productServices.getById(id);
+            }
+           
+        }catch(Exception error){
+            
+        }
         return productServices.getById(id);
     }
 

@@ -12,43 +12,51 @@
 
 <body>
 
-    <div class="menu">
+    <class class="menu">
         <div class="logo">
-            <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+            <a th:href="@{/}">
+                <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+            </a>
         </div>
         <div class="cuadros-texto">
-            <input type="search" class="entrada" placeholder="Haga su busqueda..." autofocus required>
-            <input class="buscar" type="submit" value="Buscar">
+            <form action="" method="GET" target="_blank">
+                <input type="search" class="entrada" placeholder="Haga su busqueda..." autofocus required>
+                <input class="buscar" type="submit" value="Buscar">
+            </form>
         </div>
         <div class="inicio">
             <button class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión |
                 Registrarse</button>
         </div>
-    </div>
+    
+    </class>
 
+    <div class="color">
+        <div class="contenedor">
 
-    <div class="contenedor">
-
-        <div th:each="usu : ${usuarios}" th:object="${usu}">
-            <div class="usuario">
-                <div class="usuario-usuario">
-                    <a th:href="@{/usuarios/}+ ${usu.id}">
-                        <p th:text="*{usuario}"></p>
-                 </a>
-                </div>
-                <div class="usuario-imagen">
-                    <img th:src="*{imagen}" height="200px" width="200px" />
-                </div>
-                <div class="usuario-ciudad">
-                    <p th:text="*{ciudad}"></p>
-                </div>
-                <div class="usuario-pais">
+            <div th:each="usu : ${usuarios}" th:object="${usu}">
+                <div class="usuario">
+                    <div class="usuario-usuario">
+                        <a th:href="@{/usuarios/}+ ${usu.id}">
+                            <p th:text="*{usuario}"></p>
+                        </a>
+                    </div>
+                    <div class="usuario-imagen">
+                        <a th:href="@{/usuarios/}+ ${usu.id}">
+                            <img th:src="*{imagen}" height="200px" width="200px" />
+                        </a>
+                    </div>
+                    <div class="usuario-ciudad-pais">
+                        <p th:text="*{ciudad} + ', ' + *{pais}"></p>
+                    </div>
+                    <!--     <div class="usuario-pais">
                     <p th:text="*{pais}"></p>
+                </div> -->
+                    <div class="usuario-sexo">
+                        <p th:text="*{sexo}"></p>
+                    </div>
+                    <span class="titulo-modelo" th:if="*{modelo == true}">Modelo</span>
                 </div>
-                <div class="usuario-sexo">
-                    <p th:text="*{sexo}"></p>
-                </div>
-                <span class="titulo-modelo" th:if="*{modelo == true}">Modelo</span>
             </div>
         </div>
     </div>

@@ -42,10 +42,17 @@ public class UsuariosViewController {
         return mv;
     }
 
-    @GetMapping("/usuarios/{id}")
+    /* @GetMapping("/usuarios/{id}")
     public ModelAndView GetUsuariosId(@PathVariable("id") Long id) {
         List<UsuarioDTO> allUsuarios = usuarioController.GetById(id);
         ModelAndView mv = new ModelAndView("usuarios");
+        mv.addObject("usuarios", allUsuarios);
+        return mv;
+    } */
+    @GetMapping("/usuarios/{id}")
+    public ModelAndView GetUsuariosIdMostrar(@PathVariable("id") Long id) {
+        List<UsuarioDTO> allUsuarios = usuarioController.GetById(id);
+        ModelAndView mv = new ModelAndView("usuariosID");
         mv.addObject("usuarios", allUsuarios);
         return mv;
     }

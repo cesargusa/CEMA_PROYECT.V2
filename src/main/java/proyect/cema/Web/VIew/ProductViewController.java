@@ -40,4 +40,13 @@ public class ProductViewController {
         mv.addObject("productos", allProducts);
         return mv;
     } 
+    @GetMapping("/")
+    public ModelAndView Index(@RequestParam(name = "nombre_producto", required = false, defaultValue = "") String nombre_producto,
+     @RequestParam(name = "talla", required = false, defaultValue = "") String talla,
+     @RequestParam(name = "marca", required = false, defaultValue = "") String marca){
+        List<ProductDTO> allProducts = productController.GetByName(nombre_producto,talla,marca);
+        ModelAndView mv = new ModelAndView("index");
+        mv.addObject("productos", allProducts);
+        return mv;
+    } 
 }

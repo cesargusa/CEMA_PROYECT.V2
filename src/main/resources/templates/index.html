@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" ​>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/index.css}" rel="stylesheet" />
+
+    <title>CEMA´S Clothes | Vende tu ropa </title>
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="logo">
+            <a th:href="@{/}">
+                <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+            </a>
+        </div>
+        <div class="cuadros-texto">
+            <form action="" method="GET" target="_blank">
+                <input type="search" class="entrada" placeholder="Haga su busqueda..." autofocus required>
+                <input class="buscar" type="submit" value="Buscar">
+            </form>
+        </div>
+        <div class="menus-derecha">
+
+            <div class="inicio">
+                <button class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión |
+                    Registrarse</button>
+            </div>
+
+        </div>
+        <div class="anuncio-clase">
+            <button class="anuncio" type="submit" value="Modelos">+ Sube tu Anuncio</button>
+
+        </div>
+    </div>
+
+    <div class="menu-categorias">
+        <div class="categorias-izquierda">
+            <p>MUJER</p>
+            <p>HOMBRES</p>
+            <p>NIÑOS</p>
+            <p>CEMAS´S CLOTHES</p>
+            <a th:href="@{/usuarios/}">
+                <p class="modelo-titulo">MODELOS</p>
+            </a>
+            <div class="categorias-derecha">
+                <p>Ordenar Por: </p>
+
+
+
+            </div>
+            <div class="perfil">
+                <p>Perfil</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- <div class="color">
+    <div class="contenedor">
+
+        <div th:each="usu : ${usuarios}" th:object="${usu}">
+            <div class="usuario">
+                <div class="usuario-usuario">
+                    <a th:href="@{/usuarios/}+ ${usu.id}">
+                        <p th:text="*{usuario}"></p>
+                 </a>
+                </div>
+                <div class="usuario-imagen">
+                    <a th:href="@{/usuarios/}+ ${usu.id}">
+                    <img th:src="*{imagen}" height="200px" width="200px" />
+                    </a>
+                 </div>
+                <div class="usuario-ciudad-pais">
+                    <p th:text="*{ciudad} + ', ' + *{pais}"></p>
+                </div>
+          
+                <div class="usuario-sexo">
+                    <p th:text="*{sexo}"></p>
+                </div>
+                <span class="titulo-modelo" th:if="*{modelo == true}">Modelo</span>
+            </div>
+        </div>
+    </div>
+</div> -->
+</body>
+<script>
+
+</script>
+
+</html>

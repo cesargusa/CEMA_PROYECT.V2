@@ -4,7 +4,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import proyect.cema.Services.Models.UsuarioDTO;
@@ -56,10 +59,23 @@ public class UsuariosViewController {
         mv.addObject("usuarios", allUsuarios);
         return mv;
     }
+
+    @GetMapping("/inicio-sesion")
+    public ModelAndView CrearUsuario() {
+        ModelAndView mv = new ModelAndView("inicio-sesion");
+        mv.addObject("usuarios", new UsuarioDTO());
+        return mv;
+    }
     /* @GetMapping("/ususarios")
     public ModelAndView GetAllUsuarios(){
         List<UsuarioDTO> allUsuarios = usuarioController.GetAll();
         ModelAndView mv = new ModelAndView("usuarios");
         mv.addObject("usuarios", attributeValue)
     } */
+
+    @PostMapping("/crear-usuario")
+    public String Add(@ModelAttribute("usuarios") UsuarioDTO usuario){
+       usuarioController.AddUsuario(usuario);
+        return "redirect:/usuarios";
+    }
 }

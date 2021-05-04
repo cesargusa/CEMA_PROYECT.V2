@@ -194,6 +194,11 @@ justify-content: center;
     color: #e9a220;
     font-size: 20px;
 }
+
+.listado-productos{
+    display: flex;
+    flex-flow: row wrap;
+}
   @media screen and (max-width: 697px) {
 
     .entrada{

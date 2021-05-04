@@ -59,33 +59,13 @@
         </div>
 
     </div>
-    <!-- <div class="color">
-    <div class="contenedor">
-
-        <div th:each="usu : ${usuarios}" th:object="${usu}">
-            <div class="usuario">
-                <div class="usuario-usuario">
-                    <a th:href="@{/usuarios/}+ ${usu.id}">
-                        <p th:text="*{usuario}"></p>
-                 </a>
-                </div>
-                <div class="usuario-imagen">
-                    <a th:href="@{/usuarios/}+ ${usu.id}">
-                    <img th:src="*{imagen}" height="200px" width="200px" />
-                    </a>
-                 </div>
-                <div class="usuario-ciudad-pais">
-                    <p th:text="*{ciudad} + ', ' + *{pais}"></p>
-                </div>
-          
-                <div class="usuario-sexo">
-                    <p th:text="*{sexo}"></p>
-                </div>
-                <span class="titulo-modelo" th:if="*{modelo == true}">Modelo</span>
+    <div class="listado-productos">
+        <div th:each="pro : ${productos}" th:object="${pro}">
+            <div>
+                <img width="290" height="330" th:src="*{imagenes}">
             </div>
         </div>
     </div>
-</div> -->
 </body>
 <script>
 

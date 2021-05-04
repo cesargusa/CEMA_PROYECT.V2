@@ -17,6 +17,12 @@ public class UsuarioDTO {
 
     public UsuarioDTO() {
     }
+    public UsuarioDTO(String email, String contrasena, String usuario, String nombre) {
+        this.email = email;
+        this.contrasena = contrasena;
+        this.usuario = usuario;
+        this.nombre = nombre;
+    }
     public UsuarioDTO(String email, String contrasena, String usuario,String nombre, String apellido, String imagen,String telefono, String ciudad,
             String pais, String descripcion,String sexo,boolean modelo) {
         this.email = email;

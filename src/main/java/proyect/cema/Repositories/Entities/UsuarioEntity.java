@@ -12,17 +12,17 @@ import javax.persistence.Table;
 public class UsuarioEntity {
 
     private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
-    
-    @Column(name ="Email", unique = true, nullable = false,length = 50)
+
+    @Column(nullable = false)
     private String email;
-    @Column(name ="Contraseña", nullable = false, length = 10)
+    @Column(nullable = false)
     private String contrasena;
-    @Column(name = "Usuario", nullable = false,length = 20)
+    @Column(nullable = false)
     private String usuario;
-    @Column(name ="Nombre", unique = true,nullable = false, length = 50)
+    @Column(nullable = false)
     private String nombre;
     private String apellido;
-    @Column(name = "Imagen", nullable = true, length = 400)
+    @Column(nullable = true)
     private String imagen;
     private String telefono;
     private String ciudad;
@@ -31,24 +31,31 @@ public class UsuarioEntity {
     private String sexo;
     private boolean modelo;
 
-    public UsuarioEntity() {
-        
+    public UsuarioEntity(String email, String contrasena, String usuario, String nombre) {
+        this.email = email;
+        this.contrasena = contrasena;
+        this.usuario = usuario;
+        this.nombre = nombre;
     }
 
-    public UsuarioEntity(String email, String contrasena,String usuario ,String nombre, String apellido, String imagen,String telefono, String ciudad,
-            String pais, String descripcion,String sexo,boolean modelo) {
+    public UsuarioEntity() {
+
+    }
+
+    public UsuarioEntity(String email, String contrasena, String usuario, String nombre, String apellido, String imagen,
+            String telefono, String ciudad, String pais, String descripcion, String sexo, boolean modelo) {
         this.email = email;
         this.contrasena = contrasena;
         this.usuario = usuario;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.imagen=imagen;
+        this.imagen = imagen;
         this.telefono = telefono;
         this.ciudad = ciudad;
         this.pais = pais;
         this.descripcion = descripcion;
-        this.sexo=sexo;
-        this.modelo=modelo;
+        this.sexo = sexo;
+        this.modelo = modelo;
     }
 
     public Long getId() {
@@ -66,8 +73,6 @@ public class UsuarioEntity {
     public void setEmail(String email) {
         this.email = email;
     }
-
-
 
     public String getNombre() {
         return nombre;

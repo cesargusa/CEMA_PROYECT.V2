@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/inicio-sesion.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Registrarse | Inicio de Sesion</title>
+</head>
+<body>
+    <div class="menu">
+        <img width="300" height="300" th:src="@{/images/CEMA-logo-definitivo.svg}">
+        
+    </div>
+    <form th:action="@{/crear-usuario}" th:object="${usuarios}" method="POST">
+        <label>Email *</label>
+        <input type="email" th:field="*{email}" required>
+
+        <label>Contraseña *</label>
+        <input type="password"  th:field="*{contrasena}" required minlength="8" maxlength="20">
+
+        <label>Usuario *</label>
+        <input type="text"  th:field="*{usuario}" required>
+
+        <label>Nombre</label>
+        <input type="text"  th:field="*{nombre}" >
+
+        <label>Apellido</label>
+        <input type="text" th:field="*{apellido}">
+
+        <label>Pais</label>
+        <input type="text" th:field="*{pais}">
+
+        <label>Ciudad</label>
+        <input type="text" th:field="*{ciudad}">
+
+        <label>Telefono</label>
+        <input type="number" th:field="*{telefono}">
+
+        <label>Imagen Perfil</label>
+        <input type="text" th:field="*{imagen}">
+
+<!--         <label>Sexo</label>
+        <input type="text" th:field="*{ciudad}">
+
+        <label>Modelo</label>
+        <input type="week" th:field="*{ciudad}">-->
+        <button type="submit">Enviar</button> 
+
+  
+    </form>
+   
+</body>
+<script>
+
+</script>
+</html>

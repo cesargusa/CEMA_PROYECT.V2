@@ -199,10 +199,16 @@ justify-content: center;
     display: flex;
     flex-flow: row wrap;
     margin-left: 1%;
-    
+    font-family: 'Poppins Regular';
+
 }
 .producto{
     padding: 7%;
+}
+.producto-precio{
+    padding: 7%;
+    font-family: 'Poppins Titulo';
+
 }
   @media screen and (max-width: 697px) {
 

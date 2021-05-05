@@ -198,6 +198,11 @@ justify-content: center;
 .listado-productos{
     display: flex;
     flex-flow: row wrap;
+    margin-left: 1%;
+    
+}
+.producto{
+    padding: 7%;
 }
   @media screen and (max-width: 697px) {
 

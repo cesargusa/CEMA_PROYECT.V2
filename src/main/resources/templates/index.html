@@ -61,9 +61,11 @@
     </div>
     <div class="listado-productos">
         <div th:each="pro : ${productos}" th:object="${pro}">
+            <div class="producto">
             <div>
                 <img width="290" height="330" th:src="*{imagenes}">
             </div>
+        </div>
         </div>
     </div>
 </body>

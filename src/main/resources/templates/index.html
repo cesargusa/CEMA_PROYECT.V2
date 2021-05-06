@@ -27,9 +27,10 @@
         <div class="menus-derecha">
 
             <div class="inicio">
-                <a href="http://localhost:1212/inicio-sesion"><button  class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión |
-                    Registrarse</button>
-                   
+                <a th:href="@{/inicio-sesion}">
+                    <button class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión |
+                        Registrarse</button>
+                </a>
             </div>
 
         </div>
@@ -63,16 +64,16 @@
     <div class="listado-productos">
         <div th:each="pro : ${productos}" th:object="${pro}">
             <div class="producto">
-            <div>
-                <img width="290" height="330" th:src="*{imagenes}">
+                <div>
+                    <img width="290" height="330" th:src="*{imagenes}">
+                </div>
+                <div class="producto-precio">
+                    <p th:text="*{precio } + €"></p>
+                </div>
+                <div>
+                    <p th:text="*{marca}"></p>
+                </div>
             </div>
-            <div class="producto-precio">
-                <p th:text="*{precio } + €"></p>
-            </div>
-            <div>
-                <p th:text="*{marca}"></p>
-            </div>
-        </div>
         </div>
     </div>
 </body>

@@ -110,4 +110,12 @@ public class ProductController {
  
     }
 
+    @GetMapping("/DESC")
+    public List<ProductDTO> GetOrderPriceDESC() {
+        return productServices.orderByPrecioDESC();
+    }
+    @GetMapping("/ASC")
+    public List<ProductDTO> GetOrderPriceASC() {
+        return productServices.orderByPrecioaASC();
+    }
 }

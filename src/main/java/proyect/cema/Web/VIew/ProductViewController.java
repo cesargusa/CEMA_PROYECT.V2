@@ -49,4 +49,19 @@ public class ProductViewController {
         mv.addObject("productos", allProducts);
         return mv;
     } 
+    @GetMapping("/DESC")
+    public ModelAndView Desc(){
+        List<ProductDTO> allProductsOrderByPrecioDESC = productController.GetOrderPriceDESC();
+        ModelAndView mv = new ModelAndView("index");
+        mv.addObject("productos", allProductsOrderByPrecioDESC);
+        return mv;
+    }
+
+    @GetMapping("/ASC")
+    public ModelAndView Asc(){
+        List<ProductDTO> allProductsOrderByPrecioASC = productController.GetOrderPriceASC();
+        ModelAndView mv = new ModelAndView("index");
+        mv.addObject("productos", allProductsOrderByPrecioASC);
+        return mv;
+    }
 }

@@ -9,33 +9,47 @@
 body{
     font-family: Poppins Titulo;
 }
-
-form{
-    width: 50%;
+.registrarse{
+    width: 40%;
    
-    margin: 0 auto;
+    margin: 10px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid #252850;
+ 
     padding: 20px;
+}
+.menu-contenedor{
+    display: flex;
+    flex-flow: wrap row;
+}
+.regis{
+    width: 40%;
+   
+    margin: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    border: 2px solid #252850;
+    padding: 10px;
 }
 
 
-form input {
+.regis input {
     width: 90%;
     height: 30px;
     margin: 0.5rem;
     font-size: 25px;
   }
 
-  form label{
+  .regis label{
       color: black;
       font-family: Poppins Titulo;
   }
 
- form button{
+ .regis button{
       text-decoration:none;
 font-weight: 600;
 font-size: 21px;
@@ -50,9 +64,44 @@ border-width: 3px;
 border-style: solid;
  
   }
+.inicio{
+    width: 40%;
+   
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+.inicio input {
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+    font-size: 25px;
+  }
 
+  .inicio label{
+      color: black;
+      font-family: Poppins Titulo;
+  }
+
+ .inicio button{
+      text-decoration:none;
+font-weight: 600;
+font-size: 21px;
+color:black;
+padding-top:9px;
+padding-bottom:9px;
+padding-left:20px;
+padding-right:20px;
+background-color: #4BB543;
+border-color: black;
+border-width: 3px;
+border-style: solid;
+ 
+  }
   .menu{
       display: flex;
       justify-content: center;
-      margin-top: 2%;
   }

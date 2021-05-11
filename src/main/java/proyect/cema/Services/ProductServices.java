@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import ch.qos.logback.core.joran.conditional.ElseAction;
 import proyect.cema.Repositories.Entities.ProductEntity;
@@ -67,6 +69,16 @@ public class ProductServices {
         .map(x -> modelMapper.map(x, ProductDTO.class))
         .collect(Collectors.toList());
     }
+    public List<ProductDTO> orderByPrecioDESC(){
+        return productRepository.orderPriceDESC().stream()
+        .map(x -> modelMapper.map(x, ProductDTO.class))
+        .collect(Collectors.toList());
+    }
+    public List<ProductDTO> orderByPrecioaASC(){
+        return productRepository.orderPriceASC().stream()
+        .map(x -> modelMapper.map(x, ProductDTO.class))
+        .collect(Collectors.toList());
+    }
 /*     public List<ProductDTO> getPrecio(double precio){
         return productRepository.findByPrecio(precio).stream()
         .map(x -> modelMapper.map(x, ProductDTO.class))
@@ -91,4 +103,5 @@ public class ProductServices {
         .collect(Collectors.toList());
     }   */ 
 
+  
 }

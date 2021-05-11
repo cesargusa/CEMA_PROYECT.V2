@@ -33,24 +33,9 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
         @Param("marca") String marca,
         @Param("talla") String talla);
       
-      /*   @Query(value = "SELECT p " 
-        + "FROM Productos p "
-        + " WHERE precio =:precio")
-        Collection<ProductEntity> findByPrecio(
-        @Param("precio")double precio);
+        @Query(value = "SELECT p "+" FROM Productos p "+ " ORDER BY precio DESC")
+        Collection<ProductEntity> orderPriceDESC();
 
- */
- /*     @Query(value = "SELECT p " + "FROM Productos p" + "WHERE precio = :precio")
-        Collection<ProductEntity> findByPrice(
-            @Param("precio") Long precio);
-    
-
-    @Query(value = "SELECT p " + "FROM Productos p" + "WHERE talla = :talla")
-            Collection<ProductEntity> findByTalla(
-                @Param("talla") String talla);
-
-
-    @Query(value = "SELECT p " + "FROM Productos p" + "WHERE marca = :marca")
-             Collection<ProductEntity> findByMarca(
-                    @Param("marca") String marca); */
+        @Query(value = "SELECT p "+" FROM Productos p "+ " ORDER BY precio ASC")
+        Collection<ProductEntity> orderPriceASC();
 }

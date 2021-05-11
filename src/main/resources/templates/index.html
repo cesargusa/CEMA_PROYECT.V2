@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/index.css}" rel="stylesheet" />
+    
 
     <title>CEMA´S Clothes | Vende tu ropa </title>
 </head>
@@ -20,8 +21,9 @@
         </div>
         <div class="cuadros-texto">
             <form action="" method="GET" target="_blank">
-                <input type="search" class="entrada" placeholder="Haga su busqueda..." autofocus required>
-                <input class="buscar" type="submit" value="Buscar">
+                <input type="search" id="valor-entrada" class="entrada" placeholder="Haga su busqueda..." autofocus required>
+      
+                <input id="entrada" class="buscar" type="submit" value="Buscar">
             </form>
         </div>
         <div class="menus-derecha">
@@ -50,10 +52,48 @@
                 <p class="modelo-titulo">MODELOS</p>
             </a>
             <div class="categorias-derecha">
-                <p>Ordenar Por: </p>
+                <ul id="menu">
+
+                    <li>Ordenar por:
+                        <ul>
+                            <a th:href="@{/DESC}">
+                                <li>Precio Descendiente</li>
+                            </a>
+                            <a th:href="@{/ASC}">
+                            <li>Precio Ascendiente</li>
+                            </a>
+                            <li>Talla :
+                                <ul>    
+                                    <a th:href="@{/?talla=XS}">
+                                    <li>XS</li>
+                                </a>
+                                <a th:href="@{/?talla=S}">
+                                    <li>S</li>
+                                    </a>
+                                    <a th:href="@{/?talla=M}">
+                                    <li>M</li>
+                                    </a>
+                                    <a th:href="@{/?talla=LS}">
+                                    <li>L</li>
+                                    </a>
+                                    <a th:href="@{/?talla=XL}">
+                                    <li>XL</li>
+                                    </a>
+
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
 
 
+            </div>
+            <div class="perfil">
+                <a th:href="@{/}">
+                    <p class="borrar-filtros">Borrar Filtros</p>
+                </a>
             </div>
             <div class="perfil">
                 <p>Perfil</p>
@@ -73,12 +113,12 @@
                 <div>
                     <p th:text="*{marca}"></p>
                 </div>
+                <div>
+                    <p th:text="*{talla}"></p>
+                </div>
             </div>
         </div>
     </div>
 </body>
-<script>
-
-</script>
-
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
 </html>

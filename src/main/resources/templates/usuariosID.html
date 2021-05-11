@@ -1,12 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html lang="es">
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link th:href="@{/css/index.css}" rel="stylesheet" />
+<link th:href="@{/css/usuarioId.css}" rel="stylesheet" />
+
+<title>Usuario ID</title>
 </head>
+
 <body>
-    
+
+    <div class="menu">
+        <div class="logo">
+            <a th:href="@{/}">
+                <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+            </a>
+        </div>
+        <div class="cuadros-texto">
+            <form action="" method="GET" target="_blank">
+                <input type="search" id="valor-entrada" class="entrada" placeholder="Haga su busqueda..." autofocus required>
+      
+                <input id="entrada" class="buscar" type="submit" value="Buscar">
+            </form>
+        </div>
+        <div class="menus-derecha">
+
+            <div class="inicio">
+                <a th:href="@{/inicio-sesion}">
+                    <button class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión |
+                        Registrarse</button>
+                </a>
+            </div>
+
+        </div>
+        <div class="anuncio-clase">
+            <button class="anuncio" type="submit" value="Modelos">+ Sube tu Anuncio</button>
+
+        </div>
+    </div>
+
+    <div class="menu-categorias">
+        <div class="categorias-izquierda">
+            <p>MUJER</p>
+            <p>HOMBRES</p>
+            <p>NIÑOS</p>
+            <p>CEMAS´S CLOTHES</p>
+            <a th:href="@{/usuarios/}">
+                <p class="modelo-titulo">MODELOS</p>
+            </a>
+            <div class="categorias-derecha">
+              
+
+
+            </div>
+            <div class="perfil">
+                <p>Perfil</p>
+            </div>
+        </div>
+
+        <div th:each="usu : ${usuarios}" th:object="${usu}">
+            <div class="contenedor-usuario">
+                <div class="perfil-imagen">
+                    <img th:src="*{imagen}" width="220" height="220">
+                 <div class="perfil-botones">
+                    <button class="button-seguir">Seguir</button>
+                    <button class="button-mensaje">Mensaje</button>
+                </div> 
+            </div>
+              
+                
+
+
+                <div class="perfil-contenedor-usuario-nombre">
+                    <div class="perfil-usuario">
+                        <p th:text="*{usuario}"></p>
+                    </div>
+                    <div class="perfil-nombre">
+                        <p th:text="*{nombre } +' '+ *{ apellido}"></p>
+                        <p th:text="*{ciudad } + ' ' + *{pais}"></p>
+                        <span class="titulo-modelo" th:if="*{modelo == true}">Modelo</span>
+                    </div>
+                    <div class="perfil-descripcion">
+                        <p th:if="*{descripcion == ''}" th:text="'No hay descripción'"> </p>
+                        <p th:unless="*{descripcion == ''}" th:text="*{descripcion}"> </p>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
 </body>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+
 </html>

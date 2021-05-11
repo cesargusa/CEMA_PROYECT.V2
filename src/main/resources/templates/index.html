@@ -99,13 +99,14 @@
                 <p>Perfil</p>
             </div>
         </div>
-
     </div>
     <div class="listado-productos">
         <div th:each="pro : ${productos}" th:object="${pro}">
             <div class="producto">
                 <div>
+                    <a th:href="@{/productos/} + *{id}">
                     <img width="290" height="330" th:src="*{imagenes}">
+                </a>
                 </div>
                 <div class="producto-precio">
                     <p th:text="*{precio } + €"></p>

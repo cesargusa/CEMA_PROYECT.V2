@@ -64,4 +64,12 @@ public class ProductViewController {
         mv.addObject("productos", allProductsOrderByPrecioASC);
         return mv;
     }
+
+    @GetMapping("/productos/{id}")
+    public ModelAndView GetProductosIdMostrar(@PathVariable("id") Long id) {
+        List<ProductDTO> allProductos = productController.GetById(id);
+        ModelAndView mv = new ModelAndView("productosID");
+        mv.addObject("productos", allProductos);
+        return mv;
+    }
 }

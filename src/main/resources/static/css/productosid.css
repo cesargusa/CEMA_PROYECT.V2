@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../font/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins Titulo';
+    src: url('../font/Poppins/Poppins-Bold.ttf');
+}
+.perfil-producto{
+    font-family: Poppins Titulo;
+
+}
+.contenedor-producto img{
+    border-radius: 80%;
+}
+.contenedor-producto{
+    display: flex;
+    flex-flow: wrap row;
+    margin-left: -20%;
+    margin-top: 2%;
+    font-family: Poppins Regular;
+}
+.producto-imagen{
+    margin-left: 25%;
+    margin-top: -1%;
+    align-items: center;
+}
+
+
+.perfil-botones{
+    margin-top: 4%;
+    margin-left: -15%;
+    align-items: center;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-evenly;
+}
+.perfil-botones button{
+    width: 70%;
+    height: 60%;
+    padding: 10px 30px 10px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.button-seguir{
+    background-color: #20d32f;
+    font-family: Poppins Regular;
+
+}
+.button-mensaje{
+    background-color: #252850;
+    color: white;
+    font-family: Poppins Regular;
+  
+}

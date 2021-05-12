@@ -118,4 +118,15 @@ public class ProductController {
     public List<ProductDTO> GetOrderPriceASC() {
         return productServices.orderByPrecioaASC();
     }
+
+    @GetMapping("/BOYS")
+    public List<ProductDTO> GetOrderHombres(){
+        return productServices.orderByHombres();
+    }
+
+    @GetMapping("/WOMENS")
+    public List<ProductDTO> GetOrderMujeres(){
+        return productServices.orderByMujeres();
+    }
+
 }

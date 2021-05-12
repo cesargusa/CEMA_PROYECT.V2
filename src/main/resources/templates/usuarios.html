@@ -7,12 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/usuarios.css}" rel="stylesheet" />
 
-    <title>Usuarios | Modelos</title>
+    <title>Usuarios | Modelos</title><header th:insert="~{fragments/changelang.html :: header}">
+</header>
 </head>
 
 <body>
 
-    <class class="menu">
+<div th:replace="~{fragments/changelang.html :: body}"></div>
+
+    <div class="menu">
         <div class="logo">
             <a th:href="@{/}">
                 <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
@@ -26,11 +29,13 @@
             </form>
         </div>
         <div class="inicio">
+            
             <button class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión |
                 Registrarse</button>
         </div>
     
-    </class>
+    </div>
+
 
     <div class="color">
         <div class="contenedor">

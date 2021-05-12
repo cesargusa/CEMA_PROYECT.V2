@@ -56,12 +56,35 @@ public class ProductViewController {
         mv.addObject("productos", allProductsOrderByPrecioDESC);
         return mv;
     }
+    @GetMapping("/BOYS")
+    public ModelAndView Boys(){
+        List<ProductDTO> allProductsOrderByHombres = productController.GetOrderHombres();
+        ModelAndView mv = new ModelAndView("index");
+        mv.addObject("productos", allProductsOrderByHombres);
+        return mv;
+    }
+
+    @GetMapping("/WOMENS")
+    public ModelAndView Womens(){
+        List<ProductDTO> allProductsOrderByMujeres = productController.GetOrderMujeres();
+        ModelAndView mv = new ModelAndView("index");
+        mv.addObject("productos", allProductsOrderByMujeres);
+        return mv;
+    }
 
     @GetMapping("/ASC")
     public ModelAndView Asc(){
         List<ProductDTO> allProductsOrderByPrecioASC = productController.GetOrderPriceASC();
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("productos", allProductsOrderByPrecioASC);
+        return mv;
+    }
+
+    @GetMapping("/productos/{id}")
+    public ModelAndView GetProductosIdMostrar(@PathVariable("id") Long id) {
+        List<ProductDTO> allProductos = productController.GetById(id);
+        ModelAndView mv = new ModelAndView("productosID");
+        mv.addObject("productos", allProductos);
         return mv;
     }
 }

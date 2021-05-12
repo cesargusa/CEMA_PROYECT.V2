@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link th:href="@{/css/index.css}" rel="stylesheet" />
+<link th:href="@{/css/productosid.css}" rel="stylesheet" />
+
+<title>Usuario ID</title>
+</head>
+
+<body>
+
+    <div class="menu">
+        <div class="logo">
+            <a th:href="@{/}">
+                <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+            </a>
+        </div>
+        <div class="cuadros-texto">
+            <form action="" method="GET" target="_blank">
+                <input type="search" id="valor-entrada" class="entrada" placeholder="Haga su busqueda..." autofocus required>
+      
+                <input id="entrada" class="buscar" type="submit" value="Buscar">
+            </form>
+        </div>
+        <div class="menus-derecha">
+
+            <div class="inicio">
+                <a th:href="@{/inicio-sesion}">
+                    <button class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión |
+                        Registrarse</button>
+                </a>
+            </div>
+
+        </div>
+        <div class="anuncio-clase">
+            <button class="anuncio" type="submit" value="Modelos">+ Sube tu Anuncio</button>
+
+        </div>
+    </div>
+
+    <div class="menu-categorias">
+        <div class="categorias-izquierda">
+            <p>MUJER</p>
+            <p>HOMBRES</p>
+            <p>NIÑOS</p>
+            <p>CEMAS´S CLOTHES</p>
+            <a th:href="@{/usuarios/}">
+                <p class="modelo-titulo">MODELOS</p>
+            </a>
+            <div class="categorias-derecha">
+              
+
+
+            </div>
+            <div class="perfil">
+                <p>Perfil</p>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div th:each="pro : ${productos}" th:object="${pro}">
+            <div class="contenedor-producto">
+                <div class="producto-imagen">
+                    <img th:src="*{imagenes}" width="380" height="420">
+                 <div class="perfil-botones">
+                    <button class="button-seguir">Añadir a favoritos</button>
+                    <button class="button-mensaje">Contactar con el vendedor</button>
+                </div> 
+            </div>
+              
+                
+ 
+             <!--     <div class="perfil-contenedor-producto">
+                    <div class="perfil-producto">
+                        <p th:text="*{producto}"></p>
+                    </div>
+                    <div class="perfil-producto">
+                        <p th:text="*{nombre_producto }"></p>
+                        <p th:text="*{precio}"></p>
+                        <p th:text="*{talla}"></p>
+           
+                    </div> 
+         
+                </div>    --> 
+
+
+
+            </div>
+        </div>
+</body>
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+
+</html>

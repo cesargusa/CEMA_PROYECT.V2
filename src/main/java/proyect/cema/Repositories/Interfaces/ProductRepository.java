@@ -38,4 +38,10 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
 
         @Query(value = "SELECT p "+" FROM Productos p "+ " ORDER BY precio ASC")
         Collection<ProductEntity> orderPriceASC();
+
+        @Query(value = "SELECT p "+" FROM Productos p "+ " WHERE sexo = 'Hombre'")
+        Collection<ProductEntity> orderHombres();
+
+        @Query(value = "SELECT p "+" FROM Productos p "+ " WHERE sexo = 'Mujer'")
+        Collection<ProductEntity> orderMujeres();
 }

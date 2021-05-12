@@ -68,8 +68,8 @@
 
 <div class="menu-categorias">
     <div class="categorias-izquierda">
-        <p th:text="#{Mujer}"></p>
-        <p th:text="#{Hombres}"></p>
+        <p th:href="#{Mujeres}"><a th:href="@{/WOMENS}">MUJER</a></p>
+        <p th:href="#{Hombres}"><a th:href="@{/BOYS}">HOMBRES</a></p>
         <p th:text="#{Ninos}"></p>
         <p>CEMAS´S CLOTHES</p>
         <a th:href="@{/usuarios/}">
@@ -89,6 +89,7 @@
                         <li  th:text="#{Talla}">
                             <ul>
                                 <a th:href="@{/?talla=XS}">
+
                                     <li>XS</li>
                                 </a>
                                 <a th:href="@{/?talla=S}">
@@ -114,6 +115,7 @@
 
 
         </div>
+
         <div class="perfil">
             <a th:href="@{/}">
                 <p class="borrar-filtros" th:text="#{Borrar_filtros}"></p>
@@ -136,12 +138,15 @@
     </div>
     <div class="texto-banner">
         <p th:text="#{Nuestros_Productos}"></p>
+
     </div>
     <div class="listado-productos">
         <div th:each="pro : ${productos}" th:object="${pro}">
             <div class="producto">
                 <div>
+                    <a th:href="@{/productos/} + *{id}">
                     <img width="290" height="330" th:src="*{imagenes}">
+                </a>
                 </div>
                 <div class="producto-precio">
                     <p th:text="*{precio } + €"></p>

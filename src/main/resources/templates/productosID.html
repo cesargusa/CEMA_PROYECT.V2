@@ -70,6 +70,17 @@
                     <button class="button-seguir">Añadir a favoritos</button>
                     <button class="button-mensaje">Contactar con el vendedor</button>
                 </div> 
+
+                <div class="perfil-contenedor">
+                    <p th:text="*{nombre_producto}"></p>
+                    <p th:text="*{precio} + ' '+ €"></p>
+                    <p th:text="*{talla}"></p>
+                    <p th:text="*{color}"></p>
+                    <p th:text="*{estado}"></p>
+                    <p th:text="*{marca}"></p>
+                    <p th:text="*{sexo}"></p>
+                    
+                </div>
             </div>
               
                 

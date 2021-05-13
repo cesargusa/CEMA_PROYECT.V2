@@ -39,8 +39,9 @@ public class initDB {
             product.save(new ProductEntity("Vestido Naranja H&M ",23,"S","https://images.vinted.net/thumbs/f800/03_003d1_JHbUHaJn3gKccmQfwXwuuxEn.jpeg?1620198677-2be312914ab375438a7fe9a16a5914654d93be99","naranja","En buen estado","H&M","Mujer")); 
 
             product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","verde","Sin estrenar","Adidas","Mujer"));   */
-      
+            
         };
+        
 
     }
 

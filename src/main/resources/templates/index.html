@@ -43,8 +43,7 @@
     </div>
     <div class="cuadros-texto">
         <form action="" method="GET" target="_blank">
-            <input type="search" id="valor-entrada" class="entrada"  autofocus
-                required>
+            <input type="search" id="valor-entrada" class="entrada" autofocus required>
 
             <input id="entrada" class="buscar" type="submit" th:value="#{Buscar}">
         </form>
@@ -76,20 +75,18 @@
             <p class="modelo-titulo" th:text="#{Modelos}"></p>
         </a>
         <div class="categorias-derecha">
-            <ul id="menu">
-
-                <li th:text="#{Ordenar}">
+            <ul class="nav">
+                <li><a href="">Ordenar por:</a>
                     <ul>
-                        <a th:href="@{/DESC}">
-                            <li th:text="#{Precio_Desc}"></li>
-                        </a>
                         <a th:href="@{/ASC}">
-                            <li  th:text="#{Precio_Asc}"></li>
+                            <li><span th:text="#{Precio_Asc}"></span></li>
                         </a>
-                        <li  th:text="#{Talla}">
+                        <a th:href="@{/DESC}">
+                            <li><span th:text="#{Precio_Desc}"></span></li>
+                        </a>
+                        <li><span th:text="#{Talla}"></span>
                             <ul>
                                 <a th:href="@{/?talla=XS}">
-
                                     <li>XS</li>
                                 </a>
                                 <a th:href="@{/?talla=S}">
@@ -98,7 +95,7 @@
                                 <a th:href="@{/?talla=M}">
                                     <li>M</li>
                                 </a>
-                                <a th:href="@{/?talla=LS}">
+                                <a th:href="@{/?talla=L}">
                                     <li>L</li>
                                 </a>
                                 <a th:href="@{/?talla=XL}">
@@ -106,10 +103,10 @@
                                 </a>
 
                             </ul>
-
                         </li>
                     </ul>
                 </li>
+
             </ul>
 
 
@@ -134,7 +131,9 @@
 
 
     <div class="banner">
-        <img height="480" width="1000" th:src="@{/images/banner2.jpg}">
+        <a th:href="@{/usuarios}">
+            <img height="480" width="1000" th:src="@{/images/banner2.jpg}">
+        </a>
     </div>
     <div class="texto-banner">
         <p th:text="#{Nuestros_Productos}"></p>
@@ -145,18 +144,20 @@
             <div class="producto">
                 <div>
                     <a th:href="@{/productos/} + *{id}">
-                    <img width="290" height="330" th:src="*{imagenes}">
-                </a>
+                        <img width="290" height="330" th:src="*{imagenes}">
+                    </a>
                 </div>
                 <div class="producto-precio">
-                    <p th:text="*{precio } + €"></p>
+                    <p th:text="*{precio } + €" style="text-align: left;"></p>
                 </div>
+                <div class="producto_nombre">
+                    <p th:text="*{nombre_producto}" style="text-align: left;"></p>
+                </div>
+
                 <div>
-                    <p th:text="*{marca}"></p>
+                    <p th:text="*{marca} + '<li>' + *{talla}" style="text-align: left;"></p>
                 </div>
-                <div>
-                    <p th:text="*{talla}"></p>
-                </div>
+
             </div>
         </div>
     </div>

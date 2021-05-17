@@ -259,6 +259,10 @@ justify-content: center;
 .producto{
     padding: 7%;
 }
+.producto_nombre p{
+    font-size: 20px;
+    text-align: left;
+}
 .producto-precio{
     padding: 7%;
     font-family: 'Poppins Titulo';
@@ -319,6 +323,9 @@ justify-content: center;
     .nav li ul li ul {
         right:-140px;
         top:0px;
+    }
+    .producto-datos{
+        color: gray;
     }
   @media screen and (max-width: 697px) {
 

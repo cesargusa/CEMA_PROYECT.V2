@@ -132,7 +132,7 @@
 
     <div class="banner">
         <a th:href="@{/usuarios}">
-            <img height="480" width="1000" th:src="@{/images/banner2.jpg}">
+            <img height="340" width="680" th:src="@{/images/banner2.jpg}">
         </a>
     </div>
     <div class="texto-banner">
@@ -151,11 +151,11 @@
                     <p th:text="*{precio } + €" style="text-align: left;"></p>
                 </div>
                 <div class="producto_nombre">
-                    <p th:text="*{nombre_producto}" style="text-align: left;"></p>
+                    <p th:text="*{nombre_producto}"></p>
                 </div>
 
-                <div>
-                    <p th:text="*{marca} + '<li>' + *{talla}" style="text-align: left;"></p>
+                <div class="producto-datos">
+                    <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} " style="text-align: left;"></p>
                 </div>
 
             </div>

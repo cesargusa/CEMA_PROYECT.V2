@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/index.css}" rel="stylesheet" />
 
-    <title>CEMA´S Clothes | Vende tu ropa </title>
+    <title>CE'MA Clothes | Vende tu ropa </title>
 </head>
 <header>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -69,7 +69,7 @@
     <div class="categorias-izquierda">
         <p th:href="#{Mujeres}"><a th:href="@{/WOMENS}">MUJER</a></p>
         <p th:href="#{Hombres}"><a th:href="@{/BOYS}">HOMBRES</a></p>
-        <p th:text="#{Ninos}"></p>
+        <p th:href="#{Accesorios}"><a th:href="@{/ACCESORIOS}">ACCESORIOS</a></p>
         <p>CEMAS´S CLOTHES</p>
         <a th:href="@{/usuarios/}">
             <p class="modelo-titulo" th:text="#{Modelos}"></p>
@@ -79,12 +79,18 @@
                 <li><a href="">Ordenar por:</a>
                     <ul>
                         <a th:href="@{/ASC}">
+
+                            <li th:text="#{Precio_Asc}"></li>
+                        </a>
+                        <li th:text="#{Talla}">
+
                             <li><span th:text="#{Precio_Asc}"></span></li>
                         </a>
                         <a th:href="@{/DESC}">
                             <li><span th:text="#{Precio_Desc}"></span></li>
                         </a>
                         <li><span th:text="#{Talla}"></span>
+
                             <ul>
                                 <a th:href="@{/?talla=XS}">
                                     <li>XS</li>
@@ -131,9 +137,15 @@
 
 
     <div class="banner">
+
+
+
+
+
         <a th:href="@{/usuarios}">
             <img height="340" width="680" th:src="@{/images/banner2.jpg}">
         </a>
+
     </div>
     <div class="texto-banner">
         <p th:text="#{Nuestros_Productos}"></p>

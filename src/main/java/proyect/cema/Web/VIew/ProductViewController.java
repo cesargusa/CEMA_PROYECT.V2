@@ -72,6 +72,14 @@ public class ProductViewController {
         return mv;
     }
 
+    @GetMapping("/ACCESORIOS")
+    public ModelAndView Accesorios(){
+        List<ProductDTO> allProductsOrderByAccesorios = productController.GetOrderAccesorios();
+        ModelAndView mv = new ModelAndView("index");
+        mv.addObject("productos", allProductsOrderByAccesorios);
+        return mv;
+    }
+
     @GetMapping("/ASC")
     public ModelAndView Asc(){
         List<ProductDTO> allProductsOrderByPrecioASC = productController.GetOrderPriceASC();

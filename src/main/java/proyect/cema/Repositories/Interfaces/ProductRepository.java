@@ -44,4 +44,7 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
 
         @Query(value = "SELECT p "+" FROM Productos p "+ " WHERE sexo = 'Mujer'")
         Collection<ProductEntity> orderMujeres();
+
+        @Query(value = "SELECT p "+" FROM Productos p "+ " WHERE sexo = 'Accesorios'")
+        Collection<ProductEntity> orderAccesorios();
 }

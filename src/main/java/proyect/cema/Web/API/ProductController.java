@@ -129,4 +129,9 @@ public class ProductController {
         return productServices.orderByMujeres();
     }
 
+    @GetMapping("/ACCESORIOS")
+    public List<ProductDTO> GetOrderAccesorios(){
+        return productServices.orderByAccesorios();
+    }
+
 }

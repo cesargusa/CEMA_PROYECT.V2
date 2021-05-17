@@ -11,7 +11,11 @@
 </head>
 
 <body>
-    <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+    <div class="logo">
+        <a th:href="@{/}">
+            <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+        </a>
+    </div>
 
     <div class="contenedor">
         <div class="contenido-404">

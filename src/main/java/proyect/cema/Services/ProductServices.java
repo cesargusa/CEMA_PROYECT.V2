@@ -92,6 +92,12 @@ public class ProductServices {
         .collect(Collectors.toList());
     }
 
+    public List<ProductDTO> orderByAccesorios(){
+        return productRepository.orderAccesorios().stream()
+        .map(x -> modelMapper.map(x, ProductDTO.class))
+        .collect(Collectors.toList());
+    }
+
 /*     public List<ProductDTO> getPrecio(double precio){
         return productRepository.findByPrecio(precio).stream()
         .map(x -> modelMapper.map(x, ProductDTO.class))

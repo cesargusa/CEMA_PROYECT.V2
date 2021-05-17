@@ -42,10 +42,17 @@ public class initDB {
             product.save(new ProductEntity("Camiseta Supreme ",55,"XL","https://images.vinted.net/thumbs/f800/01_01e8f_Yr7rEdmvVqjmjsYCYpwn8c4g.jpeg?1619855925-597f53d4066d68e5b05d64786bb4662c647c0751","rojo","Como nuevo","Supreme","Hombre")); 
             product.save(new ProductEntity("Zapatillas Adidas Stan Smith ",44,"38","https://images.vinted.net/thumbs/f800/02_001ca_ZKRaJa5cRBKie3de6P6GA28e.jpeg?1620198312-d8b02972e05db93d18a0a0b1444ec5f9d1bc54bf","blanco","Sin estrenar","Adidas","Mujer")); 
             product.save(new ProductEntity("Vestido Naranja H&M ",23,"S","https://images.vinted.net/thumbs/f800/03_003d1_JHbUHaJn3gKccmQfwXwuuxEn.jpeg?1620198677-2be312914ab375438a7fe9a16a5914654d93be99","naranja","En buen estado","H&M","Mujer")); 
+<<<<<<< HEAD
             product.save(new ProductEntity("Collar Tous ",40,"","https://images.vinted.net/thumbs/f800/03_019f8_eGvJheRJnKzznQapFmqypt2L.jpeg?1620411040-eca5564aa4b452fc1397d1291974babfa0835888","plata","Como nuevo","Tous","Mujer")); 
             product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","verde","Sin estrenar","Adidas","Mujer"));    */
       
+=======
+
+            product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","verde","Sin estrenar","Adidas","Mujer"));   */
+            
+>>>>>>> aa2fc7bec87e7dcef442f8777d244e72fd20f414
         };
+        
 
     }
 

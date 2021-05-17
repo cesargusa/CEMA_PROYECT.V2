@@ -5,7 +5,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import proyect.cema.Services.UsuarioServices;
+import proyect.cema.Services.CategoriaService;
 import proyect.cema.Services.ProductServices;
+import proyect.cema.Services.ProductoCategoriaService;
 
 @Configuration
 public class DI {
@@ -22,4 +24,14 @@ public class DI {
     ProductServices createProduct(){
         return new ProductServices();
     }
+    @Bean
+    CategoriaService createCategoria(){
+        return new CategoriaService();
+    }
+
+    @Bean
+    ProductoCategoriaService createProductoCategoria(){
+        return new ProductoCategoriaService();
+    }
+    
 }

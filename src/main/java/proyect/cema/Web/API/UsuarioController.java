@@ -1,7 +1,9 @@
 package proyect.cema.Web.API;
 
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -40,5 +42,15 @@ public class UsuarioController {
     @GetMapping("/{id}")
     public List<UsuarioDTO> GetById(@PathVariable("id") Long id) {
         return usuarioServices.getById(id);
+    }
+
+    @GetMapping("/inicio-sesion/{email}/{contrasena}")
+    public List<UsuarioDTO> GetByEmail(@PathVariable("email") String email, @PathVariable("contrasena") String contrasena) {
+        return usuarioServices.findUserEmail(email,contrasena);
+    }
+
+    @DeleteMapping("/{id}")
+    public void Delete(@PathVariable("id") Long id){
+        usuarioServices.delete(id);
     }
 }

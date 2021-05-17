@@ -4,15 +4,18 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import proyect.cema.Repositories.Entities.ProductEntity;
-import proyect.cema.Repositories.Entities.UsuarioEntity;
+import proyect.cema.Repositories.Entities.CategoriaEntity;
+import proyect.cema.Repositories.Entities.ProductoCategoriaEntity;
+import proyect.cema.Repositories.Interfaces.CategoriaRepository;
 import proyect.cema.Repositories.Interfaces.ProductRepository;
+import proyect.cema.Repositories.Interfaces.ProductoCategoriaRepository;
 import proyect.cema.Repositories.Interfaces.UsuarioRepository;
 
 @Configuration
 public class initDB {
     @Bean
-    CommandLineRunner initDataBase(UsuarioRepository usuario, ProductRepository product){
+    CommandLineRunner initDataBase(UsuarioRepository usuario, ProductRepository product, CategoriaRepository categoria
+    , ProductoCategoriaRepository productoCategoria){
         return args ->{
 
 
@@ -40,6 +43,13 @@ public class initDB {
 
             product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","verde","Sin estrenar","Adidas","Mujer"));   */
             
+            categoria.save(new CategoriaEntity(1L,"Sudaderas"));
+            categoria.save(new CategoriaEntity(2L,"Camisetas"));
+            categoria.save(new CategoriaEntity(3L,"Zapatillas"));
+            categoria.save(new CategoriaEntity(4L,"Accesorios"));
+
+
+            productoCategoria.save(new ProductoCategoriaEntity(1L, 1L, 5L));
         };
         
 

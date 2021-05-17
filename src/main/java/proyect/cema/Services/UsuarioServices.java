@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.hibernate.mapping.Collection;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -54,4 +55,11 @@ public class UsuarioServices {
         return usuarioRepository.findById(id).stream()
         .map(x -> modelMapper.map(x,UsuarioDTO.class)).collect(Collectors.toList());
     }
+
+    public List<UsuarioDTO> findUserEmail(String email, String contrasena){
+        return usuarioRepository.findAll().stream()
+        .map(x -> modelMapper.map(x, UsuarioDTO.class))
+        .collect(Collectors.toList());
+    }
+
 }

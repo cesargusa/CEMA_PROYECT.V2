@@ -43,8 +43,7 @@
     </div>
     <div class="cuadros-texto">
         <form action="" method="GET" target="_blank">
-            <input type="search" id="valor-entrada" class="entrada"  autofocus
-                required>
+            <input type="search" id="valor-entrada" class="entrada" autofocus required>
 
             <input id="entrada" class="buscar" type="submit" th:value="#{Buscar}">
         </form>
@@ -70,7 +69,7 @@
     <div class="categorias-izquierda">
         <p th:href="#{Mujeres}"><a th:href="@{/WOMENS}">MUJER</a></p>
         <p th:href="#{Hombres}"><a th:href="@{/BOYS}">HOMBRES</a></p>
-        <p th:text="#{Ninos}"></p>
+        <p th:text="#{Accesorios}"></p>
         <p>CEMAS´S CLOTHES</p>
         <a th:href="@{/usuarios/}">
             <p class="modelo-titulo" th:text="#{Modelos}"></p>
@@ -84,9 +83,9 @@
                             <li th:text="#{Precio_Desc}"></li>
                         </a>
                         <a th:href="@{/ASC}">
-                            <li  th:text="#{Precio_Asc}"></li>
+                            <li th:text="#{Precio_Asc}"></li>
                         </a>
-                        <li  th:text="#{Talla}">
+                        <li th:text="#{Talla}">
                             <ul>
                                 <a th:href="@{/?talla=XS}">
 
@@ -135,6 +134,9 @@
 
     <div class="banner">
         <img height="480" width="1000" th:src="@{/images/banner2.jpg}">
+
+
+
     </div>
     <div class="texto-banner">
         <p th:text="#{Nuestros_Productos}"></p>
@@ -145,8 +147,8 @@
             <div class="producto">
                 <div>
                     <a th:href="@{/productos/} + *{id}">
-                    <img width="290" height="330" th:src="*{imagenes}">
-                </a>
+                        <img width="290" height="330" th:src="*{imagenes}">
+                    </a>
                 </div>
                 <div class="producto-precio">
                     <p th:text="*{precio } + €"></p>

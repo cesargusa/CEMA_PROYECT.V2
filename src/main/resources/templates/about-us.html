@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/index.css}" rel="stylesheet" />
+    <link th:href="@{/css/about-us.css}" rel="stylesheet" />
 
     <title>CE'MA Clothes | Vende tu ropa </title>
 </head>
@@ -71,8 +72,6 @@
         <p th:href="#{Hombres}"><a th:href="@{/BOYS}">HOMBRES</a></p>
         <p th:href="#{Accesorios}"><a th:href="@{/ACCESORIOS}">ACCESORIOS</a></p>
         <p th:href="#{CE'MA Clothes}"><a th:href="@{/aboutus}">CE'MA CLOTHES</a></p>
-
-        
         <a th:href="@{/usuarios/}">
             <p class="modelo-titulo" th:text="#{Modelos}"></p>
         </a>
@@ -134,48 +133,144 @@
 </div>
 </header>
 
+
+<br>
+
+
 <body class="body">
-
-
-
-    <div class="banner">
-
-
-
-
-
-        <a th:href="@{/usuarios}">
-            <img height="340" width="680" th:src="@{/images/banner2.jpg}">
-        </a>
-
-    </div>
-    <div class="texto-banner">
-        <p th:text="#{Nuestros_Productos}"></p>
-
-    </div>
-    <div class="listado-productos">
-        <div th:each="pro : ${productos}" th:object="${pro}">
-            <div class="producto">
-                <div>
-                    <a th:href="@{/productos/} + *{id}">
-                        <img width="290" height="330" th:src="*{imagenes}">
-                    </a>
-                </div>
-                <div class="producto-precio">
-                    <p th:text="*{precio } + €" style="text-align: left;"></p>
-                </div>
-                <div class="producto_nombre">
-                    <p th:text="*{nombre_producto}"></p>
-                </div>
-
-                <div class="producto-datos">
-                    <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} " style="text-align: left;"></p>
-                </div>
-
-            </div>
+<br>
+<br>
+<br>
+    <section class="contact">
+        <div class="content">
+            <h1>Sobre CE'MA Clothes</h1>
+            <p>CE'MA Clothes es una pagina web fundada por Cesar Gutierrez y Mario Gutierrez alumnos de 2º Grado de superior de DAW que gestiona personalmente
+                la compra y venta de ropa de todos los usuarios.
+            </p>
         </div>
-    </div>
+        
+        <div class="content-us">
+           <br>
+        <br>
+        <br> 
+            <h1>Contact us</h1>
+            
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Cesar gusano 50018, <br>Owatonna,Minnesota,<br>55600</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>654 67 89 23</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>cesargusano@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+             <div class="contactForm">
+                 <form>
+                     <h2>Escribir Mensaje </h2>
+                     <div class="inputBox">
+                         <input type="text" name="" required="required">
+                         <span>Nombre y Apellidos</span>
+                     </div>
+                     <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Tipo de mensaje...</span>
+                    </div>
+                    <div class="inputBox">
+                       <input type="submit" name="" value="Send">
+                    </div>
+                 </form>
+             </div>
+        </div>
+    </section> 
 </body>
-<script type="text/javascript" th:src="@{/js/main.js}"></script>
+
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

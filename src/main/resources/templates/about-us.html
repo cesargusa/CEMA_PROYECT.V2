@@ -142,10 +142,9 @@
 
     <section class="contact">
         <div class="content">
-            <h1>Sobre CE'MA Clothes</h1>
+            <h1 th:text="#{Sobre}"></h1>
             <br>
-            <p>CE'MA Clothes es una pagina web fundada por Cesar Gutierrez y Mario Gutierrez alumnos de 2º Grado de superior de DAW que gestiona personalmente
-                la compra y venta de ropa de todos los usuarios.
+            <p th:text="#{texto}">
             </p>
             <br>
         </div>
@@ -158,57 +157,61 @@
         <br> 
         <br>
        
-            <h1>Contacta con Nosotros</h1>
+            <h1 th:text="#{contacta}"></h1>
             
         </div>
         <div class="container">
             <div class="contactInfo">
                 <div class="box">
-                    <div class="icon"><a th:href="@{/}">
+                    <div class="icon">
                         <img height="60" width="70"  th:src="@{'../images/navegacion.png'}" />
-                    </a></div>
+                   </div>
                     <div class="text">
-                        <h3>Direccion</h3>
-                        <p>Cesar gusano 50018, <br>Owatonna,Minnesota,<br>55600</p>
+                        <h3 th:text="#{direccion}"></h3>
+                        <p>Cesar gusano 50018, <br>Zaragoza,España<br>55600</p>
                     </div>
                 </div>
                 <div class="box">
                     <div class="icon">
-                        <a th:href="@{/}">
+                        
                         <img height="60" width="70"  th:src="@{'../images/llamada-telefonica.png'}" />
-                    </a></div>
+                  </div>
                     <div class="text">
-                        <h3>Telefono</h3>
+                        <h3 th:text="#{telefono}"></h3>
                         <p>976 87 67 54</p>
                     </div>
                 </div>
                 <div class="box">
-                    <div class="icon"><a th:href="@{/}">
+                    <div class="icon">
                         <img height="60" width="70"  th:src="@{'../images/email.png'}" />
-                    </a></div>
+                   </div>
                     <div class="text">
-                        <h3>Email</h3>
+                        <h3 th:text="#{email}"></h3>
                         <p>cemaclothes@gmail.com</p>
                     </div>
                 </div>
             </div>
              <div class="contactForm">
-                 <form>
-                     <h2>Escribir Mensaje </h2>
+                 <form method="POST" th:action="@{/sendMail}" id="emailForm">
+                     <h2 th:text="#{escribir_mensaje}"> </h2>
                      <div class="inputBox">
-                         <input type="text" name="" required="required">
-                         <span>Nombre y Apellidos</span>
+                         <input type="text"  name="name" required="required">
+                         <span th:text="#{nombre_apellidos}"></span>
                      </div>
                      <div class="inputBox">
-                        <input type="text" name="" required="required">
-                        <span>Email</span>
+                        <input type="text"  name="mail"required="required">
+                        <span th:text="#{email}"></span>
                     </div>
                     <div class="inputBox">
-                        <textarea required="required"></textarea>
-                        <span>Tipo de mensaje...</span>
+                        <input required="required" name="subject"></input>
+                        <span th:text="#{asunto}"></span>
                     </div>
                     <div class="inputBox">
-                       <input type="submit" name="" value="Send">
+                        <input required="required" name="body"></input>
+                        <span th:text="#{mensaje}"></span>
+                    </div>
+                    <div class="inputBox">
+                       <input type="submit"   th:value="#{enviar}">
                     </div>
                  </form>
              </div>
@@ -216,7 +219,7 @@
 <br>
 <br>
 
-        <h1>Donde Encontrarnos</h1>
+        <h1 th:text="#{donde}"></h1>
         <br>
         <div class="map">
           

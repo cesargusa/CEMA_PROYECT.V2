@@ -13,15 +13,12 @@ public class SendMailController {
     @Autowired 
     private MailService mailService;
 
-    @GetMapping("/email")
-    public String index(){
-        return "send_mail_view";
-    }
+ 
 
     @PostMapping("/sendMail")
     public String sendMail(@RequestParam("name") String name, @RequestParam("mail") String mail, @RequestParam("subject") String subject,@RequestParam("body") String body){
         String message = body + "\n\n Datos de ccontacto: "+ "\nNombre: "+ name + "\nEmail: "+ mail ;
-        mailService.sendMail("cesargusa22@gmail.com", "cesargusa22@gmail.com", subject, message);
-        return "send_mail_view";
+        mailService.sendMail("cemaclothes@gmail.com", "cemaclothes@gmail.com", subject, message);
+        return "about-us";
     }
 }

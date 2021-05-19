@@ -95,4 +95,10 @@ public class ProductViewController {
         mv.addObject("productos", allProductos);
         return mv;
     }
+
+    @GetMapping("/aboutus")
+    public ModelAndView AboutUs() {
+        ModelAndView mv = new ModelAndView("about-us");
+        return mv;
+    }
 }

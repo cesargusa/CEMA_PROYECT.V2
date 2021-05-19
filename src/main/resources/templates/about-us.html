@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/index.css}" rel="stylesheet" />
+    <link th:href="@{/css/about-us.css}" rel="stylesheet" />
 
     <title>CE'MA Clothes | Vende tu ropa </title>
 </head>
@@ -71,8 +72,6 @@
         <p th:href="#{Hombres}"><a th:href="@{/BOYS}">HOMBRES</a></p>
         <p th:href="#{Accesorios}"><a th:href="@{/ACCESORIOS}">ACCESORIOS</a></p>
         <p th:href="#{CE'MA Clothes}"><a th:href="@{/aboutus}">CE'MA CLOTHES</a></p>
-
-        
         <a th:href="@{/usuarios/}">
             <p class="modelo-titulo" th:text="#{Modelos}"></p>
         </a>
@@ -84,7 +83,10 @@
 
                             <li th:text="#{Precio_Asc}"></li>
                         </a>
-                       
+                        <li th:text="#{Talla}">
+
+                            <li><span th:text="#{Precio_Asc}"></span></li>
+                        </a>
                         <a th:href="@{/DESC}">
                             <li><span th:text="#{Precio_Desc}"></span></li>
                         </a>
@@ -131,49 +133,165 @@
 </div>
 </header>
 
+
+<br>
+
+
 <body class="body">
+<br>
 
-
-
-    <div class="banner">
-
-
-
-
-
-        <a th:href="@{/usuarios}">
-            <img height="340" width="680" th:src="@{/images/banner2.jpg}">
-        </a>
-<!--             <iframe  th:src="@{/video/banner-video.mp4}" frameborder="0" alt="no video attached" allowfullscreen="1"></iframe>
- --><iframe src="https://www.youtube.com/embed/vvKYMvoh8Yg" title="YouTube video player" frameborder="1" allow="autoplay" ></iframe>
-    </div>
-    <div class="texto-banner">
-        <p th:text="#{Nuestros_Productos}"></p>
-
-    </div>
-    <div class="listado-productos">
-        <div th:each="pro : ${productos}" th:object="${pro}">
-            <div class="producto">
-                <div>
-                    <a th:href="@{/productos/} + *{id}">
-                        <img width="290" height="330" th:src="*{imagenes}">
-                    </a>
-                </div>
-                <div class="producto-precio">
-                    <p th:text="*{precio } + €" style="text-align: left;"></p>
-                </div>
-                <div class="producto_nombre">
-                    <p th:text="*{nombre_producto}"></p>
-                </div>
-
-                <div class="producto-datos">
-                    <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} " style="text-align: left;"></p>
-                </div>
-
-            </div>
+    <section class="contact">
+        <div class="content">
+            <h1>Sobre CE'MA Clothes</h1>
+            <br>
+            <p>CE'MA Clothes es una pagina web fundada por Cesar Gutierrez y Mario Gutierrez alumnos de 2º Grado de superior de DAW que gestiona personalmente
+                la compra y venta de ropa de todos los usuarios.
+            </p>
+            <br>
         </div>
-    </div>
+        <a th:href="@{/}">
+                <img height="350" width="500" class="logo-image" th:src="@{'../images/cesargusano.png'}" />
+            </a>
+        <div class="content-us">
+           <br>
+        <br>
+        <br> 
+        <br>
+       
+            <h1>Contacta con Nosotros</h1>
+            
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><a th:href="@{/}">
+                        <img height="60" width="70"  th:src="@{'../images/navegacion.png'}" />
+                    </a></div>
+                    <div class="text">
+                        <h3>Direccion</h3>
+                        <p>Cesar gusano 50018, <br>Owatonna,Minnesota,<br>55600</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <a th:href="@{/}">
+                        <img height="60" width="70"  th:src="@{'../images/llamada-telefonica.png'}" />
+                    </a></div>
+                    <div class="text">
+                        <h3>Telefono</h3>
+                        <p>976 87 67 54</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><a th:href="@{/}">
+                        <img height="60" width="70"  th:src="@{'../images/email.png'}" />
+                    </a></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>cemaclothes@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+             <div class="contactForm">
+                 <form>
+                     <h2>Escribir Mensaje </h2>
+                     <div class="inputBox">
+                         <input type="text" name="" required="required">
+                         <span>Nombre y Apellidos</span>
+                     </div>
+                     <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span>Tipo de mensaje...</span>
+                    </div>
+                    <div class="inputBox">
+                       <input type="submit" name="" value="Send">
+                    </div>
+                 </form>
+             </div>
+        </div>
+<br>
+<br>
+
+        <h1>Donde Encontrarnos</h1>
+        <br>
+        <div class="map">
+          
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.3504993442853!2d-0.8810116852998409!3d41.669773186405656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd59149ade1f9a9f%3A0x66cc84d326d51c26!2sCentro%20San%20Valero!5e0!3m2!1ses!2ses!4v1621409135259!5m2!1ses!2ses" width="850" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section> 
 </body>
-<script type="text/javascript" th:src="@{/js/main.js}"></script>
+
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

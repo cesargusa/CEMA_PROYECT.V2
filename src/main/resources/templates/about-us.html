@@ -139,44 +139,56 @@
 
 <body class="body">
 <br>
-<br>
-<br>
+
     <section class="contact">
         <div class="content">
             <h1>Sobre CE'MA Clothes</h1>
+            <br>
             <p>CE'MA Clothes es una pagina web fundada por Cesar Gutierrez y Mario Gutierrez alumnos de 2º Grado de superior de DAW que gestiona personalmente
                 la compra y venta de ropa de todos los usuarios.
             </p>
+            <br>
         </div>
-        
+        <a th:href="@{/}">
+                <img height="350" width="500" class="logo-image" th:src="@{'../images/cesargusano.png'}" />
+            </a>
         <div class="content-us">
            <br>
         <br>
         <br> 
-            <h1>Contact us</h1>
+        <br>
+       
+            <h1>Contacta con Nosotros</h1>
             
         </div>
         <div class="container">
             <div class="contactInfo">
                 <div class="box">
-                    <div class="icon"></div>
+                    <div class="icon"><a th:href="@{/}">
+                        <img height="60" width="70"  th:src="@{'../images/navegacion.png'}" />
+                    </a></div>
                     <div class="text">
-                        <h3>Address</h3>
+                        <h3>Direccion</h3>
                         <p>Cesar gusano 50018, <br>Owatonna,Minnesota,<br>55600</p>
                     </div>
                 </div>
                 <div class="box">
-                    <div class="icon"></div>
+                    <div class="icon">
+                        <a th:href="@{/}">
+                        <img height="60" width="70"  th:src="@{'../images/llamada-telefonica.png'}" />
+                    </a></div>
                     <div class="text">
-                        <h3>Phone</h3>
-                        <p>654 67 89 23</p>
+                        <h3>Telefono</h3>
+                        <p>976 87 67 54</p>
                     </div>
                 </div>
                 <div class="box">
-                    <div class="icon"></div>
+                    <div class="icon"><a th:href="@{/}">
+                        <img height="60" width="70"  th:src="@{'../images/email.png'}" />
+                    </a></div>
                     <div class="text">
                         <h3>Email</h3>
-                        <p>cesargusano@gmail.com</p>
+                        <p>cemaclothes@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -200,6 +212,15 @@
                     </div>
                  </form>
              </div>
+        </div>
+<br>
+<br>
+
+        <h1>Donde Encontrarnos</h1>
+        <br>
+        <div class="map">
+          
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.3504993442853!2d-0.8810116852998409!3d41.669773186405656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd59149ade1f9a9f%3A0x66cc84d326d51c26!2sCentro%20San%20Valero!5e0!3m2!1ses!2ses!4v1621409135259!5m2!1ses!2ses" width="850" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section> 
 </body>

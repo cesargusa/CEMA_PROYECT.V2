@@ -84,10 +84,7 @@
 
                             <li th:text="#{Precio_Asc}"></li>
                         </a>
-                        <li th:text="#{Talla}">
-
-                            <li><span th:text="#{Precio_Asc}"></span></li>
-                        </a>
+                       
                         <a th:href="@{/DESC}">
                             <li><span th:text="#{Precio_Desc}"></span></li>
                         </a>
@@ -147,7 +144,8 @@
         <a th:href="@{/usuarios}">
             <img height="340" width="680" th:src="@{/images/banner2.jpg}">
         </a>
-
+<!--             <iframe  th:src="@{/video/banner-video.mp4}" frameborder="0" alt="no video attached" allowfullscreen="1"></iframe>
+ --><iframe src="https://www.youtube.com/embed/vvKYMvoh8Yg" title="YouTube video player" frameborder="1" allow="autoplay" ></iframe>
     </div>
     <div class="texto-banner">
         <p th:text="#{Nuestros_Productos}"></p>

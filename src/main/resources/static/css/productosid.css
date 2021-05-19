@@ -10,9 +10,9 @@
     font-family: Poppins Titulo;
 
 }
-.contenedor-producto img{
+/* .contenedor-producto img{
     border-radius: 80%;
-}
+} */
 .contenedor-producto{
     display: flex;
     flex-flow: wrap row;

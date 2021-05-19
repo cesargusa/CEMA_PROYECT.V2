@@ -5,7 +5,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import proyect.cema.Services.UsuarioServices;
+import proyect.cema.Web.API.SendMailController;
 import proyect.cema.Services.CategoriaService;
+import proyect.cema.Services.MailService;
 import proyect.cema.Services.ProductServices;
 import proyect.cema.Services.ProductoCategoriaService;
 
@@ -32,6 +34,11 @@ public class DI {
     @Bean
     ProductoCategoriaService createProductoCategoria(){
         return new ProductoCategoriaService();
+    }
+
+    @Bean 
+    MailService sendMailService(){
+        return new MailService();
     }
     
 }

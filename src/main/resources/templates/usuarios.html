@@ -8,35 +8,134 @@
     <link th:href="@{/css/usuarios.css}" rel="stylesheet" />
 
     <title>Usuarios | Modelos</title><header th:insert="~{fragments/changelang.html :: header}">
-</header>
 </head>
 
-<body>
+<html>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 
-<div th:replace="~{fragments/changelang.html :: body}"></div>
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#locales").change(function () {
+                var selectedOption = $('#locales').val();
+                if (selectedOption != '') {
+                    window.location.replace('?lang=' + selectedOption);
+                }
+            });
+        });
+    </script>
 
-    <div class="menu">
-        <div class="logo">
-            <a th:href="@{/}">
-                <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+
+<div style="font-family: 'Montserrat', sans-serif;">
+    <span th:text="#{cambiar}"></span>
+    <select id="locales" onchange="cambiar()">
+        <option value=""></option>
+        <option value="en" th:text="#{lang.en}"></option>
+        <option value="es" th:text="#{lang.es}"></option>
+    </select>
+</div>
+<div class="menu">
+    <div class="logo">
+        <a th:href="@{/}">
+            <img height="80" width="200" class="logo-image" th:src="@{'../images/CEMA-logo-definitivo.svg'}" />
+        </a>
+    </div>
+    <div class="cuadros-texto">
+        <form action="" method="GET" target="_blank">
+            <input type="search" id="valor-entrada" class="entrada" autofocus required>
+
+            <input id="entrada" class="buscar" type="submit" th:value="#{Buscar}">
+        </form>
+    </div>
+    <div class="menus-derecha">
+
+        <div class="inicio">
+            <a th:href="@{/inicio-sesion}">
+                <button class="iniciar-sesion" type="submit" th:text="#{Iniciar}"></button>
             </a>
         </div>
-        <div class="cuadros-texto">
-            <form action="" method="GET" target="_blank">
-                <input type="search" id="valor-entrada" class="entrada" placeholder="Haga su busqueda..." autofocus required>
-      
-                <input id="entrada" class="buscar" type="submit" value="Buscar">
-            </form>
-        </div>
-        <div class="inicio">
-            
-            <button class="iniciar-sesion" type="submit" value="Iniciar Sesión | Registrarse">Iniciar Sesión |
-                Registrarse</button>
-        </div>
-    
+
+    </div>
+    <div class="anuncio-clase">
+        <button class="anuncio" type="submit" value="Modelos" th:text="#{Anuncio}"></button>
+
     </div>
 
+</div>
 
+
+<div class="menu-categorias">
+    <div class="categorias-izquierda">
+        <p th:href="#{Mujeres}"><a th:href="@{/WOMENS}">MUJER</a></p>
+        <p th:href="#{Hombres}"><a th:href="@{/BOYS}">HOMBRES</a></p>
+        <p th:href="#{Accesorios}"><a th:href="@{/ACCESORIOS}">ACCESORIOS</a></p>
+        <p th:href="#{CE'MA Clothes}"><a th:href="@{/aboutus}">CE'MA CLOTHES</a></p>
+
+        
+        <a th:href="@{/usuarios/}">
+            <p class="modelo-titulo" th:text="#{Modelos}"></p>
+        </a>
+        <div class="categorias-derecha">
+            <ul class="nav">
+                <li><a href="">Ordenar por:</a>
+                    <ul>
+                        <a th:href="@{/ASC}">
+
+                            <li th:text="#{Precio_Asc}"></li>
+                        </a>
+                        <li th:text="#{Talla}">
+
+                            <li><span th:text="#{Precio_Asc}"></span></li>
+                        </a>
+                        <a th:href="@{/DESC}">
+                            <li><span th:text="#{Precio_Desc}"></span></li>
+                        </a>
+                        <li><span th:text="#{Talla}"></span>
+
+                            <ul>
+                                <a th:href="@{/?talla=XS}">
+                                    <li>XS</li>
+                                </a>
+                                <a th:href="@{/?talla=S}">
+                                    <li>S</li>
+                                </a>
+                                <a th:href="@{/?talla=M}">
+                                    <li>M</li>
+                                </a>
+                                <a th:href="@{/?talla=L}">
+                                    <li>L</li>
+                                </a>
+                                <a th:href="@{/?talla=XL}">
+                                    <li>XL</li>
+                                </a>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+
+
+        </div>
+
+        <div class="perfil">
+            <a th:href="@{/}">
+                <p class="borrar-filtros" th:text="#{Borrar_filtros}"></p>
+            </a>
+        </div>
+        <div class="perfil">
+            <p th:text="#{Perfil}"></p>
+        </div>
+    </div>
+
+</div>
+</header>
+
+<body>
     <div class="color">
         <div class="contenedor">
 

@@ -21,11 +21,28 @@ public class initDB {
         return args ->{
 
 /* 
-             usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media-exp1.licdn.com/dms/image/C5603AQE6G74tLiVRyQ/profile-displayphoto-shrink_200_200/0/1562172815294?e=1620259200&v=beta&t=jBLAKOfxtuBQwR7W3LwA3YmQN0o_jV2WMfW20Ly9bB8","722709600","Zaragoza","España","","Hombre",true));
-            usuario.save(new UsuarioEntity("marietelgmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","","Hombre",false));
-            usuario.save(new UsuarioEntity("marieteloqmail.comerevrerveevv","123","marioambel22","Marirevervreo","Gutierrezveveerv","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","123445654veevervrv5","Madrid","España","reuh9eruheuhvuherhvr0uhrvrhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvferv","Mujer",true));
+            usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
+            usuario.save(new UsuarioEntity("marietelgmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","Buenas tardes","Hombre",true));
+            usuario.save(new UsuarioEntity("marieteloqmail.comerevrerveevv","123","marioambel22","Marirevervreo","Gutierrezveveerv","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypmIARGvqviv_DOyibN9WkTafMzftqdsbFA&usqp=CAU","12344565","Madrid","España","reuh9eruheuhvuherhvr0uhrvrhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvferv","Hombre",true));
             usuario.save(new UsuarioEntity("yahira99@gmail.com", "contrasena", "yahira99", "Yahira", "Hernandez", "https://i.vimeocdn.com/portrait/10108864_640x640", "72278212", "Madrid", "España", "Hola me gusta el jamon", "Mujer", true));
             usuario.save(new UsuarioEntity("rafagarcia@gmail.com", "contrasena", "rafagarcia", "Rafa", "Garcia", "https://www.agenciaglobe.es/wp-content/uploads/2020/06/Agencia-de-Modelos-Globe-Carlos-Arrieta-2-jpg.jpg", "854245", "Canarias", "España", "Bunas soy Rafa", "Hombre", true));
+            usuario.save(new UsuarioEntity("aymericguti@gmail.com", "contrasena", "aymericguti", "Aymeric", "Guti", "https://joseppons.com/formacion/wp-content/uploads/2020/02/Corte-tupe%CC%81.jpg", "884268", "Santander", "España", "Bunas soy Aymeric", "Hombre", true));
+            usuario.save(new UsuarioEntity("pedrocortes@gmail.com", "contrasena", "pedrocortes", "Pedro", "Cortes", "https://i.pinimg.com/originals/28/01/2a/28012a9f817ac252bc2d83037f3ba90b.jpg", "236874", "Bilbao", "España", "Bunas soy Pedro", "Hombre", true));
+            usuario.save(new UsuarioEntity("antoniocampomares@gmail.com", "contrasena", "antoniocampo", "Antonio", "Campo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR654jMUNFPrYW0lJh3rXbPx7HbQ1N6pwd1teWhkn7EQ6A6Lwms-QJ8eO1RKFl1N3C1yto&usqp=CAU", "232896", "Zaragoza", "España", "Bunas soy Antonio", "Hombre", true));
+            usuario.save(new UsuarioEntity("macarenaperez@gmail.com", "contrasena", "macaperez", "Macarena", "Perez", "https://www.eltiempo.com/files/article_multimedia/uploads/2019/11/07/5dc434e900e5f.jpeg", "55482", "Valencia", "España", "Bunas soy Maca", "Mujer", true));
+            usuario.save(new UsuarioEntity("isabelgutierrez@gmail.com", "contrasena", "gutierrezisabel", "Isabel", "Gutierrez", "https://i.pinimg.com/originals/41/ff/2c/41ff2c75ae0e5263500c6b916572c1e1.jpg", "53641", "Barcelona", "España", "Bunas soy Isabel", "Mujer", true));
+            usuario.save(new UsuarioEntity("patriciarebollo@gmail.com", "contrasena", "patrirebo", "Patricia", "Rebo", "https://i.pinimg.com/originals/41/ff/2c/41ff2c75ae0e5263500c6b916572c1e1.jpg", "869521", "Barcelona", "España", "Bunas soy Isabel", "Mujer", true));
+            usuario.save(new UsuarioEntity("teresaaznar@gmail.com", "contrasena", "teresaznar", "Teresa", "Aznar", "https://i.pinimg.com/originals/74/f8/ce/74f8ceea57b1e2bf9b7d36f3a33ddab8.jpg", "412542", "Madrid", "España", "Bunas soy Teresa", "Mujer", true));
+            usuario.save(new UsuarioEntity("miguelclavel@gmail.com", "contrasena", "miguelclavel", "Miguel", "Clavel", "https://2management.org/img/modelos/hombres/david-c/david-c-modelo-img-00.jpg", "857215", "Teruel", "España", "Bunas soy Miguelito", "Hombre", true));
+            usuario.save(new UsuarioEntity("carmenperal@gmail.com", "contrasena", "carmenperal", "Carmen", "Peral", "https://www.emprendedores.es/wp-content/uploads/2020/11/9-modelos-de-negocio-solidos-para-tu-idea-de-empresa-1024x675-1.jpg", "565895", "Madrid", "España", "Bunas soy Carmen", "Mujer", true));
+            usuario.save(new UsuarioEntity("veronicagarcia@gmail.com", "contrasena", "verogarcia", "Veronica", "Garcia", "https://modelos.net/wp-content/uploads/2019/02/Primer-plano-jma-modelos.jpg", "7472658", "Huesca", "España", "Bunas soy Vero", "Mujer", true));
+            usuario.save(new UsuarioEntity("simoncoral@gmail.com", "contrasena", "simoncoral", "Simon", "Coral", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYh2IRbaAke36fBAJeg_I6btBF9dWSBpN2B44ruRuqYGO23SrTpMlBt6-7HklLziwFpaY&usqp=CAU", "145987", "Almeria", "España", "Bunas soy Simon", "Hombre", true));
+            usuario.save(new UsuarioEntity("carlosmorales@gmail.com", "contrasena", "carlosmorales", "Carlos", "Morales", "https://media.revistagq.com/photos/5ca5e03ff552a173b332ac22/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__692265935.jpg", "123689", "Cadiz", "España", "Bunas soy Carlos", "Hombre", true));
+            usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "Malaga", "España", "Bunas soy Cristian", "Hombre", true));
+
+
+
+
 
             product.save(new ProductEntity("Sudadera Nike",40,"L","https://images.asos-media.com/products/sudadera-azul-marino-con-capucha-club-de-nike-plus/12495764-1-navy?$XXL$&wid=513&fit=constrain","Azul Marino","Como nuevo","Nike","Hombre"));
             product.save(new ProductEntity("Pantalon Stradivarius",23,"M","https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elle-pantalon-negro-barato-stradivarius-c-1559142955.jpg?resize=480:*","Negro","Sin estrenar","Stradivarius","Mujer"));
@@ -60,7 +77,7 @@ public class initDB {
             categoria.save(new CategoriaEntity(4L,"Accesorios"));
 
 
-            productoCategoria.save(new ProductoCategoriaEntity(1L, 1L, 5L)); */
+            productoCategoria.save(new ProductoCategoriaEntity(1L, 1L, 5L));  */
 
         };
     

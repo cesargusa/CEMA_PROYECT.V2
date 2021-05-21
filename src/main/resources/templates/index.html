@@ -73,7 +73,7 @@
         <p th:href="#{Accesorios}"><a th:href="@{/ACCESORIOS}">ACCESORIOS</a></p>
         <p th:href="#{CE'MA Clothes}"><a th:href="@{/aboutus}">CE'MA CLOTHES</a></p>
 
-        
+
         <a th:href="@{/usuarios/}">
             <p class="modelo-titulo" th:text="#{Modelos}"></p>
         </a>
@@ -85,7 +85,7 @@
 
                             <li th:text="#{Precio_Asc}"></li>
                         </a>
-                       
+
                         <a th:href="@{/DESC}">
                             <li><span th:text="#{Precio_Desc}"></span></li>
                         </a>
@@ -143,37 +143,73 @@
 
 
         <a th:href="@{/usuarios}">
-            <img height="340" width="680" th:src="@{/images/banner2.jpg}">
+            <img height="340" width="680" th:src="@{/images/banner3.jpg}">
         </a>
-<!--             <iframe  th:src="@{/video/banner-video.mp4}" frameborder="0" alt="no video attached" allowfullscreen="1"></iframe>
- --><iframe src="https://www.youtube.com/embed/vvKYMvoh8Yg" title="YouTube video player" frameborder="1" allow="autoplay" ></iframe>
-    </div>
-    <div class="texto-banner">
-        <p th:text="#{Nuestros_Productos}"></p>
 
-    </div>
-    <div class="listado-productos">
-        <div th:each="pro : ${productos}" th:object="${pro}">
-            <div class="producto">
-                <div>
-                    <a th:href="@{/productos/} + *{id}">
-                        <img width="290" height="330" th:src="*{imagenes}">
-                    </a>
-                </div>
-                <div class="producto-precio">
-                    <p th:text="*{precio } + €" style="text-align: left;"></p>
-                </div>
-                <div class="producto_nombre">
-                    <p th:text="*{nombre_producto}"></p>
-                </div>
 
-                <div class="producto-datos">
-                    <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} " style="text-align: left;"></p>
-                </div>
+        <div class="texto-banner">
+            <p th:text="#{Nuestros_Productos}"></p>
 
+        </div>
+        <div class="listado-productos">
+            <div th:each="pro : ${productos}" th:object="${pro}">
+                <div class="producto">
+                    <div>
+                        <a th:href="@{/productos/} + *{id}">
+                            <img width="290" height="330" th:src="*{imagenes}">
+                        </a>
+                    </div>
+                    <div class="producto-precio">
+                        <p th:text="*{precio } + €" style="text-align: left;"></p>
+                    </div>
+                    <div class="producto_nombre">
+                        <p th:text="*{nombre_producto}"></p>
+                    </div>
+
+                    <div class="producto-datos">
+                        <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} " style="text-align: left;"></p>
+                    </div>
+
+                </div>
             </div>
         </div>
-    </div>
+
+            <div class="footer-dark">
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 item">
+                                <h3>Services</h3>
+                                <ul>
+                                    <p><a href="#">Politica de Privacidad</a></p>
+                                    <p><a href="#">Politica de Cookies</a></p>
+                                    <p><a href="#">Configuracion de Cookies</a></p>
+                                    <p><a href="#">Terminos y Condiciones</a></p>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-md-3 item ejemplo">
+                                <h3>Redes Sociales</h3>
+                                <ul class="ul-image">
+                                        <img th:src="@{/images/logos/001-facebook.png}">
+                                        <img th:src="@{/images/logos/001-facebook.png}">
+                                        <img th:src="@{/images/logos/001-facebook.png}">
+                                        <img th:src="@{/images/logos/001-facebook.png}">
+                                </ul>
+                            </div>
+                            <div class="col-md-6 item text">
+                                <h3>Newsletter</h3>
+                                <form action="">
+                                    <label for="">Email</label>
+                                    <input type="text" name="" id="">
+                                    <button type="submit">Enviar</button>
+                                </form>
+                            </div>
+                            <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                        </div>
+                        <p class="copyright">CEMA Clothes 2021 © Todos los derechos reservados</p>
+                    </div>
+                </footer>
+            </div>
 </body>
 <script type="text/javascript" th:src="@{/js/main.js}"></script>
 

@@ -142,11 +142,13 @@
 
 
 
-
-        <a th:href="@{/usuarios}">
-            <img height="340" width="680" th:src="@{/images/banner3.jpg}">
-        </a>
-
+        <div class="banner-total">
+            <a th:href="@{/usuarios}">
+                <img height="340" width="680" th:src="@{/images/banner3.jpg}">
+            </a>
+            <iframe width="520" height="300" src="https://www.youtube.com/embed/A728KJP2Iio?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      
 
         <div class="texto-banner">
             <p th:text="#{Nuestros_Productos}"></p>
@@ -191,10 +193,18 @@
                             <div class="col-sm-6 col-md-3 item ejemplo">
                                 <h3>Redes Sociales</h3>
                                 <ul class="ul-image">
+                                    <a th:href="@{http://www.facebook.es}">
                                         <img th:src="@{/images/logos/001-facebook.png}">
-                                        <img th:src="@{/images/logos/001-facebook.png}">
-                                        <img th:src="@{/images/logos/001-facebook.png}">
-                                        <img th:src="@{/images/logos/001-facebook.png}">
+                                    </a>
+                                    <a th:href="@{http://www.instagram.es}"> 
+                                        <img th:src="@{/images/logos/011-instagram.png}">
+                                    </a>
+                                    <a th:href="@{htpp://www.whatsapp.es}">
+                                        <img th:src="@{/images/logos/003-whatsapp.png}">
+                                    </a>
+                                    <a th:href="@{http://www.twitter.es}">
+                                        <img th:src="@{/images/logos/002-twitter.png}">
+                                    </a>
                                 </ul>
                             </div>
                             <div class="col-md-6 item text">

@@ -75,6 +75,16 @@ body{
     
     
 }  
+.banner-total{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+
+}
 .menu{
     display: flex;
     justify-content: start;
@@ -266,6 +276,13 @@ justify-content: center;
 .ul-image{
     display: flex;
     flex-flow: wrap row;
+    margin-top: 10%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.ul-image img{
+    width: 40px;
 }
 
 .producto{
@@ -358,8 +375,11 @@ justify-content: center;
 
 
 footer *{
-    background-color: #252850;
+    background-color: #e9a220;
     width: 100%;
+    font-family: 'Poppins Regular';
+    padding-top: 1%;
+    padding-left: 1%;
 
 }
 footer p{
@@ -374,7 +394,19 @@ footer li{
 footer h3{
     color: white;
 }
-
+footer a:link{
+    color: #252850;
+}
+footer input{
+    width: 60%;
+    padding: 1%;
+}
+footer button{
+    width: 15%;
+    padding: 1%;
+    background-color: #252850;
+    color: white;
+}
   @media screen and (max-width: 697px) {
 
     .entrada{

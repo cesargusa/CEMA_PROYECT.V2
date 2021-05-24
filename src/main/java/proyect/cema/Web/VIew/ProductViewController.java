@@ -101,4 +101,11 @@ public class ProductViewController {
         ModelAndView mv = new ModelAndView("about-us");
         return mv;
     }
+
+    
+    @GetMapping("/subetuproducto")
+    public ModelAndView SubetuProducto() {
+        ModelAndView mv = new ModelAndView("subetuproducto");
+        return mv;
+    }
 }

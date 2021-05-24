@@ -20,8 +20,8 @@ public class initDB {
     , ProductoCategoriaRepository productoCategoria){
         return args ->{
 
- 
-            /* usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
+ /* 
+            usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
             usuario.save(new UsuarioEntity("marietelgmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","Buenas tardes","Hombre",true));
             usuario.save(new UsuarioEntity("marieteloqmail.comerevrerveevv","123","marioambel22","Marirevervreo","Gutierrezveveerv","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypmIARGvqviv_DOyibN9WkTafMzftqdsbFA&usqp=CAU","12344565","Madrid","España","reuh9eruheuhvuherhvr0uhrvrhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvferv","Hombre",true));
             usuario.save(new UsuarioEntity("yahira99@gmail.com", "contrasena", "yahira99", "Yahira", "Hernandez", "https://i.vimeocdn.com/portrait/10108864_640x640", "72278212", "Madrid", "España", "Hola me gusta el jamon", "Mujer", true));
@@ -38,14 +38,14 @@ public class initDB {
             usuario.save(new UsuarioEntity("veronicagarcia@gmail.com", "contrasena", "verogarcia", "Veronica", "Garcia", "https://modelos.net/wp-content/uploads/2019/02/Primer-plano-jma-modelos.jpg", "7472658", "Huesca", "España", "Bunas soy Vero", "Mujer", true));
             usuario.save(new UsuarioEntity("simoncoral@gmail.com", "contrasena", "simoncoral", "Simon", "Coral", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYh2IRbaAke36fBAJeg_I6btBF9dWSBpN2B44ruRuqYGO23SrTpMlBt6-7HklLziwFpaY&usqp=CAU", "145987", "Almeria", "España", "Bunas soy Simon", "Hombre", true));
             usuario.save(new UsuarioEntity("carlosmorales@gmail.com", "contrasena", "carlosmorales", "Carlos", "Morales", "https://media.revistagq.com/photos/5ca5e03ff552a173b332ac22/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__692265935.jpg", "123689", "Cadiz", "España", "Bunas soy Carlos", "Hombre", true));
-            usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "Malaga", "España", "Bunas soy Cristian", "Hombre", true)); */
+            usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "Malaga", "España", "Bunas soy Cristian", "Hombre", true)); 
 
 
 
 
 
             product.save(new ProductEntity("Sudadera Nike",40,"L","https://images.asos-media.com/products/sudadera-azul-marino-con-capucha-club-de-nike-plus/12495764-1-navy?$XXL$&wid=513&fit=constrain","Azul Marino","Como nuevo","Nike","Hombre"));
-/*             product.save(new ProductEntity("Pantalon Stradivarius",23,"M","https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elle-pantalon-negro-barato-stradivarius-c-1559142955.jpg?resize=480:*","Negro","Sin estrenar","Stradivarius","Mujer"));
+             product.save(new ProductEntity("Pantalon Stradivarius",23,"M","https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elle-pantalon-negro-barato-stradivarius-c-1559142955.jpg?resize=480:*","Negro","Sin estrenar","Stradivarius","Mujer"));
             product.save(new ProductEntity("Pulsera Hoja",12,"","https://images.vinted.net/thumbs/f800/02_018b3_f86o378nKJ3wHreFGTpAmLmd.jpeg?1620891170-0a2fee3ac48c7e7ecbc3bb4a3df34f886022e348","Plata","Buen estadp","Bonito","Accesorios"));
             product.save(new ProductEntity("Camiseta Snipes",15.35,"M","https://www.snipes.es/dw/image/v2/BDCB_PRD/on/demandware.static/-/Sites-snse-master-eu/default/dwf079653a/1964803_P.jpg?sw=780&sh=780&sm=fit&sfrm=png","Rojo","En buen estado ","Snipes","Hombre"));
             product.save(new ProductEntity("Cazadora North Face",170,"XL","https://http2.mlstatic.com/casaca-chaqueta-mujer-north-face-fibra-800-cintura-D_NQ_NP_800779-MPE27648121921_062018-F.jpg","blanca","Como nuevo","North Face","Hombre"));
@@ -66,19 +66,19 @@ public class initDB {
             product.save(new ProductEntity("Vestido Naranja H&M ",23,"S","https://images.vinted.net/thumbs/f800/03_003d1_JHbUHaJn3gKccmQfwXwuuxEn.jpeg?1620198677-2be312914ab375438a7fe9a16a5914654d93be99","naranja","En buen estado","H&M","Mujer")); 
             product.save(new ProductEntity("Collar Tous ",40,"","https://images.vinted.net/thumbs/f800/01_01232_yiV6SnYRVSKLUoARcuTFf7Pr.jpeg?1620071577-0da737bd31b0a225ce7dfe25cdb8623a1359ff0f","plata","Como nuevo","Tous","Accesorios")); 
             product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","verde","Sin estrenar","Adidas","Hombre"));  
-            product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","verde","Sin estrenar","Adidas","Mujer"));  */ 
+            product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","verde","Sin estrenar","Adidas","Mujer"));  
             
            
            
            
-      /*       categoria.save(new CategoriaEntity(1L,"Sudaderas"));
+             categoria.save(new CategoriaEntity(1L,"Sudaderas"));
             categoria.save(new CategoriaEntity(2L,"Camisetas"));
             categoria.save(new CategoriaEntity(3L,"Zapatillas"));
-            categoria.save(new CategoriaEntity(4L,"Accesorios")); */
+            categoria.save(new CategoriaEntity(4L,"Accesorios")); 
 
 
-           /* productoCategoria.save(new ProductoCategoriaEntity(1L, 1L, 5L));  */
-
+            productoCategoria.save(new ProductoCategoriaEntity(1L, 1L, 5L));  
+ */
         };
     
 

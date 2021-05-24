@@ -58,9 +58,8 @@
 
     </div>
     <div class="anuncio-clase">
-        <a th:href="@{/subetuproducto}">
         <button class="anuncio" type="submit" value="Modelos" th:text="#{Anuncio}"></button>
-        </a>
+
     </div>
     
 
@@ -135,45 +134,6 @@
 
 <body class="body">
 
-
-
-    <div class="banner">
-
-
-
-
-
-        <a th:href="@{/usuarios}">
-            <img height="340" width="680" th:src="@{/images/banner3.jpg}">
-        </a>
-
-
-        <div class="texto-banner">
-            <p th:text="#{Nuestros_Productos}"></p>
-
-        </div>
-        <div class="listado-productos">
-            <div th:each="pro : ${productos}" th:object="${pro}">
-                <div class="producto">
-                    <div>
-                        <a th:href="@{/productos/} + *{id}">
-                            <img width="290" height="330" th:src="*{imagenes}">
-                        </a>
-                    </div>
-                    <div class="producto-precio">
-                        <p th:text="*{precio } + €" style="text-align: left;"></p>
-                    </div>
-                    <div class="producto_nombre">
-                        <p th:text="*{nombre_producto}"></p>
-                    </div>
-
-                    <div class="producto-datos">
-                        <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} " style="text-align: left;"></p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
 
             <div class="footer-dark">
                 <footer>

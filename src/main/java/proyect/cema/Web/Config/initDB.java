@@ -19,12 +19,10 @@ public class initDB {
     CommandLineRunner initDataBase(UsuarioRepository usuario, ProductRepository product, CategoriaRepository categoria
     , ProductoCategoriaRepository productoCategoria){
         return args ->{
+/* 
 
-<<<<<<< HEAD
- /* 
-=======
  
->>>>>>> a6c61bad98b4836db127f48434f5be9b09d1682b
+
             usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
             usuario.save(new UsuarioEntity("marietelgmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","Buenas tardes","Hombre",true));
             usuario.save(new UsuarioEntity("marieteloqmail.comerevrerveevv","123","marioambel22","Marirevervreo","Gutierrezveveerv","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypmIARGvqviv_DOyibN9WkTafMzftqdsbFA&usqp=CAU","12344565","Madrid","España","reuh9eruheuhvuherhvr0uhrvrhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvferv","Hombre",true));
@@ -81,8 +79,8 @@ public class initDB {
             categoria.save(new CategoriaEntity(4L,"Accesorios")); 
 
 
-            productoCategoria.save(new ProductoCategoriaEntity(1L, 1L, 5L));  
- */
+            productoCategoria.save(new ProductoCategoriaEntity(1L, 1L, 5L));   */
+ 
         };
     
 

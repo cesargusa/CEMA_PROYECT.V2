@@ -21,7 +21,7 @@ public class initDB {
         return args ->{
 
  
-            /* usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
+            usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
             usuario.save(new UsuarioEntity("marietelgmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","Buenas tardes","Hombre",true));
             usuario.save(new UsuarioEntity("marieteloqmail.comerevrerveevv","123","marioambel22","Marirevervreo","Gutierrezveveerv","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypmIARGvqviv_DOyibN9WkTafMzftqdsbFA&usqp=CAU","12344565","Madrid","España","reuh9eruheuhvuherhvr0uhrvrhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvferv","Hombre",true));
             usuario.save(new UsuarioEntity("yahira99@gmail.com", "contrasena", "yahira99", "Yahira", "Hernandez", "https://i.vimeocdn.com/portrait/10108864_640x640", "72278212", "Madrid", "España", "Hola me gusta el jamon", "Mujer", true));
@@ -38,7 +38,7 @@ public class initDB {
             usuario.save(new UsuarioEntity("veronicagarcia@gmail.com", "contrasena", "verogarcia", "Veronica", "Garcia", "https://modelos.net/wp-content/uploads/2019/02/Primer-plano-jma-modelos.jpg", "7472658", "Huesca", "España", "Bunas soy Vero", "Mujer", true));
             usuario.save(new UsuarioEntity("simoncoral@gmail.com", "contrasena", "simoncoral", "Simon", "Coral", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYh2IRbaAke36fBAJeg_I6btBF9dWSBpN2B44ruRuqYGO23SrTpMlBt6-7HklLziwFpaY&usqp=CAU", "145987", "Almeria", "España", "Bunas soy Simon", "Hombre", true));
             usuario.save(new UsuarioEntity("carlosmorales@gmail.com", "contrasena", "carlosmorales", "Carlos", "Morales", "https://media.revistagq.com/photos/5ca5e03ff552a173b332ac22/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__692265935.jpg", "123689", "Cadiz", "España", "Bunas soy Carlos", "Hombre", true));
-            usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "Malaga", "España", "Bunas soy Cristian", "Hombre", true)); */
+            usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "Malaga", "España", "Bunas soy Cristian", "Hombre", true)); 
 
 
 

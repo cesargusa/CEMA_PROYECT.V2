@@ -16,8 +16,8 @@
 .contenedor-producto{
     display: flex;
     flex-flow: wrap row;
-    margin-left: -20%;
-    margin-top: 2%;
+    margin-right: -20%;
+    margin-top: -95%;
     font-family: Poppins Regular;
 }
 .producto-imagen{
@@ -55,6 +55,8 @@
   
 }
 .perfil-contenedor{
-    margin-inline-start: 50%;
-    margin-left: 90%;
+   color: #20d32f;
+    margin-top: -90%;
+    margin-inline: 40px;
+    
 }

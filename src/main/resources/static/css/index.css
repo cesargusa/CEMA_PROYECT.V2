@@ -75,6 +75,16 @@ body{
     
     
 }  
+.banner-total{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+
+}
 .menu{
     display: flex;
     justify-content: start;

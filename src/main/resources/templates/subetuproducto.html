@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/index.css}" rel="stylesheet" />
+    <link th:href="@{/css/sube-tu-producto.css}" rel="stylesheet" />
+
 
     <title>CE'MA Clothes | Vende tu ropa </title>
 </head>
@@ -58,9 +60,8 @@
 
     </div>
     <div class="anuncio-clase">
-        <a th:href="@{/subetuproducto}">
         <button class="anuncio" type="submit" value="Modelos" th:text="#{Anuncio}"></button>
-        </a>
+
     </div>
     
 
@@ -111,69 +112,6 @@
 
                             </ul>
                         </li>
-                  
-                        <li><span>Estado: </span>
-
-                            <ul>
-                                <a th:href="@{/?estado=Nuevo}">
-                                    <li>Nuevo</li>
-                                </a>
-                                <a th:href="@{/?estado=Seminuevo}">
-                                    <li>Seminuevo</li>
-                                </a>
-                                <a th:href="@{/?estado=Usado}">
-                                    <li>Usado</li>
-                                </a>
-                                <a th:href="@{/?estado=Muy Usado}">
-                                    <li>Muy Usado</li>
-                                </a>
-                             
-
-                            </ul>
-                        </li>
-
-                        <li><span>Color: </span>
-
-                            <ul>
-                                <a th:href="@{/?color=Azul Marino}">
-                                    <li>Azul Marino</li>
-                                </a>
-                                <a th:href="@{/?color=Negro}">
-                                    <li>Negro</li>
-                                </a>
-                                <a th:href="@{/?color=Plata}">
-                                    <li>Plata</li>
-                                </a>
-                                <a th:href="@{/?color=Blanco}">
-                                    <li>Blanco</li>
-                                </a>
-                                <a th:href="@{/?color=Rojo}">
-                                    <li>Rojo</li>
-                                </a>
-                                <a th:href="@{/?color=Marron}">
-                                    <li>Marron</li>
-                                </a>
-                                <a th:href="@{/?color=Naranja}">
-                                    <li>Naranja</li>
-                                </a>
-                                <a th:href="@{/?color=Rosa}">
-                                    <li>Rosa</li>
-                                </a>
-                                <a th:href="@{/?color=Amarillo}">
-                                    <li>Amarillo</li>
-                                </a>
-                                <a th:href="@{/?color=Caramelo}">
-                                    <li>Caremelo</li>
-                                </a>
-                                <a th:href="@{/?color=Mostaza}">
-                                    <li>Mostaza</li>
-                                </a>
-                                <a th:href="@{/?color=Verde}">
-                                    <li>Verde</li>
-                                </a>
-
-                            </ul>
-                        </li>
                     </ul>
                 </li>
 
@@ -198,48 +136,20 @@
 
 <body class="body">
 
-
-
-    <div class="banner">
-
-
-
-
-        <div class="banner-total">
-            <a th:href="@{/usuarios}">
-                <img height="340" width="680" th:src="@{/images/banner3.jpg}">
-            </a>
-            <iframe width="520" height="300" src="https://www.youtube.com/embed/A728KJP2Iio?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      
-
-        <div class="texto-banner">
-           <!--  <p th:text="#{Nuestros_Productos}"></p> -->
-           <p>LISTADO DE PRODUCTOS</p>
-
-        </div>
-        <div class="listado-productos">
-            <div th:each="pro : ${productos}" th:object="${pro}">
-                <div class="producto">
-                    <div>
-                        <a th:href="@{/productos/} + *{id}">
-                            <img width="290" height="330" th:src="*{imagenes}">
-                        </a>
-                    </div>
-                    <div class="producto-precio">
-                        <p th:text="*{precio } + €" ></p>
-                    </div>
-                    <div class="producto_nombre">
-                        <p th:text="*{nombre_producto}"></p>
-                    </div>
-
-                    <div class="producto-datos">
-                        <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} "></p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+    <section class="product-form">
+        <h1>Subir un producto</h1>
+        <input class="inputs" type="text" name="titulo" id="titulo" placeholder="Ingrese un titulo para el producto">
+        <input class="inputs" type="text" name="descripcion" id="titulo" placeholder="Describe tu producto">
+        <input class="inputs" type="text" name="categoria" id="titulo" placeholder="Elige una categoria">
+        <input class="inputs" type="text" name="marca" id="titulo" placeholder="Describe la marca">
+        <input class="inputs" type="text" name="estado" id="titulo" placeholder="Elige un estado ">
+        <input class="inputs" type="text" name="precio" id="titulo" placeholder="Precio">
+        <p>Estoy de acuerdo con <a href="#">Terminos y condiciones</a></p>
+        <input class="boton-product" type="submit" value="Subir mi Producto"></input>
+    </section>
+<br>
+<br>
+<br>
 
             <div class="footer-dark">
                 <footer>
@@ -257,18 +167,10 @@
                             <div class="col-sm-6 col-md-3 item ejemplo">
                                 <h3>Redes Sociales</h3>
                                 <ul class="ul-image">
-                                    <a th:href="@{http://www.facebook.es}">
                                         <img th:src="@{/images/logos/001-facebook.png}">
-                                    </a>
-                                    <a th:href="@{http://www.instagram.es}"> 
-                                        <img th:src="@{/images/logos/011-instagram.png}">
-                                    </a>
-                                    <a th:href="@{htpp://www.whatsapp.es}">
-                                        <img th:src="@{/images/logos/003-whatsapp.png}">
-                                    </a>
-                                    <a th:href="@{http://www.twitter.es}">
-                                        <img th:src="@{/images/logos/002-twitter.png}">
-                                    </a>
+                                        <img th:src="@{/images/logos/001-facebook.png}">
+                                        <img th:src="@{/images/logos/001-facebook.png}">
+                                        <img th:src="@{/images/logos/001-facebook.png}">
                                 </ul>
                             </div>
                             <div class="col-md-6 item text">

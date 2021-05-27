@@ -110,6 +110,69 @@
 
                             </ul>
                         </li>
+                  
+                        <li><span>Estado: </span>
+
+                            <ul>
+                                <a th:href="@{/?estado=Nuevo}">
+                                    <li>Nuevo</li>
+                                </a>
+                                <a th:href="@{/?estado=Seminuevo}">
+                                    <li>Seminuevo</li>
+                                </a>
+                                <a th:href="@{/?estado=Usado}">
+                                    <li>Usado</li>
+                                </a>
+                                <a th:href="@{/?estado=Muy Usado}">
+                                    <li>Muy Usado</li>
+                                </a>
+                             
+
+                            </ul>
+                        </li>
+
+                        <li><span>Color: </span>
+
+                            <ul>
+                                <a th:href="@{/?color=Azul Marino}">
+                                    <li>Azul Marino</li>
+                                </a>
+                                <a th:href="@{/?color=Negro}">
+                                    <li>Negro</li>
+                                </a>
+                                <a th:href="@{/?color=Plata}">
+                                    <li>Plata</li>
+                                </a>
+                                <a th:href="@{/?color=Blanco}">
+                                    <li>Blanco</li>
+                                </a>
+                                <a th:href="@{/?color=Rojo}">
+                                    <li>Rojo</li>
+                                </a>
+                                <a th:href="@{/?color=Marron}">
+                                    <li>Marron</li>
+                                </a>
+                                <a th:href="@{/?color=Naranja}">
+                                    <li>Naranja</li>
+                                </a>
+                                <a th:href="@{/?color=Rosa}">
+                                    <li>Rosa</li>
+                                </a>
+                                <a th:href="@{/?color=Amarillo}">
+                                    <li>Amarillo</li>
+                                </a>
+                                <a th:href="@{/?color=Caramelo}">
+                                    <li>Caremelo</li>
+                                </a>
+                                <a th:href="@{/?color=Mostaza}">
+                                    <li>Mostaza</li>
+                                </a>
+                                <a th:href="@{/?color=Verde}">
+                                    <li>Verde</li>
+                                </a>
+
+                            </ul>
+                        </li>
                     </ul>
                 </li>
 
@@ -150,7 +213,8 @@
       
 
         <div class="texto-banner">
-            <p th:text="#{Nuestros_Productos}"></p>
+           <!--  <p th:text="#{Nuestros_Productos}"></p> -->
+           <p>LISTADO DE PRODUCTOS</p>
 
         </div>
         <div class="listado-productos">
@@ -162,14 +226,14 @@
                         </a>
                     </div>
                     <div class="producto-precio">
-                        <p th:text="*{precio } + €" style="text-align: left;"></p>
+                        <p th:text="*{precio } + €" ></p>
                     </div>
                     <div class="producto_nombre">
                         <p th:text="*{nombre_producto}"></p>
                     </div>
 
                     <div class="producto-datos">
-                        <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} " style="text-align: left;"></p>
+                        <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} "></p>
                     </div>
 
                 </div>

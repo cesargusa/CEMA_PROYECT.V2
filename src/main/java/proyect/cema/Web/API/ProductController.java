@@ -1,13 +1,7 @@
 package proyect.cema.Web.API;
 
 import java.util.List;
-import java.util.Optional;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.websocket.server.PathParam;
-
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +10,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import proyect.cema.Services.Models.ProductDTO;
@@ -48,67 +41,21 @@ public class ProductController {
             return productServices.getById(id);
         }
      
-       
-    
- 
-    
     @GetMapping()
     public List<ProductDTO> GetByName(
             @RequestParam(name = "nombre_producto", required = false, defaultValue = "") String nombre_producto,
-            
-           /*    @RequestParam(name = "precio", required = false, defaultValue = "0") double
-              precio, */
-             
             @RequestParam(name = "talla", required = false, defaultValue = "") String talla,
-            @RequestParam(name = "marca", required = false, defaultValue = "") String marca) {
+            @RequestParam(name = "marca", required = false, defaultValue = "") String marca,
+            @RequestParam(name = "sexo", required = false, defaultValue = "") String sexo,
+            @RequestParam(name = "estado", required = false, defaultValue = "") String estado,
+            @RequestParam(name = "color", required = false, defaultValue = "") String color ) {
         // MUESTRA TODO SI NO HAY FILTROS
-        if (marca.equals("") && nombre_producto.equals("") && talla.equals("")) {
+        if (marca.equals("") && nombre_producto.equals("") && talla.equals("") && sexo.equals("") && estado.equals("")
+        && color.equals("")) {
             return productServices.GetAll();
-        }
-
-        //NOMBRE
-        if (marca.equals("") && !nombre_producto.equals("") && talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-        if (!marca.equals("") && !nombre_producto.equals("") && talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-        if (marca.equals("") && !nombre_producto.equals("") && !talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-        //MARCA
-        if (!marca.equals("") && nombre_producto.equals("") && talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-        if (!marca.equals("") && !nombre_producto.equals("") && talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-
-        if (!marca.equals("") && nombre_producto.equals("") && !talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-        //TALLAS
-        if (marca.equals("") && nombre_producto.equals("") && !talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-        if (!marca.equals("") && nombre_producto.equals("") && !talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-        if (marca.equals("") && !nombre_producto.equals("") && !talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-
-        // MUESTRA TODO
-        if (!marca.equals("") && !nombre_producto.equals("") && !talla.equals("")) {
-            return productServices.getByName(nombre_producto, marca, talla);
-        }
-       /*  if(precio !=0 && marca.equals("") && nombre_producto.equals("") && talla.equals("")){
-            productServices.getPrecio(precio);
-        }
-         */
-        return null;
-
- 
+        }else{
+            return productServices.getByName(nombre_producto, marca, talla,sexo,estado,color);
+        } 
     }
 
     @DeleteMapping("/{id}")
@@ -125,7 +72,7 @@ public class ProductController {
         return productServices.orderByPrecioaASC();
     }
 
-    @GetMapping("/BOYS")
+/*     @GetMapping("/BOYS")
     public List<ProductDTO> GetOrderHombres(){
         return productServices.orderByHombres();
     }
@@ -138,6 +85,6 @@ public class ProductController {
     @GetMapping("/ACCESORIOS")
     public List<ProductDTO> GetOrderAccesorios(){
         return productServices.orderByAccesorios();
-    }
+    } */
 
 }

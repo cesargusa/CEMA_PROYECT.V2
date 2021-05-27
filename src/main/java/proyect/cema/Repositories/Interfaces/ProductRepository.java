@@ -27,11 +27,17 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
         + "FROM Productos p "
         + "WHERE (:nombre_producto = '' OR nombre_producto LIKE %:nombre_producto%) "+
         " AND (:marca = '' OR marca LIKE %:marca%) " +
-        " AND (:talla = '' OR talla =:talla)")
+        " AND (:talla = '' OR talla =:talla)"+
+        " AND (:sexo = '' OR sexo LIKE %:sexo%)" +
+        " AND (:estado = '' OR estado LIKE %:estado%)"+
+        " AND (:color = '' OR color LIKE %:color%)" )
         Collection<ProductEntity> findByName(
         @Param("nombre_producto") String nombre_producto,
         @Param("marca") String marca,
-        @Param("talla") String talla);
+        @Param("talla") String talla,
+        @Param("sexo") String sexo,
+        @Param("estado") String estado,
+        @Param("color") String color);
       
         @Query(value = "SELECT p "+" FROM Productos p "+ " ORDER BY precio DESC")
         Collection<ProductEntity> orderPriceDESC();
@@ -39,12 +45,5 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
         @Query(value = "SELECT p "+" FROM Productos p "+ " ORDER BY precio ASC")
         Collection<ProductEntity> orderPriceASC();
 
-        @Query(value = "SELECT p "+" FROM Productos p "+ " WHERE sexo = 'Hombre'")
-        Collection<ProductEntity> orderHombres();
-
-        @Query(value = "SELECT p "+" FROM Productos p "+ " WHERE sexo = 'Mujer'")
-        Collection<ProductEntity> orderMujeres();
-
-        @Query(value = "SELECT p "+" FROM Productos p "+ " WHERE sexo = 'Accesorios'")
-        Collection<ProductEntity> orderAccesorios();
+   
 }

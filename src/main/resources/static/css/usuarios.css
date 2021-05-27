@@ -7,7 +7,18 @@
     src: url('../font/Poppins/Poppins-Bold.ttf');
 }
 
+header{
+    background-color: rgba(239, 241, 243, 0.89);
 
+        position: fixed;
+        top: 0;
+        width:100%;
+       }
+
+body{
+    background-color: rgba(239, 241, 243, 0.89);
+
+}
 *{
     margin:0;
     padding: 0;

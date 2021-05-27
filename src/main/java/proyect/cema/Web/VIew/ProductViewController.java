@@ -1,10 +1,7 @@
 package proyect.cema.Web.VIew;
 
 import java.util.List;
-import java.util.Optional;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,8 +24,11 @@ public class ProductViewController {
     @GetMapping("/productosControl")
     public ModelAndView GetAllProducts(@RequestParam(name = "nombre_producto", required = false, defaultValue = "") String nombre_producto,
      @RequestParam(name = "talla", required = false, defaultValue = "") String talla,
-     @RequestParam(name = "marca", required = false, defaultValue = "") String marca){
-        List<ProductDTO> allProducts = productController.GetByName(nombre_producto,talla,marca);
+     @RequestParam(name = "marca", required = false, defaultValue = "") String marca,
+     @RequestParam(name = "sexo", required = false, defaultValue = "") String sexo,
+     @RequestParam(name = "estado", required = false, defaultValue = "") String estado,
+            @RequestParam(name = "color", required = false, defaultValue = "") String color){
+        List<ProductDTO> allProducts = productController.GetByName(nombre_producto,talla,marca,sexo,estado,color);
         ModelAndView mv = new ModelAndView("productosControl");
         mv.addObject("productos", allProducts);
         return mv;
@@ -43,8 +43,12 @@ public class ProductViewController {
     @GetMapping("/")
     public ModelAndView Index(@RequestParam(name = "nombre_producto", required = false, defaultValue = "") String nombre_producto,
      @RequestParam(name = "talla", required = false, defaultValue = "") String talla,
-     @RequestParam(name = "marca", required = false, defaultValue = "") String marca){
-        List<ProductDTO> allProducts = productController.GetByName(nombre_producto,talla,marca);
+     @RequestParam(name = "marca", required = false, defaultValue = "") String marca,
+     @RequestParam(name = "sexo", required = false, defaultValue = "") String sexo,
+     @RequestParam(name = "estado", required = false, defaultValue = "") String estado,
+     @RequestParam(name = "color", required = false, defaultValue = "") String color
+){
+        List<ProductDTO> allProducts = productController.GetByName(nombre_producto,talla,marca,sexo,estado,color);
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("productos", allProducts);
         return mv;
@@ -56,7 +60,7 @@ public class ProductViewController {
         mv.addObject("productos", allProductsOrderByPrecioDESC);
         return mv;
     }
-    @GetMapping("/BOYS")
+/*     @GetMapping("/BOYS")
     public ModelAndView Boys(){
         List<ProductDTO> allProductsOrderByHombres = productController.GetOrderHombres();
         ModelAndView mv = new ModelAndView("index");
@@ -78,7 +82,7 @@ public class ProductViewController {
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("productos", allProductsOrderByAccesorios);
         return mv;
-    }
+    } */
 
     @GetMapping("/ASC")
     public ModelAndView Asc(){

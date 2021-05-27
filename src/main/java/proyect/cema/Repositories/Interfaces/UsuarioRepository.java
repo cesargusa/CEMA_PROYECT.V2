@@ -17,6 +17,11 @@ public interface UsuarioRepository extends JpaRepository<UsuarioEntity, Long> {
     @Query(value = "SELECT u " + "FROM Usuarios u " + "WHERE email = :email AND contrasena =:contrasena ")
     Collection<UsuarioEntity> findUserPassword(@Param("email") String email, @Param("contrasena") String contrasena);
 
+    @Query(value = "SELECT u " 
+    + "FROM Usuarios u "
+    + "WHERE (:usuario = '' OR usuario LIKE %:usuario%)"
+)
+    Collection<UsuarioEntity> findByUser(@Param("usuario") String usuario);
     /*
      * @Query(value = "SELECT p " + "FROM Usuarios p " +
      * " WHERE nombre_producto LIKE %:nombre_producto% OR precio = :precio OR talla = :talla OR marca = :marca"

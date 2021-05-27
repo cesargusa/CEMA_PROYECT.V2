@@ -20,8 +20,9 @@
         </div>
         <div class="cuadros-texto">
             <form action="" method="GET" target="_blank">
-                <input type="search" id="valor-entrada" class="entrada" placeholder="Haga su busqueda..." autofocus required>
-      
+                <input type="search" id="valor-entrada" class="entrada" placeholder="Haga su busqueda..." autofocus
+                    required>
+
                 <input id="entrada" class="buscar" type="submit" value="Buscar">
             </form>
         </div>
@@ -51,7 +52,7 @@
                 <p class="modelo-titulo">MODELOS</p>
             </a>
             <div class="categorias-derecha">
-              
+
 
 
             </div>
@@ -62,39 +63,53 @@
         <br>
         <br>
 
-        <div th:each="pro : ${productos}" th:object="${pro}">
-         
-                    
-            <div class="contenedor-producto">
-                <div class="producto-imagen">
-                    <img th:src="*{imagenes}" width="380" height="420">
-                 <div class="perfil-botones">
-                    <button class="button-seguir">Añadir a favoritos</button>
-                    <button class="button-mensaje">Contactar con el vendedor</button>
-                </div> 
-                <div class="perfil-contenedor">
-                    <h1 th:text="*{nombre_producto}"></h1>
-                    <br>
-                    <h2 th:text="*{precio} + ' '+ €"></h2>
-                    <br>
-                    <p th:text="*{talla}"></p>
-                    <br>
+        <div th:each="pro : ${productos}" th:object="${pro}" class="productId">
+            <div class="productId-imagenes">
+
+                <img th:src="*{imagenes}" alt="">
+            </div>
+            <div class="productId-informacion">
+                <p th:text="*{nombre_producto}" class="productId-nombre"></p>
+                <div class="precio-productId">
+                    <span>precio </span>
+                    <p th:text="*{precio} + €"></span>
+                </div>
+                <div class="color-productId">
+                    <span>color </span>
                     <p th:text="*{color}"></p>
-                    <p th:text="*{estado}"></p>
+                </div>
+                <div class="talla-productId">
+                    <span>talla </span>
+                    <p th:text="*{talla}"></p>
+                </div>
+                <div class="marca-productId">
+                    <span>marca </span>
                     <p th:text="*{marca}"></p>
-                    <p th:text="*{sexo}"></p>
-                
+                </div>   
+                <div class="estado-productId">
+                    <span>estado </span>
+                    <p th:text="*{estado}"></p>
+                </div>
+                <div class="productId-botones">
+                    <button class="contactar">Contactar con el Vendedor</button>
+                    <button class="favoritos">Añadir a favoritos</button>
                 </div>
             </div>
-              
-                
- 
-            
 
 
 
-            
+
+
         </div>
+
+
+
+
+
+
+
+
+    </div>
 </body>
 <script type="text/javascript" th:src="@{/js/main.js}"></script>
 

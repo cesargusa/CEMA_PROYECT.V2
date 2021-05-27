@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import proyect.cema.Services.Models.UsuarioDTO;
@@ -20,13 +21,13 @@ public class UsuariosViewController {
         this.usuarioController = usuarioController;
     }
 
-    @GetMapping("/usuariosControl")
-    public ModelAndView GetAllUsuariosControl() {
-        List<UsuarioDTO> allUsuarios = usuarioController.GetAll();
+  /*   @GetMapping("/usuariosControl")
+    public ModelAndView GetAllUsuariosControl(@RequestParam(name = "usuario", required = false, defaultValue = "") String usuario) {
+        List<UsuarioDTO> allUsuarios = usuarioController.GetByUser(usuario);
         ModelAndView mv = new ModelAndView("usuariosControl");
         mv.addObject("usuarios", allUsuarios);
         return mv;
-    }
+    } */
     @GetMapping("/usuariosControl/{id}")
     public ModelAndView GetUsuariosControlId(@PathVariable("id") Long id) {
         List<UsuarioDTO> allUsuarios = usuarioController.GetById(id);
@@ -37,10 +38,14 @@ public class UsuariosViewController {
 
     
     @GetMapping("/usuarios")
-    public ModelAndView GetAllUsuarios() {
-        List<UsuarioDTO> allUsuarios = usuarioController.GetAll();
+    public ModelAndView GetAllUsuarios(@RequestParam(name = "usuario", required = false, defaultValue = "") String usuario,
+    @RequestParam(name = "modelo", required = false, defaultValue = "") boolean modelo) {
+    
+        List<UsuarioDTO> usuariosFiltre = usuarioController.GetByUser(usuario,modelo);
+       
         ModelAndView mv = new ModelAndView("usuarios");
-        mv.addObject("usuarios", allUsuarios);
+     
+        mv.addObject("usuarios", usuariosFiltre);
         return mv;
     }
 
@@ -65,16 +70,12 @@ public class UsuariosViewController {
         mv.addObject("usuarios", new UsuarioDTO());
         return mv;
     }
-    /* @GetMapping("/ususarios")
-    public ModelAndView GetAllUsuarios(){
-        List<UsuarioDTO> allUsuarios = usuarioController.GetAll();
-        ModelAndView mv = new ModelAndView("usuarios");
-        mv.addObject("usuarios", attributeValue)
-    } */
 
     @PostMapping("/crear-usuario")
     public String Add(@ModelAttribute("usuarios") UsuarioDTO usuario){
        usuarioController.AddUsuario(usuario);
         return "redirect:/usuarios";
     }
+
+   
 }

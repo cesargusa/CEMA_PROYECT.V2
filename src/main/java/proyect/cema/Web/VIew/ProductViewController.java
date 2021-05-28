@@ -112,4 +112,10 @@ public class ProductViewController {
         ModelAndView mv = new ModelAndView("subetuproducto");
         return mv;
     }
+
+    @GetMapping("/terminos-servicios")
+    public ModelAndView TerminosServicios() {
+        ModelAndView mv = new ModelAndView("terminosyservicios");
+        return mv;
+    }
 }

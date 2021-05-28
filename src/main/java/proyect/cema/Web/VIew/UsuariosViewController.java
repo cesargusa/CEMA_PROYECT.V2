@@ -39,23 +39,16 @@ public class UsuariosViewController {
     
     @GetMapping("/usuarios")
     public ModelAndView GetAllUsuarios(@RequestParam(name = "usuario", required = false, defaultValue = "") String usuario,
-    @RequestParam(name = "modelo", required = false, defaultValue = "") boolean modelo) {
+    @RequestParam(name = "pais", required = false, defaultValue = "") String pais,
+    @RequestParam(name = "sexo", required = false, defaultValue = "") String sexo){
     
-        List<UsuarioDTO> usuariosFiltre = usuarioController.GetByUser(usuario,modelo);
+        List<UsuarioDTO> usuariosFiltre = usuarioController.GetByUser(usuario,pais,sexo);
        
         ModelAndView mv = new ModelAndView("usuarios");
      
         mv.addObject("usuarios", usuariosFiltre);
         return mv;
     }
-
-    /* @GetMapping("/usuarios/{id}")
-    public ModelAndView GetUsuariosId(@PathVariable("id") Long id) {
-        List<UsuarioDTO> allUsuarios = usuarioController.GetById(id);
-        ModelAndView mv = new ModelAndView("usuarios");
-        mv.addObject("usuarios", allUsuarios);
-        return mv;
-    } */
     @GetMapping("/usuarios/{id}")
     public ModelAndView GetUsuariosIdMostrar(@PathVariable("id") Long id) {
         List<UsuarioDTO> allUsuarios = usuarioController.GetById(id);
@@ -64,12 +57,19 @@ public class UsuariosViewController {
         return mv;
     }
 
-    @GetMapping("/inicio-sesion")
+    @GetMapping("/registro")
     public ModelAndView CrearUsuario() {
+        ModelAndView mv = new ModelAndView("registro");
+        mv.addObject("usuarios", new UsuarioDTO());
+        return mv;
+    }
+    @GetMapping("/inicio-sesion")
+    public ModelAndView InicioSesion() {
         ModelAndView mv = new ModelAndView("inicio-sesion");
         mv.addObject("usuarios", new UsuarioDTO());
         return mv;
     }
+
 
     @PostMapping("/crear-usuario")
     public String Add(@ModelAttribute("usuarios") UsuarioDTO usuario){

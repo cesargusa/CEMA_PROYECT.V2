@@ -61,8 +61,8 @@ public class UsuarioServices {
         .collect(Collectors.toList());
     }
 
-    public List<UsuarioDTO> findName(String usuario){
-        return usuarioRepository.findByUser(usuario).stream()
+    public List<UsuarioDTO> findName(String usuario,String pais,String sexo){
+        return usuarioRepository.findByUser(usuario,pais,sexo).stream()
         .map(x -> modelMapper.map(x, UsuarioDTO.class))
         .collect(Collectors.toList());
     }

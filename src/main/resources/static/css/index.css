@@ -480,6 +480,9 @@ justify-content: center;
     flex-flow: row wrap;
     justify-self: auto;
     justify-items: auto;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     
 }
 footer *{

@@ -22,17 +22,22 @@ body{
 }
 .menu-contenedor{
     display: flex;
-    flex-flow: wrap row;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh; 
+    background: -webkit-linear-gradient(140deg, rgb(221, 217, 5), #e9a220);
+    background: -moz-linear-gradient(140deg, rgb(221, 217, 5), #e9a220);
+    background: -o-linear-gradient(140deg, rgb(221, 217, 5), #e9a220);
+    background: linear-gradient(140deg, rgb(221, 217, 5), #e9a220);
+    
 }
 .regis{
     width: 40%;
-   
     margin: 10px 40px;
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: center;
-    border: 2px solid #252850;
     padding: 10px;
 }
 
@@ -43,7 +48,9 @@ body{
     margin: 0.5rem;
     font-size: 25px;
   }
-
+select{
+    width: 90%;
+}
   .regis label{
       color: black;
       font-family: Poppins Titulo;
@@ -60,7 +67,7 @@ padding-left:20px;
 padding-right:20px;
 background-color: #4BB543;
 border-color: black;
-border-width: 3px;
+border-width: 1px;
 border-style: solid;
  
   }
@@ -97,11 +104,22 @@ padding-left:20px;
 padding-right:20px;
 background-color: #4BB543;
 border-color: black;
-border-width: 3px;
+border-width: 1px;
 border-style: solid;
  
   }
-  .menu{
-      display: flex;
-      justify-content: center;
+
+
+  * {
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  input {
+    outline: none;
+  }
+  html,
+  body {
+    height: 100%;
   }

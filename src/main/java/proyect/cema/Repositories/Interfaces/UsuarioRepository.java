@@ -20,8 +20,12 @@ public interface UsuarioRepository extends JpaRepository<UsuarioEntity, Long> {
     @Query(value = "SELECT u " 
     + "FROM Usuarios u "
     + "WHERE (:usuario = '' OR usuario LIKE %:usuario%)"
+    + "AND  (:pais = '' OR pais LIKE %:pais%)"
+    + "AND (:sexo = '' OR sexo LIKE %:sexo%)"
 )
-    Collection<UsuarioEntity> findByUser(@Param("usuario") String usuario);
+    Collection<UsuarioEntity> findByUser(@Param("usuario") String usuario,
+    @Param("pais") String pais,
+    @Param("sexo") String sexo);
     /*
      * @Query(value = "SELECT p " + "FROM Usuarios p " +
      * " WHERE nombre_producto LIKE %:nombre_producto% OR precio = :precio OR talla = :talla OR marca = :marca"

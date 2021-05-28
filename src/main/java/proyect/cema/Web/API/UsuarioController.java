@@ -54,13 +54,15 @@ public class UsuarioController {
     } */
     @GetMapping()
     public List<UsuarioDTO> GetByUser(
-            @RequestParam(name = "usuario", required = false, defaultValue = "") String usuario
+            @RequestParam(name = "usuario", required = false, defaultValue = "") String usuario,
+            @RequestParam(name = "pais", required = false, defaultValue = "") String pais,
+            @RequestParam(name = "sexo", required = false, defaultValue = "") String sexo
         ) {
         // MUESTRA TODO SI NO HAY FILTROS
-        if (usuario.equals("")) {
+        if (usuario.equals("") && pais.equals("") && sexo.equals("")) {
             return usuarioServices.GetAll();
         }else{
-            return usuarioServices.findName(usuario);
+            return usuarioServices.findName(usuario,pais,sexo);
         } 
     }
     @DeleteMapping("/{id}")

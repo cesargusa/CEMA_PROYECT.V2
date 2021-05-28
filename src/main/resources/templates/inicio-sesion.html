@@ -10,50 +10,13 @@
     <title>Registrarse | Inicio de Sesion</title>
 </head>
 <body>
-    <div class="menu">
-        <a th:href="@{/}">
-        <img width="200" height="200"  th:src="@{/images/CEMA-logo-definitivo.svg}">
-        </a>
-    </div>
+
     <div class="menu-contenedor"> 
 
  
-    <form th:action="@{/crear-usuario}" th:object="${usuarios}" method="POST" class="regis" enctype="multipart/form-data">
-        <label>Email *</label>
-        <input type="email" th:field="*{email}" required>
-
-        <label>Contraseña *</label>
-        <input type="password"  th:field="*{contrasena}" required minlength="8" maxlength="20">
-
-        <label>Usuario *</label>
-        <input type="text"  th:field="*{usuario}" required>
-
-        <label>Nombre</label>
-        <input type="text"  th:field="*{nombre}" >
-
-        <label>Apellido</label>
-        <input type="text" th:field="*{apellido}">
-
-        <label>Pais</label>
-        <input type="text" th:field="*{pais}">
-
-        <label>Ciudad</label>
-        <input type="text" th:field="*{ciudad}">
-
-        <label>Telefono</label>
-        <input type="number" th:field="*{telefono}">
-
-        <label>Imagen Perfil</label>
-        <input type="text" th:field="*{imagen}">
 
 
-        <button type="submit">Registrarse</button> 
-
-  
-    </form>
-
-
-    <form th:action="@{/crear-usuario}" th:object="${usuarios}" method="POST" class="inicio">
+   <form th:action="@{/crear-usuario}" th:object="${usuarios}" method="POST" class="inicio">
         <label>Email *</label>
         <input type="email" th:field="*{email}" required>
 
@@ -62,9 +25,13 @@
 
 
         <button type="submit">Iniciar Sesion</button> 
-
-  
-    </form>
+        <a th:href="@{/registro}">
+    <p>Registrarse</p>
+  </a>
+  <a th:href="@{/}">
+    <p>INICIO</p>
+    </a>
+    </form> 
 </div>
 </body>
 <script>

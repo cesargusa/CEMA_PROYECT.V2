@@ -43,7 +43,7 @@
     </div>
     <div class="cuadros-texto">
         <form action="" method="GET" target="_blank">
-            <input type="search" id="valor-entrada" class="entrada" autofocus required>
+            <input type="search" id="valor-entradaUsuario" class="entrada" autofocus required placeholder="Busque a un usuario...">
 
             <input id="entrada" class="buscar" type="submit" th:value="#{Buscar}">
         </form>
@@ -93,16 +93,26 @@
                             
                             </ul>
                         </li>
-                        <a th:href="@{/DESC}">
-                            <li><span th:text="#{Precio_Desc}"></span></li>
-                        </a>
+                        <li><span>Pais:</span>
+
+                            <ul>
+                                <a th:href="@{/usuarios/?pais=España}">
+                                    <li>España</li>
+                                </a>
+                                <a th:href="@{/usuarios/?pais=Estados Unidos}">
+                                    <li>EEUU</li>
+                                </a>
+                                
+
+                            </ul>
+                        </li>
                         <li><span>Sexo:</span>
 
                             <ul>
-                                <a th:href="@{/?talla=XS}">
+                                <a th:href="@{/usuarios/?sexo=Hombre}">
                                     <li>Hombres</li>
                                 </a>
-                                <a th:href="@{/?talla=S}">
+                                <a th:href="@{/usuarios/?sexo=Mujer}">
                                     <li>Mujeres</li>
                                 </a>
                                 
@@ -119,7 +129,7 @@
         </div>
 
         <div class="perfil">
-            <a th:href="@{/}">
+            <a th:href="@{/usuarios/}">
                 <p class="borrar-filtros" th:text="#{Borrar_filtros}"></p>
             </a>
         </div>

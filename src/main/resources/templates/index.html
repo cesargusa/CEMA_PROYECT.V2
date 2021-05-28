@@ -69,8 +69,14 @@
 
 <div class="menu-categorias">
     <div class="categorias-izquierda">
-        <p th:href="#{Mujeres}"><a th:href="@{/WOMENS}">MUJER</a></p>
-        <p th:href="#{Hombres}"><a th:href="@{/BOYS}">HOMBRES</a></p>
+        <a th:href="@{/?sexo=Mujer}">
+            <p>MUJERES</p>
+
+        </a>
+        <a th:href="@{/?sexo=Hombre}">
+            <p>HOMBRES</p>
+
+        </a>
         <p th:href="#{Accesorios}"><a th:href="@{/ACCESORIOS}">ACCESORIOS</a></p>
         <p th:href="#{CE'MA Clothes}"><a th:href="@{/aboutus}">CE'MA CLOTHES</a></p>
 

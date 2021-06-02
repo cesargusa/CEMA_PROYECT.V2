@@ -79,48 +79,11 @@ public class ProductServices {
         .map(x -> modelMapper.map(x, ProductDTO.class))
         .collect(Collectors.toList());
     }
-
-   /*  public List<ProductDTO> orderByHombres(){
-        return productRepository.orderHombres().stream()
+    public List<ProductDTO> findByCategory(String nombre_categoria){
+        return productRepository.FindByCategory(nombre_categoria).stream()
         .map(x -> modelMapper.map(x, ProductDTO.class))
         .collect(Collectors.toList());
     }
-
-    public List<ProductDTO> orderByMujeres(){
-        return productRepository.orderMujeres().stream()
-        .map(x -> modelMapper.map(x, ProductDTO.class))
-        .collect(Collectors.toList());
-    }
-
-    public List<ProductDTO> orderByAccesorios(){
-        return productRepository.orderAccesorios().stream()
-        .map(x -> modelMapper.map(x, ProductDTO.class))
-        .collect(Collectors.toList());
-    } */
-
-/*     public List<ProductDTO> getPrecio(double precio){
-        return productRepository.findByPrecio(precio).stream()
-        .map(x -> modelMapper.map(x, ProductDTO.class))
-        .collect(Collectors.toList());
-    }
-  */
-  /*    public List<ProductDTO> getByPrice(Long precio ){
-        return productRepository.findByPrice(precio).stream()
-        .map(x -> modelMapper.map(x, ProductDTO.class))
-        .collect(Collectors.toList());
-    } */
-/*
-    public List<ProductDTO> getByTalla(String talla ){
-        return productRepository.findByTalla(talla).stream()
-        .map(x -> modelMapper.map(x, ProductDTO.class))
-        .collect(Collectors.toList());
-    }
-
-    public List<ProductDTO> getByMarca(String marca ){
-        return productRepository.findByMarca(marca).stream()
-        .map(x -> modelMapper.map(x, ProductDTO.class))
-        .collect(Collectors.toList());
-    }   */ 
 
   
 }

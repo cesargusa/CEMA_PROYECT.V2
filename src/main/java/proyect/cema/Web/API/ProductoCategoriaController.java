@@ -49,4 +49,6 @@ public class ProductoCategoriaController {
     public void Delete(@PathVariable("id") Long id){
         productoCategoriaService.delete(id);
     }
+   
+
 }

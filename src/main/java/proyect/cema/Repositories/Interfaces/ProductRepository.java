@@ -38,12 +38,19 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
         @Param("sexo") String sexo,
         @Param("estado") String estado,
         @Param("color") String color);
-      
+
+        @Query(value = "SELECT p FROM Productos p"
+        +" INNER join ProductoCategoria pc on p.id = pc.productoId"
+        +" INNER join Categoria c on c.id = pc.categoriaId"
+        +" WHERE c.nombre_categoria =:nombre_categoria")
+        Collection<ProductEntity> FindByCategory(@Param("nombre_categoria") String nombre_categoria);
+
         @Query(value = "SELECT p "+" FROM Productos p "+ " ORDER BY precio DESC")
         Collection<ProductEntity> orderPriceDESC();
 
         @Query(value = "SELECT p "+" FROM Productos p "+ " ORDER BY precio ASC")
         Collection<ProductEntity> orderPriceASC();
 
-   
+     
+       
 }

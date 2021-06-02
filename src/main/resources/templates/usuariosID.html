@@ -79,8 +79,13 @@
                     </div>
                     <div class="perfil-nombre">
                         <p th:text="*{nombre } +' '+ *{ apellido}"></p>
-                        <p th:text="*{ciudad } + ' ' + *{pais}"></p>
+                        <p th:text="*{telefono}"></p>
+                        <p th:text="*{ciudad} + ', ' + *{pais}"></p>
+                        <p th:text="*{sexo}"></p>
                         <span class="titulo-modelo" th:if="*{modelo == true}">Modelo</span>
+
+
+
                     </div>
                     <div class="perfil-descripcion">
                         <p th:if="*{descripcion == ''}" th:text="'No hay descripción'"> </p>

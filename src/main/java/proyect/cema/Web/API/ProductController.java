@@ -71,7 +71,10 @@ public class ProductController {
     public List<ProductDTO> GetOrderPriceASC() {
         return productServices.orderByPrecioaASC();
     }
-
+    @GetMapping("/c")
+    public List<ProductDTO> c( @RequestParam(name = "nombre_categoria", required = false, defaultValue = "") String nombre_categoria){
+        return productServices.findByCategory(nombre_categoria);
+    }
 /*     @GetMapping("/BOYS")
     public List<ProductDTO> GetOrderHombres(){
         return productServices.orderByHombres();

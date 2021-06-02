@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../font/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: 'Poppins Titulo';
+    src: url('../font/Poppins/Poppins-Bold.ttf');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.listado-categorias{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.categoria{
+
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
+.categoria p{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Poppins Titulo';
+    text-decoration: none;
+
+}
+.categoria p:hover{
+ text-decoration: none;
+}

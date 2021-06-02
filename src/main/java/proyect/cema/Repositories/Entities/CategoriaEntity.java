@@ -11,11 +11,16 @@ import javax.persistence.Table;
 public class CategoriaEntity {
     private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
     private String nombre_categoria;
+    private String imagen_categoria;
+    private String url_categoria;
 
     
-    public CategoriaEntity(Long id, String nombre_categoria) {
-        this.id = id;
+    
+   
+    public CategoriaEntity(String nombre_categoria, String imagen_categoria) {
+    
         this.nombre_categoria = nombre_categoria;
+        this.imagen_categoria = imagen_categoria;
     }
     public CategoriaEntity() {
     }
@@ -30,6 +35,18 @@ public class CategoriaEntity {
     }
     public void setNombre_categoria(String nombre_categoria) {
         this.nombre_categoria = nombre_categoria;
+    }
+    public String getImagen_categoria() {
+        return imagen_categoria;
+    }
+    public void setImagen_categoria(String imagen_categoria) {
+        this.imagen_categoria = imagen_categoria;
+    }
+    public String getUrl_categoria() {
+        return url_categoria;
+    }
+    public void setUrl_categoria(String url_categoria) {
+        this.url_categoria = "/categorias/"+nombre_categoria;
     }
 
     

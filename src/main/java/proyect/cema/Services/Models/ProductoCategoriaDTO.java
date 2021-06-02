@@ -8,8 +8,7 @@ public class ProductoCategoriaDTO {
     public ProductoCategoriaDTO() {
     }
 
-    public ProductoCategoriaDTO(Long id, Long productoId, Long categoriaId) {
-        this.id = id;
+    public ProductoCategoriaDTO(Long productoId, Long categoriaId) {
         this.productoId = productoId;
         this.categoriaId = categoriaId;
     }

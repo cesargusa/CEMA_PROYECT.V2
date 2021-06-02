@@ -37,10 +37,10 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public List<ProductDTO> GetById(@PathVariable("id") Long id) {
-      
-            return productServices.getById(id);
-        }
-     
+
+        return productServices.getById(id);
+    }
+
     @GetMapping()
     public List<ProductDTO> GetByName(
             @RequestParam(name = "nombre_producto", required = false, defaultValue = "") String nombre_producto,
@@ -48,46 +48,33 @@ public class ProductController {
             @RequestParam(name = "marca", required = false, defaultValue = "") String marca,
             @RequestParam(name = "sexo", required = false, defaultValue = "") String sexo,
             @RequestParam(name = "estado", required = false, defaultValue = "") String estado,
-            @RequestParam(name = "color", required = false, defaultValue = "") String color ) {
-        // MUESTRA TODO SI NO HAY FILTROS
+            @RequestParam(name = "color", required = false, defaultValue = "") String color) {
         if (marca.equals("") && nombre_producto.equals("") && talla.equals("") && sexo.equals("") && estado.equals("")
-        && color.equals("")) {
+                && color.equals("")) {
             return productServices.GetAll();
-        }else{
-            return productServices.getByName(nombre_producto, marca, talla,sexo,estado,color);
-        } 
+        } else {
+            return productServices.getByName(nombre_producto, marca, talla, sexo, estado, color);
+        }
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Long id){
-         productServices.delete(id);
+    public void delete(@PathVariable("id") Long id) {
+        productServices.delete(id);
     }
 
     @GetMapping("/DESC")
     public List<ProductDTO> GetOrderPriceDESC() {
         return productServices.orderByPrecioDESC();
     }
+
     @GetMapping("/ASC")
     public List<ProductDTO> GetOrderPriceASC() {
         return productServices.orderByPrecioaASC();
     }
-    @GetMapping("/c")
-    public List<ProductDTO> c( @RequestParam(name = "nombre_categoria", required = false, defaultValue = "") String nombre_categoria){
+
+    @GetMapping("/categorias/{nombre_categoria}")
+    public List<ProductDTO> c(@PathVariable("nombre_categoria")String nombre_categoria) {
         return productServices.findByCategory(nombre_categoria);
     }
-/*     @GetMapping("/BOYS")
-    public List<ProductDTO> GetOrderHombres(){
-        return productServices.orderByHombres();
-    }
-
-    @GetMapping("/WOMENS")
-    public List<ProductDTO> GetOrderMujeres(){
-        return productServices.orderByMujeres();
-    }
-
-    @GetMapping("/ACCESORIOS")
-    public List<ProductDTO> GetOrderAccesorios(){
-        return productServices.orderByAccesorios();
-    } */
 
 }

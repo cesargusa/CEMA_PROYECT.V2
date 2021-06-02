@@ -87,17 +87,22 @@ public class initDB {
             product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","verde","Sin estrenar","Adidas","Hombre"));  
             product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","verde","Sin estrenar","Adidas","Mujer"));  
 
-            categoria.save(new CategoriaEntity(1L,"Sudaderas"));
-            categoria.save(new CategoriaEntity(2L,"Camisetas"));
-            categoria.save(new CategoriaEntity(3L,"Zapatillas"));
-            categoria.save(new CategoriaEntity(4L,"Accesorios")); 
-            categoria.save(new CategoriaEntity(5L,"Pantalones")); 
-            categoria.save(new CategoriaEntity(6L,"Mujeres")); 
 
-            productoCategoria.save(new ProductoCategoriaEntity(2L, 2L, 5L)); 
-            productoCategoria.save(new ProductoCategoriaEntity(3L, 2L, 6L));
+            categoria.save(new CategoriaEntity("Mujeres","https://img.ltwebstatic.com/images3_pi/2021/04/01/1617245949e0b1217bed1bc05c4793b776d582c880_thumbnail_600x.webp"));
+            categoria.save(new CategoriaEntity("Hombres","https://img.ltwebstatic.com/images3_pi/2021/03/26/16167308995815f2d1e37e211312bb277a0eaf8c00_thumbnail_600x.webp"));  
+            categoria.save(new CategoriaEntity("Sudaderas","https://img.ltwebstatic.com/images3_pi/2020/12/22/1608617143339de2ec72e37485120b68fb618ffcc7_thumbnail_600x.webp"));
+            categoria.save(new CategoriaEntity("Camisetas","https://img.ltwebstatic.com/images3_pi/2019/10/11/15707838107f3d39d193931dfa2cea95dbec0200b8_thumbnail_600x.webp"));
+            categoria.save(new CategoriaEntity("Abrigos","https://img.ltwebstatic.com/images3_pi/2020/11/09/1604888212bf8d0077ab67f2ae94c04d11f71b1819_thumbnail_600x.webp"));
+            categoria.save(new CategoriaEntity("Bañadores","https://img.ltwebstatic.com/images3_pi/2021/01/13/1610523880d4c7f27652fea3d31fa3e82a1222139f_thumbnail_600x.webp"));
+            categoria.save(new CategoriaEntity("Calcetines","https://img.ltwebstatic.com/images3_pi/2021/05/14/1620980706487e1d64398515cf88973bb70bd2a62a_thumbnail_600x.webp"));
+            categoria.save(new CategoriaEntity("Zapatillas","https://img.ltwebstatic.com/images3_pi/2021/04/19/1618810391236a16fbd841b3d55b74cf749d2b13fb_thumbnail_600x.webp"));
+            categoria.save(new CategoriaEntity("Accesorios","https://img.ltwebstatic.com/images3_pi/2020/08/06/159668543510dbd73504c030fa50486d3c4e0b74c7_thumbnail_600x.webp")); 
+            categoria.save(new CategoriaEntity("Pantalones","https://img.ltwebstatic.com/images3_pi/2020/12/03/1606972375e1540d7b31f283215cf43fc5af4fd8cc_thumbnail_600x.webp")); 
+           
 
-            productoCategoria.save(new ProductoCategoriaEntity(4L, 4L, 2L));
+            productoCategoria.save(new ProductoCategoriaEntity(2L, 5L)); 
+            productoCategoria.save(new ProductoCategoriaEntity(2L, 6L));
+            productoCategoria.save(new ProductoCategoriaEntity(4L, 6L));
 
 
   

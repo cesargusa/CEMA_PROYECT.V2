@@ -17,8 +17,7 @@ public class ProductoCategoriaEntity {
     public ProductoCategoriaEntity() {
     }
 
-    public ProductoCategoriaEntity(Long id, Long productoId, Long categoriaId) {
-        this.id = id;
+    public ProductoCategoriaEntity( Long productoId, Long categoriaId) {
         this.productoId = productoId;
         this.categoriaId = categoriaId;
     }

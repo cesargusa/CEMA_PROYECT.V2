@@ -20,6 +20,7 @@ public class CategoriaService {
         .map(x -> modelMapper.map(x, CategoriaDTO.class))
         .collect(Collectors.toList());
     }
+    
 
     public CategoriaDTO add(CategoriaDTO product){
         CategoriaEntity entitytoInsert = modelMapper.map(product, CategoriaEntity.class);

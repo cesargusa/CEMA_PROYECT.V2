@@ -9,17 +9,25 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import proyect.cema.Services.Models.CategoriaDTO;
 import proyect.cema.Services.Models.ProductDTO;
+import proyect.cema.Web.API.CategoriaController;
 import proyect.cema.Web.API.ProductController;
 
 
 @Controller
 public class ProductViewController {
     private final ProductController productController;
+    private final CategoriaController categoriaController;
 
-    ProductViewController(ProductController productController){
+
+    ProductViewController(ProductController productController, CategoriaController categoriaController){
         this.productController=productController;
+        this.categoriaController=categoriaController;
     }
+
+
+    
 
     @GetMapping("/productosControl")
     public ModelAndView GetAllProducts(@RequestParam(name = "nombre_producto", required = false, defaultValue = "") String nombre_producto,
@@ -46,13 +54,53 @@ public class ProductViewController {
      @RequestParam(name = "marca", required = false, defaultValue = "") String marca,
      @RequestParam(name = "sexo", required = false, defaultValue = "") String sexo,
      @RequestParam(name = "estado", required = false, defaultValue = "") String estado,
-     @RequestParam(name = "color", required = false, defaultValue = "") String color
+     @RequestParam(name = "color", required = false, defaultValue = "") String color,
+     @RequestParam(name = "categoria",required = false,defaultValue = "")String categoria
 ){
         List<ProductDTO> allProducts = productController.GetByName(nombre_producto,talla,marca,sexo,estado,color);
+        List<ProductDTO> categoriaProducts = productController.c(categoria);
         ModelAndView mv = new ModelAndView("index");
         mv.addObject("productos", allProducts);
+        mv.addObject("categorias", categoriaProducts);
         return mv;
     } 
+    @GetMapping("/categorias")
+    public ModelAndView GetAllProducts(@RequestParam(name = "nombre_categoria",required = false,defaultValue = "")String nombre_categoria,
+    @RequestParam(name = "nombre_producto", required = false, defaultValue = "") String nombre_producto,
+     @RequestParam(name = "talla", required = false, defaultValue = "") String talla,
+     @RequestParam(name = "marca", required = false, defaultValue = "") String marca,
+     @RequestParam(name = "sexo", required = false, defaultValue = "") String sexo,
+     @RequestParam(name = "estado", required = false, defaultValue = "") String estado,
+     @RequestParam(name = "color", required = false, defaultValue = "") String color,
+     @RequestParam(name = "categoria",required = false,defaultValue = "")String categoria){
+        List<CategoriaDTO> allCategories = categoriaController.GetAll();
+        List<ProductDTO> allProducts = productController.GetByName(nombre_producto, talla, marca, sexo, estado, color);
+
+        ModelAndView mv = new ModelAndView("categorias");
+        mv.addObject("categorias", allCategories);
+        mv.addObject("productos", allProducts);
+
+        return mv;
+    } 
+    @GetMapping("/categorias/{nombre_categoria}")
+    public ModelAndView GetCategories(@PathVariable("nombre_categoria") String nombre_categoria){
+        List<ProductDTO> allCategories = productController.c(nombre_categoria);
+
+        ModelAndView mv = new ModelAndView("categorias");
+        mv.addObject("cat", allCategories);
+
+        return mv;
+    } 
+
+  /*   @GetMapping("/categorias")
+    public ModelAndView IndexCategoria(
+     @RequestParam(name = "categoria",required = false,defaultValue = "")String categoria
+){
+        List<ProductDTO> categoriaProducts = productController.c(categoria);
+        ModelAndView mv = new ModelAndView("index");
+        mv.addObject("categorias", categoriaProducts);
+        return mv;
+    }  */
     @GetMapping("/DESC")
     public ModelAndView Desc(){
         List<ProductDTO> allProductsOrderByPrecioDESC = productController.GetOrderPriceDESC();

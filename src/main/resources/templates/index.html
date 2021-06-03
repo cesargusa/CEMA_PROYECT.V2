@@ -59,10 +59,10 @@
     </div>
     <div class="anuncio-clase">
         <a th:href="@{/subetuproducto}">
-        <button class="anuncio" type="submit" value="Modelos" th:text="#{Anuncio}"></button>
+            <button class="anuncio" type="submit" value="Modelos" th:text="#{Anuncio}"></button>
         </a>
     </div>
-    
+
 
 </div>
 
@@ -117,7 +117,7 @@
 
                             </ul>
                         </li>
-                  
+
                         <li><span>Estado: </span>
 
                             <ul>
@@ -133,7 +133,7 @@
                                 <a th:href="@{/?estado=Muy Usado}">
                                     <li>Muy Usado</li>
                                 </a>
-                             
+
 
                             </ul>
                         </li>
@@ -205,7 +205,7 @@
 <body class="body">
 
 
-<!-- 
+    <!-- 
     <div class="banner">
 
 
@@ -219,82 +219,85 @@
         </div>
       
  -->
-        <div class="texto-banner">
-           <!--  <p th:text="#{Nuestros_Productos}"></p> -->
-           <p>LISTADO DE PRODUCTOS</p>
+    <div class="texto-banner">
+        <!--  <p th:text="#{Nuestros_Productos}"></p> -->
+        <p>LISTADO DE PRODUCTOS</p>
 
-        </div>
-        <div class="listado-productos">
-            <div th:each="pro : ${productos}" th:object="${pro}">
-                <div class="producto">
-                   
-                        <a th:href="@{/productos/} + *{id}">
-                            <img width="290" height="330" th:src="*{imagenes}">
-                        </a>
-                 
-                    <div class="producto-precio">
-                        <p th:text="*{precio } + €" ></p>
-                    </div>
-                    <div class="producto_nombre">
-                        <p th:text="*{nombre_producto}"></p>
-                    </div>
+    </div>
+    <div class="listado-productos">
+        <div th:each="pro : ${productos}" th:object="${pro}">
+            <div class="producto">
 
-                    <div class="producto-datos">
-                        <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} "></p>
-                    </div>
+                <a th:href="@{/productos/} + *{id}">
+                    <img width="290" height="330" th:src="*{imagenes}">
+                </a>
 
+                <div class="producto-precio">
+                    <p th:text="*{precio } + €"></p>
                 </div>
+                <div class="producto_nombre">
+                    <p th:text="*{nombre_producto}"></p>
+                </div>
+
+                <div class="producto-datos">
+                    <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} "></p>
+                </div>
+
             </div>
         </div>
+    </div>
 
-            <div th:each="p : ${categorias}" th:object="${p}">
-                <p th:text="*{nombre_producto}"></p>
+    <div th:each="p : ${categorias}" th:object="${p}">
+        <p th:text="*{nombre_producto}"></p>
 
-            </div>
-            <div class="footer-dark">
-                <footer>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-3 item">
-                                <h3>Services</h3>
-                                <ul>
-                                    <p><a href="#">Politica de Privacidad</a></p>
-                                    <p><a href="#">Politica de Cookies</a></p>
-                                    <p><a href="#">Configuracion de Cookies</a></p>
-                                    <p><a href="#">Terminos y Condiciones</a></p>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6 col-md-3 item ejemplo">
-                                <h3>Redes Sociales</h3>
-                                <ul class="ul-image">
-                                    <a th:href="@{http://www.facebook.es}">
-                                        <img th:src="@{/images/logos/001-facebook.png}">
-                                    </a>
-                                    <a th:href="@{http://www.instagram.es}"> 
-                                        <img th:src="@{/images/logos/011-instagram.png}">
-                                    </a>
-                                    <a th:href="@{htpp://www.whatsapp.es}">
-                                        <img th:src="@{/images/logos/003-whatsapp.png}">
-                                    </a>
-                                    <a th:href="@{http://www.twitter.es}">
-                                        <img th:src="@{/images/logos/002-twitter.png}">
-                                    </a>
-                                </ul>
-                            </div>
-                            <div class="col-md-6 item text">
-                                <h3>Newsletter</h3>
-                                <form action="">
-                                    <label for="">Email</label>
-                                    <input type="text" name="" id="">
-                                    <button type="submit">Enviar</button>
-                                </form>
-                            </div>
-                            <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                        </div>
-                        <p class="copyright">CEMA Clothes 2021 © Todos los derechos reservados</p>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <p><a href="#">Politica de Privacidad</a></p>
+                            <p><a href="#">Politica de Cookies</a></p>
+                            <p><a href="#">Configuracion de Cookies</a></p>
+                            <p><a href="#">Terminos y Condiciones</a></p>
+                        </ul>
                     </div>
-                </footer>
+                    <div class="col-sm-6 col-md-3 item ejemplo">
+                        <h3>Redes Sociales</h3>
+                        <ul class="ul-image">
+                            <a th:href="@{http://www.facebook.es}">
+                                <img th:src="@{/images/logos/001-facebook.png}">
+                            </a>
+                            <a th:href="@{http://www.instagram.es}">
+                                <img th:src="@{/images/logos/011-instagram.png}">
+                            </a>
+                            <a th:href="@{htpp://www.whatsapp.es}">
+                                <img th:src="@{/images/logos/003-whatsapp.png}">
+                            </a>
+                            <a th:href="@{http://www.twitter.es}">
+                                <img th:src="@{/images/logos/002-twitter.png}">
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Newsletter</h3>
+                        <form action="">
+                            <label for="">Email</label>
+                            <input type="text" name="" id="">
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                                class="icon ion-social-twitter"></i></a><a href="#"><i
+                                class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">CEMA Clothes 2021 © Todos los derechos reservados</p>
             </div>
+        </footer>
+    </div>
 </body>
 <script type="text/javascript" th:src="@{/js/main.js}"></script>
 

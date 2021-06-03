@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/controlUsuarios.css}" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/src/main/resources/static/images/CEMA-logo-definitivo.svg">
-       <title>Usuarios</title>
+    <title>Usuarios</title>
 </head>
 
 <body>
-     
+
     <div th:replace="~{fragments/changelang.html :: body}"></div>
 
     <div class="menu">
@@ -22,13 +22,14 @@
 
         </div>
         <div>
-            <p th:text="#{control_usuarios}" style="text-transform: uppercase;"></p>        </div>
+            <p th:text="#{control_usuarios}" style="text-transform: uppercase;"></p>
+        </div>
     </div>
     <table>
 
         <thead>
             <tr>
-                <th >Id</th>
+                <th>Id</th>
                 <th th:text="#{Email}">Email</th>
                 <th th:text="#{Contrasena}">Contraseña</th>
                 <th th:text="#{Usuario}">Usuario</th>

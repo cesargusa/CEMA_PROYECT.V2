@@ -3,14 +3,14 @@
 
 <head>
     <header th:insert="~{fragments/changelang.html :: header}">
-</header>
+    </header>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/controlUsuarios.css}" rel="stylesheet" />
     <link rel="icon" type="image/svg+xml" href="/src/main/resources/static/images/CEMA-logo-definitivo.svg">
-  
+
     <title>Usuarios</title>
 </head>
 
@@ -42,7 +42,7 @@
                 <th th:text="#{marca}">Marca</th>
                 <th th:text="#{sexo}">Sexo</th>
 
-               
+
 
             </tr>
         </thead>
@@ -54,9 +54,9 @@
                 <td>
                     <p th:text="*{nombre_producto}"></p>
                 </td>
-            
+
                 <td>
-                    <p th:text="*{precio} + €" ></p>
+                    <p th:text="*{precio} + €"></p>
                 </td>
 
                 <td>
@@ -84,15 +84,15 @@
                 <td>
                     <p th:text="*{sexo}"></p>
                 </td>
-            
-            
+
+
             </tr>
         </tbody>
 
 
     </table>
     <a th:href="@{~/productosControl}">
-    <button  type="button" class="btn btn-danger" th:text="#{borrar_filtros}" onclick="borrar_filtros()"></button>
+        <button type="button" class="btn btn-danger" th:text="#{borrar_filtros}" onclick="borrar_filtros()"></button>
     </a>
 
 </body>
@@ -101,4 +101,5 @@
             window.location.href="@{~/productosControl}";
         }
     </script> -->
+
 </html>

@@ -63,7 +63,7 @@
         <button class="anuncio" type="submit" value="Modelos" th:text="#{Anuncio}"></button>
 
     </div>
-    
+
 
 </div>
 
@@ -145,53 +145,56 @@
         <input class="inputs" type="text" name="estado" id="titulo" placeholder="Elige un estado ">
         <input class="inputs" type="text" name="precio" id="titulo" placeholder="Precio">
         <div class="añadir-imagen">
-          <label for="avatar"><strong>Inserte una foto de su producto:</strong></label>
-            <input type="file" name="avatar" id="avatar">             
-     </div>
-     <br>
+            <label for="avatar"><strong>Inserte una foto de su producto:</strong></label>
+            <input type="file" name="avatar" id="avatar">
+        </div>
+        <br>
         <p>Estoy de acuerdo con <a href="/terminos-servicios">Terminos y condiciones</a></p>
         <input class="boton-product" type="submit" value="Subir mi Producto"></input>
     </section>
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
 
-            <div class="footer-dark">
-                <footer>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 col-md-3 item">
-                                <h3>Services</h3>
-                                <ul>
-                                    <p><a href="#">Politica de Privacidad</a></p>
-                                    <p><a href="#">Politica de Cookies</a></p>
-                                    <p><a href="#">Configuracion de Cookies</a></p>
-                                    <p><a href="#">Terminos y Condiciones</a></p>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6 col-md-3 item ejemplo">
-                                <h3>Redes Sociales</h3>
-                                <ul class="ul-image">
-                                        <img th:src="@{/images/logos/001-facebook.png}">
-                                        <img th:src="@{/images/logos/001-facebook.png}">
-                                        <img th:src="@{/images/logos/001-facebook.png}">
-                                        <img th:src="@{/images/logos/001-facebook.png}">
-                                </ul>
-                            </div>
-                            <div class="col-md-6 item text">
-                                <h3>Newsletter</h3>
-                                <form action="">
-                                    <label for="">Email</label>
-                                    <input type="text" name="" id="">
-                                    <button type="submit">Enviar</button>
-                                </form>
-                            </div>
-                            <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-                        </div>
-                        <p class="copyright">CEMA Clothes 2021 © Todos los derechos reservados</p>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <p><a href="#">Politica de Privacidad</a></p>
+                            <p><a href="#">Politica de Cookies</a></p>
+                            <p><a href="#">Configuracion de Cookies</a></p>
+                            <p><a href="#">Terminos y Condiciones</a></p>
+                        </ul>
                     </div>
-                </footer>
+                    <div class="col-sm-6 col-md-3 item ejemplo">
+                        <h3>Redes Sociales</h3>
+                        <ul class="ul-image">
+                            <img th:src="@{/images/logos/001-facebook.png}">
+                            <img th:src="@{/images/logos/001-facebook.png}">
+                            <img th:src="@{/images/logos/001-facebook.png}">
+                            <img th:src="@{/images/logos/001-facebook.png}">
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Newsletter</h3>
+                        <form action="">
+                            <label for="">Email</label>
+                            <input type="text" name="" id="">
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                                class="icon ion-social-twitter"></i></a><a href="#"><i
+                                class="icon ion-social-snapchat"></i></a><a href="#"><i
+                                class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">CEMA Clothes 2021 © Todos los derechos reservados</p>
             </div>
+        </footer>
+    </div>
 </body>
 <script type="text/javascript" th:src="@{/js/main.js}"></script>
 

@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/css/inicio-sesion.css}" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <title>Registrarse | Inicio de Sesion</title>
 </head>
+
 <body>
 
-    <div class="menu-contenedor"> 
-
- 
+    <div class="menu-contenedor">
 
 
-   <form th:action="@{/crear-usuario}" th:object="${usuarios}" method="POST" class="inicio">
-        <label>Email *</label>
-        <input type="email" th:field="*{email}" required>
-
-        <label>Contraseña *</label>
-        <input type="password"  th:field="*{contrasena}" required minlength="8" maxlength="20">
 
 
-        <button type="submit">Iniciar Sesion</button> 
-        <a th:href="@{/registro}">
-    <p>Registrarse</p>
-  </a>
-  <a th:href="@{/}">
-    <p>INICIO</p>
-    </a>
-    </form> 
-</div>
+        <form th:action="@{/crear-usuario}" th:object="${usuarios}" method="POST" class="inicio">
+            <label>Email *</label>
+            <input type="email" th:field="*{email}" required>
+
+            <label>Contraseña *</label>
+            <input type="password" th:field="*{contrasena}" required minlength="8" maxlength="20">
+
+
+            <button type="submit">Iniciar Sesion</button>
+            <a th:href="@{/registro}">
+                <p>Registrarse</p>
+            </a>
+            <a th:href="@{/}">
+                <p>INICIO</p>
+            </a>
+        </form>
+    </div>
 </body>
 <script>
 
 </script>
+
 </html>

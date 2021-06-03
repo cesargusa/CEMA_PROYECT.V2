@@ -92,15 +92,6 @@ public class ProductViewController {
         return mv;
     } 
 
-  /*   @GetMapping("/categorias")
-    public ModelAndView IndexCategoria(
-     @RequestParam(name = "categoria",required = false,defaultValue = "")String categoria
-){
-        List<ProductDTO> categoriaProducts = productController.c(categoria);
-        ModelAndView mv = new ModelAndView("index");
-        mv.addObject("categorias", categoriaProducts);
-        return mv;
-    }  */
     @GetMapping("/DESC")
     public ModelAndView Desc(){
         List<ProductDTO> allProductsOrderByPrecioDESC = productController.GetOrderPriceDESC();

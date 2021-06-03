@@ -85,7 +85,7 @@
                         </a>
                         <li th:text="#{Talla}">
 
-                            <li><span th:text="#{Precio_Asc}"></span></li>
+                        <li><span th:text="#{Precio_Asc}"></span></li>
                         </a>
                         <a th:href="@{/DESC}">
                             <li><span th:text="#{Precio_Desc}"></span></li>
@@ -138,7 +138,7 @@
 
 
 <body class="body">
-<br>
+    <br>
 
     <section class="contact">
         <div class="content">
@@ -149,23 +149,23 @@
             <br>
         </div>
         <a th:href="@{/}">
-                <img height="580" width="520" class="logo-image" th:src="@{'../images/Imagen2.jpeg'}" />
-            </a>
+            <img height="580" width="520" class="logo-image" th:src="@{'../images/Imagen2.jpeg'}" />
+        </a>
         <div class="content-us">
-           <br>
-        <br>
-        <br> 
-        <br>
-       
+            <br>
+            <br>
+            <br>
+            <br>
+
             <h1 th:text="#{contacta}"></h1>
-            
+
         </div>
         <div class="container">
             <div class="contactInfo">
                 <div class="box">
                     <div class="icon">
-                        <img height="60" width="70"  th:src="@{'../images/navegacion.png'}" />
-                   </div>
+                        <img height="60" width="70" th:src="@{'../images/navegacion.png'}" />
+                    </div>
                     <div class="text">
                         <h3 th:text="#{direccion}"></h3>
                         <p>Cesar gusano 50018, <br>Zaragoza,España<br>55600</p>
@@ -173,9 +173,9 @@
                 </div>
                 <div class="box">
                     <div class="icon">
-                        
-                        <img height="60" width="70"  th:src="@{'../images/llamada-telefonica.png'}" />
-                  </div>
+
+                        <img height="60" width="70" th:src="@{'../images/llamada-telefonica.png'}" />
+                    </div>
                     <div class="text">
                         <h3 th:text="#{telefono}"></h3>
                         <p>976 87 67 54</p>
@@ -183,23 +183,23 @@
                 </div>
                 <div class="box">
                     <div class="icon">
-                        <img height="60" width="70"  th:src="@{'../images/email.png'}" />
-                   </div>
+                        <img height="60" width="70" th:src="@{'../images/email.png'}" />
+                    </div>
                     <div class="text">
                         <h3 th:text="#{email}"></h3>
                         <p>cemaclothes@gmail.com</p>
                     </div>
                 </div>
             </div>
-             <div class="contactForm">
-                 <form method="POST" th:action="@{/sendMail}" id="emailForm">
-                     <h2 th:text="#{escribir_mensaje}"> </h2>
-                     <div class="inputBox">
-                         <input type="text"  name="name" required="required">
-                         <span th:text="#{nombre_apellidos}"></span>
-                     </div>
-                     <div class="inputBox">
-                        <input type="text"  name="mail"required="required">
+            <div class="contactForm">
+                <form method="POST" th:action="@{/sendMail}" id="emailForm">
+                    <h2 th:text="#{escribir_mensaje}"> </h2>
+                    <div class="inputBox">
+                        <input type="text" name="name" required="required">
+                        <span th:text="#{nombre_apellidos}"></span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="mail" required="required">
                         <span th:text="#{email}"></span>
                     </div>
                     <div class="inputBox">
@@ -211,90 +211,24 @@
                         <span th:text="#{mensaje}"></span>
                     </div>
                     <div class="inputBox">
-                       <input type="submit"   th:value="#{enviar}">
+                        <input type="submit" th:value="#{enviar}">
                     </div>
-                 </form>
-             </div>
+                </form>
+            </div>
         </div>
-<br>
-<br>
+        <br>
+        <br>
 
         <h1 th:text="#{donde}"></h1>
         <br>
         <div class="map">
-          
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.3504993442853!2d-0.8810116852998409!3d41.669773186405656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd59149ade1f9a9f%3A0x66cc84d326d51c26!2sCentro%20San%20Valero!5e0!3m2!1ses!2ses!4v1621409135259!5m2!1ses!2ses" width="850" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.3504993442853!2d-0.8810116852998409!3d41.669773186405656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd59149ade1f9a9f%3A0x66cc84d326d51c26!2sCentro%20San%20Valero!5e0!3m2!1ses!2ses!4v1621409135259!5m2!1ses!2ses"
+                width="850" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </section> 
+    </section>
 </body>
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

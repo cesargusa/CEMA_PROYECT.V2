@@ -43,7 +43,8 @@
     </div>
     <div class="cuadros-texto">
         <form action="" method="GET" target="_blank">
-            <input type="search" id="valor-entradaUsuario" class="entrada" autofocus required placeholder="Busque a un usuario...">
+            <input type="search" id="valor-entradaUsuario" class="entrada" autofocus required
+                placeholder="Busque a un usuario...">
 
             <input id="entrada" class="buscar" type="submit" th:value="#{Buscar}">
         </form>
@@ -90,7 +91,7 @@
                                 <a th:href="@{/?talla=S}">
                                     <li>No</li>
                                 </a>
-                            
+
                             </ul>
                         </li>
                         <li><span>Pais:</span>
@@ -102,7 +103,7 @@
                                 <a th:href="@{/usuarios/?pais=Estados Unidos}">
                                     <li>EEUU</li>
                                 </a>
-                                
+
 
                             </ul>
                         </li>
@@ -115,7 +116,7 @@
                                 <a th:href="@{/usuarios/?sexo=Mujer}">
                                     <li>Mujeres</li>
                                 </a>
-                                
+
 
                             </ul>
                         </li>
@@ -147,11 +148,11 @@
     <div class="listado-usuarios">
         <div th:each="usu : ${usuarios}" th:object="${usu}">
             <div class="usuario">
-            
+
                 <div class="imagen-usuario">
                     <a th:href="@{/usuarios/} + *{id}">
-                    <img th:src="*{imagen}" width="300" height="300">
-                </a>
+                        <img th:src="*{imagen}" width="300" height="300">
+                    </a>
                 </div>
                 <div class="nombre-usuario">
                     <p th:text="*{usuario}"></p>

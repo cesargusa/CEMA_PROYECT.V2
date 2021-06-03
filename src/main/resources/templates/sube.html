@@ -1,12 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link th:href="@{/css/sube.css}" rel="stylesheet" />
+
+    <title>Sube Tu Producto</title>
 </head>
+
 <body>
-    
+    <form class="form1" action="">
+        <label for="firstName" class="first-name">Nombre del Producto</label>
+        <input id="firstName" type="text">
+  
+        <label for="lastName" class="last-name">Precio</label>
+        <input id="lastName" type="number">
+  
+        <label>Talla</label>
+        <select name="select" required >
+            <option value="XS" selected>XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="2XL">2XL</option>
+        </select>
+        <br>
+        <br>
+        <label for="age">Imagen</label>
+        <input id="age" type="text">
+  
+        <label for="email">Color</label>
+        <input id="email" type="text">
+
+        <label>Estado</label>
+        <select name="select" required>
+            <option value="Nuevo" selected>Nuevo</option>
+            <option value="Como Nuevo">Como Nuevo</option>
+            <option value="Usado">Usado</option>
+            <option value="Muy Usado">Muy Usado</option>
+           
+        </select>
+
+        <label for="email">Marca</label>
+        <input id="email" type="text">
+
+        <label for="email">Sexo</label>
+        <input id="email" type="text">
+        
+  
+        <button>Submit</button>
+      </form>
 </body>
+
 </html>

@@ -46,6 +46,8 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
         @Query(value = "SELECT p "+" FROM Productos p "+ " ORDER BY precio ASC")
         Collection<ProductEntity> orderPriceASC();
 
+        
+
      
        
 }

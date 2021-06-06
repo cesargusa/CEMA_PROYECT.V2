@@ -10,6 +10,7 @@ import proyect.cema.Services.CategoriaService;
 import proyect.cema.Services.MailService;
 import proyect.cema.Services.ProductServices;
 import proyect.cema.Services.ProductoCategoriaService;
+import proyect.cema.Services.UsuarioProductoService;
 
 @Configuration
 public class DI {
@@ -40,5 +41,9 @@ public class DI {
     MailService sendMailService(){
         return new MailService();
     }
-    
+    @Bean
+    UsuarioProductoService createUsuarioProducto(){
+        return new UsuarioProductoService();
+    }
+
 }

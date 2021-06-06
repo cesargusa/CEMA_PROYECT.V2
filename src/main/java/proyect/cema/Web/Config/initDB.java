@@ -21,7 +21,7 @@ public class initDB {
         return args ->{
 
 
-           /*  usuario.save(new UsuarioEntity("cesargusa22@gmail.com","cersar","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Soy Cesar tengo 23 años y me gustaria ser modelo","Hombre",true));
+             usuario.save(new UsuarioEntity("cesargusa22@gmail.com","cersar","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Soy Cesar tengo 23 años y me gustaria ser modelo","Hombre",true));
             usuario.save(new UsuarioEntity("oiram@gmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","Soy Mario tengo en mi perfil ropa muy exclusiva y economica que puede interesarte","Hombre",true));
             usuario.save(new UsuarioEntity("jacintoq@gmail.com","jacinto","marioambel22","Jacinto","Aranda","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypmIARGvqviv_DOyibN9WkTafMzftqdsbFA&usqp=CAU","12344565","Madrid","España","Soy Jacinto tengo ropa muy exclusiva y economica en mi perfil","Hombre",true));
             usuario.save(new UsuarioEntity("yahira99@gmail.com", "contrasena", "yahira99", "Yahira", "Hernandez", "https://i.vimeocdn.com/portrait/10108864_640x640", "72278212", "Madrid", "España", "Hola soy Yahira y me gustaria ser modelo", "Mujer", false));
@@ -39,9 +39,9 @@ public class initDB {
             usuario.save(new UsuarioEntity("simoncoral@gmail.com", "contrasena", "simoncoral", "Simon", "Coral", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYh2IRbaAke36fBAJeg_I6btBF9dWSBpN2B44ruRuqYGO23SrTpMlBt6-7HklLziwFpaY&usqp=CAU", "145987", "Almeria", "España", "Bunas soy Simon vivo en Almeria tengo en mi perfil ropa muy exclusiva y economica que puede interesarte", "Hombre", true));
             usuario.save(new UsuarioEntity("carlosmorales@gmail.com", "contrasena", "carlosmorales", "Carlos", "Morales", "https://media.revistagq.com/photos/5ca5e03ff552a173b332ac22/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__692265935.jpg", "123689", "Cadiz", "España", "Bunas soy Carlos tengo experiencia de Modelo en una agencia de modelos de Cadiz", "Hombre", true));
             usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "Malaga", "España", "Bunas soy Cristian de Malaga me gustaria ser modelo", "Hombre", true)); 
-            usuario.save(new UsuarioEntity("abeldomin@gmail.com", "contrasena", "cristianroy", "Abel", "Dominguez", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "4123123", "Sevilla", "España", "Bunas soy Abel soy modelo y me gustaria vender algunas cosas que ya no me pongo", "Hombre", true));  */
+            usuario.save(new UsuarioEntity("abeldomin@gmail.com", "contrasena", "cristianroy", "Abel", "Dominguez", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "4123123", "Sevilla", "España", "Bunas soy Abel soy modelo y me gustaria vender algunas cosas que ya no me pongo", "Hombre", true));  
 
-            /* usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
+             usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
             usuario.save(new UsuarioEntity("marietelgmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","Buenas tardes","Hombre",true));
             usuario.save(new UsuarioEntity("marieteloqmail.comerevrerveevv","123","marioambel22","Marirevervreo","Gutierrezveveerv","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypmIARGvqviv_DOyibN9WkTafMzftqdsbFA&usqp=CAU","12344565","Madrid","España","reuh9eruheuhvuherhvr0uhrvrhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvferv","Hombre",true));
             usuario.save(new UsuarioEntity("yahira99@gmail.com", "contrasena", "yahira99", "Yahira", "Hernandez", "https://i.vimeocdn.com/portrait/10108864_640x640", "72278212", "Madrid", "España", "Hola me gusta el jamon", "Mujer", false));
@@ -59,11 +59,11 @@ public class initDB {
             usuario.save(new UsuarioEntity("simoncoral@gmail.com", "contrasena", "simoncoral", "Simon", "Coral", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYh2IRbaAke36fBAJeg_I6btBF9dWSBpN2B44ruRuqYGO23SrTpMlBt6-7HklLziwFpaY&usqp=CAU", "145987", "Almeria", "España", "Bunas soy Simon", "Hombre", true));
             usuario.save(new UsuarioEntity("carlosmorales@gmail.com", "contrasena", "carlosmorales", "Carlos", "Morales", "https://media.revistagq.com/photos/5ca5e03ff552a173b332ac22/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__692265935.jpg", "123689", "Cadiz", "España", "Bunas soy Carlos", "Hombre", true));
             usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "Malaga", "España", "Bunas soy Cristian", "Hombre", true)); 
-            usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "New York", "Estados Unidos", "Bunas soy Cristian", "Hombre", true));  */
+            usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "New York", "Estados Unidos", "Bunas soy Cristian", "Hombre", true));  
 
  
 
-           /*  product.save(new ProductEntity("Sudadera Nike",40,"L","https://images.asos-media.com/products/sudadera-azul-marino-con-capucha-club-de-nike-plus/12495764-1-navy?$XXL$&wid=513&fit=constrain","Azul Marino","Usado","Nike","Hombre"));
+            product.save(new ProductEntity("Sudadera Nike",40,"L","https://images.asos-media.com/products/sudadera-azul-marino-con-capucha-club-de-nike-plus/12495764-1-navy?$XXL$&wid=513&fit=constrain","Azul Marino","Usado","Nike","Hombre"));
             product.save(new ProductEntity("Pantalon Stradivarius",23,"M","https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/elle-pantalon-negro-barato-stradivarius-c-1559142955.jpg?resize=480:*","Negro","Nuevo","Stradivarius","Mujer"));
             product.save(new ProductEntity("Pulsera Hoja",12,"","https://images.vinted.net/thumbs/f800/02_018b3_f86o378nKJ3wHreFGTpAmLmd.jpeg?1620891170-0a2fee3ac48c7e7ecbc3bb4a3df34f886022e348","Plata","Seminuevo","Bonito","Accesorios"));
             product.save(new ProductEntity("Camiseta Snipes",15.35,"M","https://www.snipes.es/dw/image/v2/BDCB_PRD/on/demandware.static/-/Sites-snse-master-eu/default/dwf079653a/1964803_P.jpg?sw=780&sh=780&sm=fit&sfrm=png","Rojo","Usado","Snipes","Hombre"));
@@ -83,9 +83,9 @@ public class initDB {
             product.save(new ProductEntity("Zapatillas Adidas Stan Smith ",44,"38","https://images.vinted.net/thumbs/f800/02_001ca_ZKRaJa5cRBKie3de6P6GA28e.jpeg?1620198312-d8b02972e05db93d18a0a0b1444ec5f9d1bc54bf","Blanco","Nuevo","Adidas","Mujer")); 
             product.save(new ProductEntity("Vestido Naranja H&M ",23,"S","https://images.vinted.net/thumbs/f800/03_003d1_JHbUHaJn3gKccmQfwXwuuxEn.jpeg?1620198677-2be312914ab375438a7fe9a16a5914654d93be99","Naranja","Muy Usado","H&M","Mujer")); 
             product.save(new ProductEntity("Collar Tous ",40,"","https://images.vinted.net/thumbs/f800/01_01232_yiV6SnYRVSKLUoARcuTFf7Pr.jpeg?1620071577-0da737bd31b0a225ce7dfe25cdb8623a1359ff0f","Plata","Muy Usado","Tous","Accesorios")); 
-            product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","Verde","Sin estrenar","Adidas","Hombre"));   */
+            product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","Verde","Sin estrenar","Adidas","Hombre"));   
 
-/* categoria.save(new CategoriaEntity("Mujeres","https://img.ltwebstatic.com/images3_pi/2021/04/01/1617245949e0b1217bed1bc05c4793b776d582c880_thumbnail_600x.webp"));
+ categoria.save(new CategoriaEntity("Mujeres","https://img.ltwebstatic.com/images3_pi/2021/04/01/1617245949e0b1217bed1bc05c4793b776d582c880_thumbnail_600x.webp"));
      categoria.save(new CategoriaEntity("Hombres","https://img.ltwebstatic.com/images3_pi/2021/03/26/16167308995815f2d1e37e211312bb277a0eaf8c00_thumbnail_600x.webp"));  
     categoria.save(new CategoriaEntity("Sudaderas","https://img.ltwebstatic.com/images3_pi/2020/12/22/1608617143339de2ec72e37485120b68fb618ffcc7_thumbnail_600x.webp"));
     categoria.save(new CategoriaEntity("Camisetas","https://img.ltwebstatic.com/images3_pi/2019/10/11/15707838107f3d39d193931dfa2cea95dbec0200b8_thumbnail_600x.webp"));
@@ -100,11 +100,11 @@ categoria.save(new CategoriaEntity("Calcetines","https://img.ltwebstatic.com/ima
           categoria.save(new CategoriaEntity("Stradivarius","https://logos-marcas.com/wp-content/uploads/2020/11/Stradivarius-Logo-2012-presente.jpg")); 
           categoria.save(new CategoriaEntity("Adidas","https://1000marcas.net/wp-content/uploads/2019/11/Adidas-logo.jpg")); 
           categoria.save(new CategoriaEntity("Calvin Klein","https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/CK_Calvin_Klein_logo.svg/821px-CK_Calvin_Klein_logo.svg.png"));
-          categoria.save(new CategoriaEntity("Tous","https://www.feelingdaperfume.com/wp-content/uploads/2020/02/Tous.png"));  */
+          categoria.save(new CategoriaEntity("Tous","https://www.feelingdaperfume.com/wp-content/uploads/2020/02/Tous.png"));  
 
 
 
-          /*   productoCategoria.save(new ProductoCategoriaEntity(1L, 3L)); 
+            productoCategoria.save(new ProductoCategoriaEntity(1L, 3L)); 
             productoCategoria.save(new ProductoCategoriaEntity(1L, 13L)); 
             productoCategoria.save(new ProductoCategoriaEntity(1L, 2L));  
             productoCategoria.save(new ProductoCategoriaEntity(2L, 10L)); 
@@ -158,9 +158,9 @@ categoria.save(new CategoriaEntity("Calcetines","https://img.ltwebstatic.com/ima
             productoCategoria.save(new ProductoCategoriaEntity(22L, 14L));
 
 
- */
+ 
 
-
+ 
       
 
   

@@ -74,6 +74,10 @@ public class ProductServices {
         .map(x -> modelMapper.map(x, ProductDTO.class))
         .collect(Collectors.toList());
     }
-
+    public List<ProductDTO> findIdUsuarioProducti(Long id){
+        return productRepository.UsuarioProducto(id).stream()
+        .map(x -> modelMapper.map(x, ProductDTO.class))
+        .collect(Collectors.toList());
+    }
   
 }

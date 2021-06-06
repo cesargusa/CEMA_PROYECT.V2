@@ -40,6 +40,12 @@ public interface ProductRepository extends JpaRepository<ProductEntity,Long>{
         +" WHERE c.nombre_categoria =:nombre_categoria")
         Collection<ProductEntity> FindByCategory(@Param("nombre_categoria") String nombre_categoria);
 
+        @Query(value = "SELECT p FROM Productos p"
+        +" INNER join UsuarioProducto up on p.id = up.productoId"
+        +" INNER join Usuarios u on u.id = up.usuarioId"
+        +" WHERE u.id =:id")
+        Collection<ProductEntity> UsuarioProducto(@Param("id") Long id);
+
         @Query(value = "SELECT p "+" FROM Productos p "+ " ORDER BY precio DESC")
         Collection<ProductEntity> orderPriceDESC();
 

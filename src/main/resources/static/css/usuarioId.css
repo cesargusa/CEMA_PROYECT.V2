@@ -63,3 +63,13 @@
     width: 100%;
 }
 
+.misProductos{
+    background-color: #E9A220;
+    text-align: center;
+    font-family: Poppins Titulo;
+    padding: 1%;
+    margin-top: 5%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}

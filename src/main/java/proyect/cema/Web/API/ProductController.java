@@ -77,4 +77,9 @@ public class ProductController {
         return productServices.findByCategory(nombre_categoria);
     }
 
+    @GetMapping("/usuarioproducto/{id}")
+    public List<ProductDTO> UsuarioProducto(@PathVariable("id")Long id) {
+        return productServices.findIdUsuarioProducti(id);
+    }
+
 }

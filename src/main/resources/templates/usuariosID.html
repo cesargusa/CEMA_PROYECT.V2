@@ -84,6 +84,31 @@
                 </div>
             </div>
         </div>
+
+        <div class="misProductos">MIS PRODUCTOS</div>
+
+        <div class="listado-productos">
+            <div th:each="pro : ${productos}" th:object="${pro}">
+                <div class="producto">
+    
+                    <a th:href="@{/productos/} + *{id}">
+                        <img width="290" height="330" th:src="*{imagenes}">
+                    </a>
+    
+                    <div class="producto-precio">
+                        <p th:text="*{precio } + €"></p>
+                    </div>
+                    <div class="producto_nombre">
+                        <p th:text="*{nombre_producto}"></p>
+                    </div>
+    
+                    <div class="producto-datos">
+                        <p th:text="*{marca} + ' • ' + *{talla} + ' • ' + *{color} "></p>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
 </body>
 <script type="text/javascript" th:src="@{/js/main.js}"></script>
 

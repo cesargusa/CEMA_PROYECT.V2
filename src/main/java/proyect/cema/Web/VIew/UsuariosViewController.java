@@ -10,15 +10,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import proyect.cema.Services.Models.ProductDTO;
 import proyect.cema.Services.Models.UsuarioDTO;
+import proyect.cema.Web.API.ProductController;
 import proyect.cema.Web.API.UsuarioController;
 
 @Controller
 public class UsuariosViewController {
     private final UsuarioController usuarioController;
+    private final ProductController productController;
 
-    UsuariosViewController(UsuarioController usuarioController) {
+    UsuariosViewController(UsuarioController usuarioController,ProductController productController){
         this.usuarioController = usuarioController;
+        this.productController=productController;
     }
 
   /*   @GetMapping("/usuariosControl")
@@ -52,8 +56,10 @@ public class UsuariosViewController {
     @GetMapping("/usuarios/{id}")
     public ModelAndView GetUsuariosIdMostrar(@PathVariable("id") Long id) {
         List<UsuarioDTO> allUsuarios = usuarioController.GetById(id);
+        List<ProductDTO> UsuariosProductos = productController.UsuarioProducto(id);
         ModelAndView mv = new ModelAndView("usuariosID");
         mv.addObject("usuarios", allUsuarios);
+        mv.addObject("productos", UsuariosProductos);
         return mv;
     }
 

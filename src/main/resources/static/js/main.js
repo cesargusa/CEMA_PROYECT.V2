@@ -1,6 +1,5 @@
-document.getElementById("entrada").onclick = entradaNombre_producto
-document.getElementById("entradaProducto").onclick = entradaUsuario
-
+/* document.getElementById("entrada").onclick = entradaNombre_producto
+document.getElementById("entradaProducto").onclick = entradaUsuario */
 function entradaNombre_producto() {
     let valorEntrada = document.getElementById("valor-entrada").value
         location.href="/?nombre_producto="+valorEntrada

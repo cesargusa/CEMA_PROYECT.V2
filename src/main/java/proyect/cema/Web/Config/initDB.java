@@ -23,11 +23,8 @@ public class initDB {
         return args ->{
 
 
-<<<<<<< HEAD
            usuario.save(new UsuarioEntity("cesargusa22@gmail.com","cersar","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Soy Cesar tengo 23 años y me gustaria ser modelo","Hombre",true));
-=======
              usuario.save(new UsuarioEntity("cesargusa22@gmail.com","cersar","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Soy Cesar tengo 23 años y me gustaria ser modelo","Hombre",true));
->>>>>>> 9529d22a848188387b598aceeff997771ce9d2d9
             usuario.save(new UsuarioEntity("oiram@gmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","Soy Mario tengo en mi perfil ropa muy exclusiva y economica que puede interesarte","Hombre",true));
             usuario.save(new UsuarioEntity("jacintoq@gmail.com","jacinto","marioambel22","Jacinto","Aranda","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypmIARGvqviv_DOyibN9WkTafMzftqdsbFA&usqp=CAU","12344565","Madrid","España","Soy Jacinto tengo ropa muy exclusiva y economica en mi perfil","Hombre",true));
             usuario.save(new UsuarioEntity("yahira99@gmail.com", "contrasena", "yahira99", "Yahira", "Hernandez", "https://i.vimeocdn.com/portrait/10108864_640x640", "72278212", "Madrid", "España", "Hola soy Yahira y me gustaria ser modelo", "Mujer", false));
@@ -47,11 +44,8 @@ public class initDB {
             usuario.save(new UsuarioEntity("cristianroy@gmail.com", "contrasena", "cristianroy", "Cristian", "Roy", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "457869", "Malaga", "España", "Bunas soy Cristian de Malaga me gustaria ser modelo", "Hombre", true)); 
             usuario.save(new UsuarioEntity("abeldomin@gmail.com", "contrasena", "cristianroy", "Abel", "Dominguez", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWgQuMN1qFPLWfbVR8ahW2h25YA6TMr0pa4A&usqp=CAU", "4123123", "Sevilla", "España", "Bunas soy Abel soy modelo y me gustaria vender algunas cosas que ya no me pongo", "Hombre", true));  
 
-<<<<<<< HEAD
             usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
-=======
              usuario.save(new UsuarioEntity("cesargusa22@gmail.com","jajaxdxd","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Buenos dias","Hombre",true));
->>>>>>> 9529d22a848188387b598aceeff997771ce9d2d9
             usuario.save(new UsuarioEntity("marietelgmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","Buenas tardes","Hombre",true));
             usuario.save(new UsuarioEntity("marieteloqmail.comerevrerveevv","123","marioambel22","Marirevervreo","Gutierrezveveerv","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQypmIARGvqviv_DOyibN9WkTafMzftqdsbFA&usqp=CAU","12344565","Madrid","España","reuh9eruheuhvuherhvr0uhrvrhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvferv","Hombre",true));
             usuario.save(new UsuarioEntity("yahira99@gmail.com", "contrasena", "yahira99", "Yahira", "Hernandez", "https://i.vimeocdn.com/portrait/10108864_640x640", "72278212", "Madrid", "España", "Hola me gusta el jamon", "Mujer", false));
@@ -95,11 +89,8 @@ public class initDB {
             product.save(new ProductEntity("Collar Tous ",40,"","https://images.vinted.net/thumbs/f800/01_01232_yiV6SnYRVSKLUoARcuTFf7Pr.jpeg?1620071577-0da737bd31b0a225ce7dfe25cdb8623a1359ff0f","Plata","Muy Usado","Tous","Accesorios")); 
             product.save(new ProductEntity("Cortavientos Adidas ",50,"M","https://images-na.ssl-images-amazon.com/images/I/713Y%2BqQdKmL._AC_UY879_.jpg","Verde","Sin estrenar","Adidas","Hombre"));   
 
-<<<<<<< HEAD
 categoria.save(new CategoriaEntity("Mujeres","https://img.ltwebstatic.com/images3_pi/2021/04/01/1617245949e0b1217bed1bc05c4793b776d582c880_thumbnail_600x.webp"));
-=======
  categoria.save(new CategoriaEntity("Mujeres","https://img.ltwebstatic.com/images3_pi/2021/04/01/1617245949e0b1217bed1bc05c4793b776d582c880_thumbnail_600x.webp"));
->>>>>>> 9529d22a848188387b598aceeff997771ce9d2d9
      categoria.save(new CategoriaEntity("Hombres","https://img.ltwebstatic.com/images3_pi/2021/03/26/16167308995815f2d1e37e211312bb277a0eaf8c00_thumbnail_600x.webp"));  
     categoria.save(new CategoriaEntity("Sudaderas","https://img.ltwebstatic.com/images3_pi/2020/12/22/1608617143339de2ec72e37485120b68fb618ffcc7_thumbnail_600x.webp"));
     categoria.save(new CategoriaEntity("Camisetas","https://img.ltwebstatic.com/images3_pi/2019/10/11/15707838107f3d39d193931dfa2cea95dbec0200b8_thumbnail_600x.webp"));
@@ -118,11 +109,8 @@ categoria.save(new CategoriaEntity("Calcetines","https://img.ltwebstatic.com/ima
 
 
 
-<<<<<<< HEAD
            productoCategoria.save(new ProductoCategoriaEntity(1L, 3L)); 
-=======
             productoCategoria.save(new ProductoCategoriaEntity(1L, 3L)); 
->>>>>>> 9529d22a848188387b598aceeff997771ce9d2d9
             productoCategoria.save(new ProductoCategoriaEntity(1L, 13L)); 
             productoCategoria.save(new ProductoCategoriaEntity(1L, 2L));  
             productoCategoria.save(new ProductoCategoriaEntity(2L, 10L)); 
@@ -176,16 +164,12 @@ categoria.save(new CategoriaEntity("Calcetines","https://img.ltwebstatic.com/ima
             productoCategoria.save(new ProductoCategoriaEntity(22L, 14L));
 
 
-<<<<<<< HEAD
 
 usuarioProductoRepository.save(new UsuarioProductoEntity(1L,2L));
 usuarioProductoRepository.save(new UsuarioProductoEntity(1L,1L));
 usuarioProductoRepository.save(new UsuarioProductoEntity(1L,3L));
 usuarioProductoRepository.save(new UsuarioProductoEntity(1L,4L));
-=======
  
->>>>>>> 9529d22a848188387b598aceeff997771ce9d2d9
-
  
       
 

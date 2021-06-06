@@ -5,7 +5,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -125,9 +127,16 @@ public class ProductViewController {
 
     
     @GetMapping("/sube")
-    public ModelAndView SubeProducto() {
+    public ModelAndView SubeProducto(){
         ModelAndView mv = new ModelAndView("sube");
+        mv.addObject("productos", new ProductDTO());
         return mv;
+    }
+
+    @PostMapping("/crear-producto")
+    public String Add(@ModelAttribute("productos") ProductDTO producto){
+       productController.AddProduct(producto);
+        return "redirect:/";
     }
 
     @GetMapping("/terminos-servicios")

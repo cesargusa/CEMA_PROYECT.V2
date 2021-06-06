@@ -11,48 +11,61 @@
 </head>
 
 <body>
-    <form class="form1" action="">
-        <label for="firstName" class="first-name">Nombre del Producto</label>
-        <input id="firstName" type="text">
-  
-        <label for="lastName" class="last-name">Precio</label>
-        <input id="lastName" type="number">
-  
-        <label>Talla</label>
-        <select name="select" required >
-            <option value="XS" selected>XS</option>
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
-            <option value="XL">XL</option>
-            <option value="2XL">2XL</option>
-        </select>
-        <br>
-        <br>
-        <label for="age">Imagen</label>
-        <input id="age" type="text">
-  
-        <label for="email">Color</label>
-        <input id="email" type="text">
+    <div class="menu-contenedor">
 
-        <label>Estado</label>
-        <select name="select" required>
-            <option value="Nuevo" selected>Nuevo</option>
-            <option value="Como Nuevo">Como Nuevo</option>
-            <option value="Usado">Usado</option>
-            <option value="Muy Usado">Muy Usado</option>
-           
-        </select>
 
-        <label for="email">Marca</label>
-        <input id="email" type="text">
 
-        <label for="email">Sexo</label>
-        <input id="email" type="text">
-        
-  
-        <button>Submit</button>
-      </form>
+
+        <form  method="POST" th:action="@{/crear-producto}" th:object="${productos}" class="inicio">
+            <label for="">Nombre de Producto</label>
+            <input type="text">
+
+            <label for="">Talla</label>
+            <select name="select" required th:field="*{talla}">
+                <option value="Naranja" selected>XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="2XL">2XL</option>
+            </select>
+
+            <label for="">Estado</label>
+            <select name="select" required th:field="*{estado}">
+                <option value="Nuevo" selected>Nuevo</option>
+                <option value="Seminuevo">Seminuevo</option>
+                <option value="Usado">Usado</option>
+                <option value="Muy Usado">Muy Usado</option>
+            </select>
+
+            <label for="">Color</label>
+            <input type="text" th:field="*{color}">
+
+            <label for="">Precio</label>
+            <input type="number" th:field="*{precio}">
+
+            <label for="">Marca</label>
+            <input type="text" th:field="*{marca}">
+
+            <label for="">Sexo</label>
+            <select name="select" required th:field="*{sexo}">
+                <option value="Hombre" selected>Hombre</option>
+                <option value="Mujer">Mujer</option>
+            </select>
+
+            <label for="">Imagen</label>
+            <input type="text" th:field="*{imagenes}">
+
+
+            <button type="submit">Subir Producto</button>
+            <a th:href="@{/registro}">
+                <p>Registrarse</p>
+            </a>
+            <a th:href="@{/}">
+                <p>INICIO</p>
+            </a>
+        </form>
+    </div>
 </body>
 
 </html>

@@ -45,7 +45,7 @@
         <form action="" method="GET" target="_blank">
             <input type="search" id="valor-entrada" class="entrada" autofocus required>
 
-            <input id="entradaProducto" class="buscar" type="submit" th:value="#{Buscar}">
+            <input id="entrada" class="buscar" type="submit" th:value="#{Buscar}" onclick="entradaNombre_producto()">
         </form>
     </div>
     <div class="menus-derecha">
@@ -58,7 +58,7 @@
 
     </div>
     <div class="anuncio-clase">
-        <a th:href="@{/sube}">
+        <a th:href="@{/subetuproducto}">
             <button class="anuncio" type="submit" value="Modelos" th:text="#{Anuncio}"></button>
         </a>
     </div>

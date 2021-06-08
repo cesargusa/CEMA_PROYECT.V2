@@ -22,7 +22,7 @@ public class initDB {
     , ProductoCategoriaRepository productoCategoria, UsuarioProductoRepository usuarioProductoRepository){
         return args ->{
 
-
+/* 
            usuario.save(new UsuarioEntity("cesargusa22@gmail.com","cersar","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Soy Cesar tengo 23 años y me gustaria ser modelo","Hombre",true));
              usuario.save(new UsuarioEntity("cesargusa22@gmail.com","cersar","cesargusa","Cesar","Gutierrez","https://media.revistagq.com/photos/5ca5e040f552a1024132ac28/master/w_1200,c_limit/modelos_masculinos_mejor_pagados_2019__10941983.jpg","722709600","Zaragoza","España","Soy Cesar tengo 23 años y me gustaria ser modelo","Hombre",true));
             usuario.save(new UsuarioEntity("oiram@gmail.com","ambel1234","marioguti3","Mario","Gutierrez","https://parma.repubblica.it/images/2012/09/14/141819337-d98f658e-289c-4a0d-8f00-20d8c5063773.jpg","1234456545","Madrid","España","Soy Mario tengo en mi perfil ropa muy exclusiva y economica que puede interesarte","Hombre",true));
@@ -169,7 +169,7 @@ usuarioProductoRepository.save(new UsuarioProductoEntity(1L,2L));
 usuarioProductoRepository.save(new UsuarioProductoEntity(1L,1L));
 usuarioProductoRepository.save(new UsuarioProductoEntity(1L,3L));
 usuarioProductoRepository.save(new UsuarioProductoEntity(1L,4L));
- 
+  */
  
       
 
